@@ -170,7 +170,7 @@ nav {
 .product-categories, .products, .solutions {
     width: 30%;
     text-align: left;
-    max-height: 300px;
+    max-height: 500px;
     overflow-y: auto;
 }
 
