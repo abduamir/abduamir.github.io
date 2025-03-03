@@ -9,17 +9,22 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <style>
+    body {
+        overflow: hidden; /* Prevent scrolling when overlay is active */
+    }
+
     .overlay {
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(255, 255, 255, 0.9);
+        background: rgba(0, 0, 0, 0.8); /* Darker background to ensure visibility */
         display: flex;
         justify-content: center;
         align-items: center;
-        z-index: 1000;
+        z-index: 10000; /* Higher z-index to ensure it is on top */
+        pointer-events: auto; /* Enable pointer events for the overlay */
     }
 
     .overlay-content {
@@ -88,6 +93,7 @@
         z-index: 1000;
         display: none;
     }
+
     .cookie-banner p {
         margin: 0;
         padding: 0 10px;
@@ -110,7 +116,7 @@
         background-color: #416775;
     }
 </style>
-<div class="overlay" id="overlay" style="display: none;">
+<div class="overlay" id="overlay">
     <div class="overlay-content">
         <h2>Important Notice</h2>
         <p>Portions of this website include information on products that may not be approved for diagnostic use within Canada. By clicking the I Accept button, you indicate your understanding that some products in this section may not be licensed in accordance with Canadian Law. Please contact a Phoenix Airmid product specialist for more information on licensing status.</p>
@@ -121,13 +127,19 @@
     </div>
 </div>
 <div class="cookie-banner" id="cookie-banner">
-    <p>We use cookies to ensure you get the best experience on our website. <button onclick="acceptCookies()">I Accept</button> <button onclick="declineCookies()">I Do Not Accept</button></p>
+    <p>We use cookies to ensure you get the best experience on our website. <button onclick="acceptCookies()">Got it!</button></p>
 </div>
 <script>
     function accept() {
-        document.querySelector('header').style.pointerEvents = 'auto';
         document.getElementById('overlay').style.display = 'none';
+        document.body.style.overflow = 'auto'; // Re-enable scrolling
         localStorage.setItem('overlayAccepted', 'true');
+        document.body.style.pointerEvents = 'auto'; // Re-enable pointer events for the rest of the page
+        console.log('Overlay accepted and stored in localStorage.');
+        if (!localStorage.getItem('cookiesAccepted')) {
+            document.getElementById('cookie-banner').style.display = 'block';
+            console.log('Cookie banner displayed.');
+        }
     }
 
     function decline() {
@@ -137,28 +149,32 @@
     function acceptCookies() {
         document.getElementById('cookie-banner').style.display = 'none';
         localStorage.setItem('cookiesAccepted', 'true');
+        console.log('Cookies accepted and stored in localStorage.');
     }
 
-    function declineCookies() {
-        document.getElementById('cookie-banner').style.display = 'none';
-        localStorage.setItem('cookiesAccepted', 'false');
-        // Add any functionality to disable cookies here
-    }
-
-        if (!localStorage.getItem('overlayAccepted')) {
-            document.querySelector('header').style.pointerEvents = 'none';
-        if (!localStorage.getItem('overlayAccepted')) {
-            document.getElementById('overlay').style.display = 'flex';
-        } else {
-            document.getElementById('overlay').style.display = 'none';
-        }
-
+    function checkCookies() {
         if (!localStorage.getItem('cookiesAccepted')) {
             document.getElementById('cookie-banner').style.display = 'block';
+            console.log('Cookie banner displayed.');
         } else {
             document.getElementById('cookie-banner').style.display = 'none';
+            console.log('Cookie banner hidden.');
         }
     }
+
+    window.addEventListener('load', function() {
+        // Check if overlay has been accepted
+        if (!localStorage.getItem('overlayAccepted')) {
+            document.body.style.pointerEvents = 'none'; // Disable pointer events for the rest of the page
+            document.getElementById('overlay').style.pointerEvents = 'auto'; // Enable pointer events for the overlay
+            document.getElementById('overlay').style.display = 'flex';
+            console.log('Overlay displayed.');
+        } else {
+            document.body.style.pointerEvents = 'auto'; // Re-enable pointer events for the rest of the page
+            console.log('Overlay already accepted.');
+            checkCookies();
+        }
+    });
 </script>
 <body>
     <header>
