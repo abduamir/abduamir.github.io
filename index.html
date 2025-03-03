@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <link src= "Flatit  QuietSansRegular.otf" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phoenix Airmid Biomedical</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.9);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+    }
+
+    .overlay-content {
+        background: white;
+        padding: 20px;
+        text-align: center;
+        max-width: 600px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        font-family: 'Barlow', sans-serif;
+    }
+
+    .overlay-content h2 {
+        margin-bottom: 20px;
+        color: #333;
+        font-size: 1.5rem;
+    }
+
+    .overlay-content p {
+        margin-bottom: 20px;
+        color: #333;
+        font-size: 1.2rem;
+    }
+
+    .overlay-buttons {
+        margin-top: 20px;
+    }
+
+    .overlay-buttons button {
+        margin: 0 10px;
+        padding: 10px 20px;
+        font-size: 1rem;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s ease-in-out;
+    }
+
+    .accept-btn {
+        background-color: #54A9C7;
+        color: white;
+    }
+
+    .decline-btn {
+        background-color: #f44336;
+        color: white;
+    }
+
+    .accept-btn:hover {
+        background-color: #416775;
+    }
+
+    .decline-btn:hover {
+        background-color: #d32f2f;
+    }
+
+    .cookie-banner {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        color: white;
+        text-align: center;
+        padding: 10px;
+        z-index: 1000;
+        display: none;
+    }
+    .cookie-banner p {
+        margin: 0;
+        padding: 0 10px;
+        font-size: 1rem;
+    }
+
+    .cookie-banner button {
+        margin-left: 10px;
+        padding: 5px 10px;
+        font-size: 1rem;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        background-color: #54A9C7;
+        color: white;
+        transition: background 0.3s ease-in-out;
+    }
+
+    .cookie-banner button:hover {
+        background-color: #416775;
+    }
+</style>
+<div class="overlay" id="overlay" style="display: none;">
+    <div class="overlay-content">
+        <h2>Important Notice</h2>
+        <p>Portions of this website include information on products that may not be approved for diagnostic use within Canada. By clicking the I Accept button, you indicate your understanding that some products in this section may not be licensed in accordance with Canadian Law. Please contact a Phoenix Airmid product specialist for more information on licensing status.</p>
+        <div class="overlay-buttons">
+            <button class="accept-btn" onclick="accept()">I Accept</button>
+            <button class="decline-btn" onclick="decline()">I Do Not Accept</button>
+        </div>
+    </div>
+</div>
+<div class="cookie-banner" id="cookie-banner">
+    <p>We use cookies to ensure you get the best experience on our website. <button onclick="acceptCookies()">I Accept</button> <button onclick="declineCookies()">I Do Not Accept</button></p>
+</div>
+<script>
+    function accept() {
+        document.querySelector('header').style.pointerEvents = 'auto';
+        document.getElementById('overlay').style.display = 'none';
+        localStorage.setItem('overlayAccepted', 'true');
+    }
+
+    function decline() {
+        alert('You must click "I Accept" to access the website.');
+    }
+
+    function acceptCookies() {
+        document.getElementById('cookie-banner').style.display = 'none';
+        localStorage.setItem('cookiesAccepted', 'true');
+    }
+
+    function declineCookies() {
+        document.getElementById('cookie-banner').style.display = 'none';
+        localStorage.setItem('cookiesAccepted', 'false');
+        // Add any functionality to disable cookies here
+    }
+
+        if (!localStorage.getItem('overlayAccepted')) {
+            document.querySelector('header').style.pointerEvents = 'none';
+        if (!localStorage.getItem('overlayAccepted')) {
+            document.getElementById('overlay').style.display = 'flex';
+        } else {
+            document.getElementById('overlay').style.display = 'none';
+        }
+
+        if (!localStorage.getItem('cookiesAccepted')) {
+            document.getElementById('cookie-banner').style.display = 'block';
+        } else {
+            document.getElementById('cookie-banner').style.display = 'none';
+        }
+    }
+</script>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <li><a href="index.html"><img src="PAB Logo Old.png" alt="Phoenix Airmid Logo"></a></li>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#" class="dropdown-trigger" data-menu="company-menu">Company</a></li>
+                <li><a href="#" class="dropdown-trigger" data-menu="products-menu">Products & Solutions</a></li>
+                <li><a href="#" class="dropdown-trigger" data-menu="resources-menu">Resources</a></li>
+                <li><a href="#" class="dropdown-trigger" data-menu="support-menu">Support</a></li>
+                <li><a href="#" class="dropdown-trigger" data-menu="news-menu">News & Events</a></li>
+            </ul>
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Search...">
+                <button class="search-btn">🔍</button>
+            </div>
+
+            <!-- Move dropdowns OUT of <ul> so they can span full width -->
+            <div class="dropdown-menu" id="company-menu">
+                <a href="about.html">About Us</a>
+                <a href="what_we_do.html">What We Do</a>
+                <a href="values.html">Our Values</a>
+                <a href="our_people.html">Our People</a>
+                <a href="responsibility.html">Our Corporate Responsibility</a>
+                <a href="partners.html">Our Partners</a>
+            </div>
+
+            <div class="dropdown-menu" id="products-menu">
+                <div class="dropdown-content">
+                    <div class="product-categories">
+                        <h3>Product Categories</h3>
+                        <ul id="category-list">
+                            <li><a href="#" class="category-trigger" data-category="clinical-biochemistry">Clinical Biochemistry</a></li>
+                            <li><a href="#" class="category-trigger" data-category="hematology">Hematology</a></li>
+                            <li><a href="#" class="category-trigger" data-category="microbiology">Microbiology</a></li>
+                            <li><a href="#" class="category-trigger" data-category="molecular">Molecular</a></li>
+                            <li><a href="#" class="category-trigger" data-category="pathology">Pathology</a></li>
+                            <li><a href="#" class="category-trigger" data-category="transfusion-medicine">Transfusion Medicine</a></li>
+                            <li><a href="#" class="category-trigger" data-category="electrophoresis">Electrophoresis</a></li>
+                            <li><a href="#" class="category-trigger" data-category="hemostasis">Hemostasis</a></li>
+                        </ul>
+                    </div>
+                    <div class="products">
+                        <h3>Products</h3>
+                        <ul id="products-list" class="scrollable-list"></ul>
+                    </div>
+                    <div class="solutions">
+                        <h3>Solutions</h3>
+                        <ul id="solutions-list" class="scrollable-list"></ul>
+                    </div>
+                </div>
+            </div>
+            
+                
+            <div class="dropdown-menu" id="resources-menu">
+                <!-- Orders Section -->
+                <div class="dropdown-category">
+                    <span>Orders</span> <!-- Non-clickable category -->
+                    <ul>
+                        <li><a href="ordering.html">Ordering</a></li>
+                        <li><a href="logistics.html">Logistics</a></li>
+                    </ul>
+                </div>
+            
+                <!-- Inquiries Section -->
+                <div class="dropdown-category">
+                    <span>Inquiries</span> <!-- Non-clickable category -->
+                    <ul>
+                        <li><a href="account-executives.html">Account Executives</a></li>
+                        <li><a href="product-specialists.html">Product Specialists</a></li>
+                        <li><a href="business-development.html">Business Development</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="dropdown-menu" id="support-menu">
+                <a href="contact.html">Contact Us</a>
+                <a href="Instrument-Service-and-Application-Specialists.html">Instrument Service and Application Specialists</a>
+            </div>
+
+            <div class="dropdown-menu" id="news-menu">
+                <a href="news.html">Latest News</a>
+                <a href="events.html">Upcoming Events</a>
+            </div>
+        </nav>
+    </header>
+    <!-- Slideshow Section -->
+    <section id="slideshow">
+      <!-- Slide 1: Diagnostic Kits -->
+      <div class="slide fade">
+        <img src="dreampath.jpg" alt="Dreampath">
+        <div class="slide-text">
+        <h2>Dreampath Sample Management Solutions</h2>
+        <p>Never lose a tissue sample again</p>
+        <a href="dreampath-products.html" class="btn">Learn More</a> <!-- Updated href -->
+        </div>
+      </div>
+      
+      <!-- Slide 2: Automation Solutions -->
+      <div class="slide fade">
+        <img src="radgil.jpg" alt="Automation Solutions">
+        <div class="slide-text"></div>
+            <h2>Automation Solutions</h2>
+            <p>Enhancing laboratory efficiency with cutting-edge automation.</p>
+            <a href="automation.html" class="btn">Learn More</a> <!-- Updated href -->
+        </div>
+      </div>
+    
+      <!-- Slide 3: Research Products -->
+      <div class="slide fade">
+        <img src="teeclean.png" alt="TEEClean®">
+        <div class="slide-text">
+            <h2>TEEClean® Automated TEE Probe Cleaner Disinfector</h2>
+            <p>Revolutionizing probe disinfection with unmatched efficiency</p>
+            <a href="csmedical-products.html" class="btn">Learn More</a> <!-- Updated href -->
+        </div>
+      </div>
+    
+      <!-- Slide 4: Disinfection Systems -->
+      <div class="slide fade">
+        <img src="ised.jpg" alt="iSED">
+        <div class="slide-text">
+            <h2>iSED® Fully Automated ESR Analyzer</h2>
+            <p>Bringing Efficiency to ESR</p>
+            <a href="alcor-products.html" class="btn">Learn More</a> <!-- Updated href -->
+        </div>
+      </div>
+
+      <!-- Slide 5: Laboratory Equipment -->
+      <div class="slide fade">
+        <img src="lab-equipment.jpg" alt="Laboratory Equipment">
+        <div class="slide-text">
+            <h2>Advanced Laboratory Equipment</h2>
+            <p>State-of-the-art equipment for modern laboratories.</p>
+            <a href="lab-equipment.html" class="btn">Learn More</a>
+        </div>
+      </div>
+
+      <!-- Slide 6: Clinical Trials -->
+      <div class="slide fade">
+        <img src="clinical-trials.jpg" alt="Clinical Trials">
+        <div class="slide-text">
+            <h2>Clinical Trials</h2>
+            <p>Innovative solutions for clinical trial management.</p>
+            <a href="clinical-trials.html" class="btn">Learn More</a>
+        </div>
+      </div>
+    
+      <!-- Navigation Arrows -->
+      <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+      <a class="next" onclick="changeSlide(1)">&#10095;</a>
+    
+      <!-- Slide Indicators -->
+      <div class="dots">
+        <span class="dot" onclick="setSlide(0)"></span>
+        <span class="dot" onclick="setSlide(1)"></span>
+        <span class="dot" onclick="setSlide(2)"></span>
+        <span class="dot" onclick="setSlide(3)"></span>
+        <span class="dot" onclick="setSlide(4)"></span>
+        <span class="dot" onclick="setSlide(5)"></span>
+      </div>
+    </section></div>
+    <section class = "vertical-bar">
+        <div class="sidebar">
+            <div class="sidebar-content">
+                <a href="customer-service.html">
+                    <img src="icons8-headset-50.png" alt="Customer Service">
+                    <span>Customer Service</span>
+                </a>
+                <a href="events.html">
+                    <img src="icons8-calendar-100.png" alt="Events">
+                    <span>Events</span>
+                </a>
+                <a href="contact.html">
+                    <img src="icons8-phone-100.png" alt="Contact Us">
+                    <span>Contact Us</span>
+                </a>
+                <a href="ordering.html">
+                    <img src="icons8-megaphone-100.png" alt="Call for Service">
+                    <span>Call for Service</span>
+                </a>
+            </div>
+        </div>
+        
+    </section>
+    <section class="tiles">
+        <div class="tile">
+            <h2>About Phoenix</h2>
+            <p>We are a multi-divisional distributor in the biotech market. We pride ourselves in providing the highest standard of quality products, customer service, technical support, and laboratory automation options.</p>
+            <a href="about.html">Learn More</a>
+        </div>
+        <div class="tile">
+            <h2>Diagnostic Kits</h2>
+            <p>We distribute a wide range of quality autoimmune, infectious disease, and molecular diagnostic products – and continually look to bring new and revolutionary test kits to the Canadian market.</p>
+            <a href="diagnostic-kits.html">View Products</a>
+        </div>
+        <div class="tile">
+            <h2>Disinfection Systems</h2>
+            <p>This product line provides complete reprocessing solutions and accessories for TEE and ultrasound probes. The TD-100 is the only automated TEE probe disinfector available and offers many advantages over manual processing.</p>
+            <a href="disinfection-systems.html">Explore Solutions</a>
+        </div>
+        <div class="tile">
+            <h2>News/Events</h2>
+            <p>From industry trade shows, to community involvement, and new product launches – we're always up to new things:</p>
+            <a href="news.html">See what's happening at Phoenix!</a>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <div class="footer-map-container">
+
+        </div>
+        <div class="footer-info">
+            <p class="footer-left">1166 South Service Rd. W, Oakville, ON L6L 5T7</p>
+            <p class="footer-center">
+                Phone: 905-469-4253 &nbsp;|&nbsp; 
+                Fax: 905-825-9795 &nbsp;|&nbsp; 
+                Toll Free: 866-718-0515
+            </p>
+            <p class="footer-right">
+                Email: <a href="mailto:info@phoenixairmid.com">info@phoenixairmid.com</a>
+            </p>
+        </div>
+    </footer>    
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Business Development Team | Phoenix Airmid Biomedical</title>
+    <link rel="stylesheet" href="resourcestyle.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">
+                <li><a href="index.html"><img src="PAB Logo Old.png" alt="Phoenix Airmid Logo"></a></li>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#" class="dropdown-trigger" data-menu="company-menu">Company</a></li>
+                <li><a href="#" class="dropdown-trigger" data-menu="products-menu">Products & Solutions</a></li>
+                <li><a href="#" class="dropdown-trigger" data-menu="resources-menu">Resources</a></li>
+                <li><a href="#" class="dropdown-trigger" data-menu="support-menu">Support</a></li>
+                <li><a href="#" class="dropdown-trigger" data-menu="news-menu">News & Events</a></li>
+            </ul>
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Search...">
+                <button class="search-btn">🔍</button>
+            </div>
+    
+            <!-- Move dropdowns OUT of <ul> so they can span full width -->
+            <div class="dropdown-menu" id="company-menu">
+                <a href="about.html">About Us</a>
+                <a href="what_we_do.html">What We Do</a>
+                <a href="values.html">Our Values</a>
+                <a href="our_people.html">Our People</a>
+                <a href="responsibility.html">Our Corporate Responsibility</a>
+                <a href="partners.html">Our Partners</a>
+            </div>
+    
+            <div class="dropdown-menu" id="products-menu">
+                <a href="diagnostic-kits.html">Diagnostic Kits</a>
+                <a href="automation.html">Automation</a>
+                <a href="research-products.html">Research Products</a>
+            </div>
+    
+            <div class="dropdown-menu" id="resources-menu">
+                <!-- Orders Section -->
+                <div class="dropdown-category">
+                    <span>Orders</span> <!-- Non-clickable category -->
+                    <ul>
+                        <li><a href="ordering.html">Ordering</a></li>
+                        <li><a href="logistics.html">Logistics</a></li>
+                    </ul>
+                </div>
+            
+                <!-- Inquiries Section -->
+                <div class="dropdown-category">
+                    <span>Inquiries</span> <!-- Non-clickable category -->
+                    <ul>
+                        <li><a href="account-executives.html">Account Executives</a></li>
+                        <li><a href="product-specialists.html">Product Specialists</a></li>
+                        <li><a href="business-development.html">Business Development</a></li>
+                    </ul>
+                </div>
+            </div>
+    
+            <div class="dropdown-menu" id="support-menu">
+                <a href="contact.html">Contact Us</a>
+                <a href="Instrument-Service-and-Application-Specialists.html">Instrument Service and Application Specialists</a>
+            </div>
+    
+            <div class="dropdown-menu" id="news-menu">
+                <a href="news.html">Latest News</a>
+                <a href="events.html">Upcoming Events</a>
+            </div>
+        </nav>
+    </header>
+    <section class = "vertical-bar">
+        <div class="sidebar">
+            <div class="sidebar-content">
+                <a href="customer-service.html">
+                    <img src="icons8-headset-50.png" alt="Customer Service">
+                    <span>Customer Service</span>
+                </a>
+                <a href="events.html">
+                    <img src="icons8-calendar-100.png" alt="Events">
+                    <span>Events</span>
+                </a>
+                <a href="contact.html">
+                    <img src="icons8-phone-100.png" alt="Contact Us">
+                    <span>Contact Us</span>
+                </a>
+                <a href="ordering.html">
+                    <img src="icons8-megaphone-100.png" alt="Call for Service">
+                    <span>Call for Service</span>
+                </a>
+            </div>
+        </div>
+        
+    </section>
+    <!-- Banner Section -->
+    <section class="banner">
+        <img src="banner_service.jpg" alt="Contact Banner">
+        
+    </section>
+
+    <!-- Content Section -->
+    <section class="ordering-content">
+        <div class="text-content">
+            <h1>Interested in partnering with Phoenix?</h1>
+            <p>Please contact our Business Development Team using the form below:</p>
+            
+            <!-- Email Form -->
+            <form action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data">
+
+                <!-- REQUIRED: Your Access key here. Don't worry this can be public -->
+                <!-- Create your Access key here: https://web3forms.com/ -->
+                <input type="hidden" name="access_key" value="f77bc3ec-d5b9-46d9-a8d5-1c885fbe9796">
+                
+                <input type="text" name="subject" value="Subject">
+
+                <!-- Optional: default replyto will be "email" (if available), 
+                     you may overwrite here -->
+                <input type="hidden" name="replyto" value="customer@example.com">
+
+                <!-- Required: if submitting without Javascript 
+                     (because by default web3form outputs json) -->
+                <input type="hidden" name="redirect" value="https://web3forms.com/success">
+
+                <!-- Optional: But Recommended: To Prevent SPAM Submission. 
+                     Make sure it's hidden by default -->
+                <input type="checkbox" name="botcheck" id="" style="display: none;">
+                
+                <!-- Custom Form Data: 
+                 Include your own form data you wish to receive in email. -->
+                <input type="email" name="email" placeholder="Your Email" required>
+                <input type="text" name="First Name" placeholder="Full Name" required>
+                <input type="text" name="Phone Number" placeholder="Phone Number" required>
+                <textarea name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+
+                <button type="submit">Submit Form</button>
+
+            </form>
+        </div>
+    </section>
+
+
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="footer-info">
+            <p class="footer-left">1166 South Service Rd. W, Oakville, ON L6L 5T7</p>
+            <p class="footer-center">
+                Phone: 905-469-4253 &nbsp;|&nbsp; 
+                Fax: 905-825-9795 &nbsp;|&nbsp; 
+                Toll Free: 866-718-0515
+            </p>
+            <p class="footer-right">
+                Email: <a href="mailto:info@phoenixairmid.com">info@phoenixairmid.com</a>
+            </p>
+        </div>
+    </footer>   
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,893 @@
+<script type="text/javascript">
+    var healthcare_provider = 'Healthcare Provider';
+
+    if ( getCookie('wp-wpml_current_language') === 'fr' ) {
+        healthcare_provider = 'Professionnel de la santé';
+    }
+
+    if (getCookie('visitor-type') == 'healthcare-user') {
+        document.getElementById('visitor-switcher').innerHTML = healthcare_provider;
+    } else {
+        document.getElementById('visitor-switcher').innerHTML = 'Patient';
+    }
+    
+    function int_lang_dropdown_function() {
+        document.getElementById("int_lang_dropdown").classList.toggle("show");
+    }
+
+    // Close the dropdown menu if the user clicks outside of it
+    window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+    }
+</script>
+    <div class="elementor-shortcode"></div>
+            </div>
+            </div>
+                </div>
+    </div>
+                </div>
+    </section>
+            <section class="elementor-section elementor-top-section elementor-element elementor-element-bc776e1 elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="bc776e1" data-element_type="section">
+                    <div class="elementor-container elementor-column-gap-default">
+                <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-18baa1e" data-id="18baa1e" data-element_type="column">
+        <div class="elementor-widget-wrap elementor-element-populated">
+                    <div class="elementor-element elementor-element-f138f43 elementor-widget elementor-widget-wp-widget-maxmegamenu" data-id="f138f43" data-element_type="widget" data-widget_type="wp-widget-maxmegamenu.default">
+            <div class="elementor-widget-container">
+        <div id="mega-menu-wrap-menu-1" class="mega-menu-wrap"><div class="mega-menu-toggle"><div class="mega-toggle-blocks-left"><div class='mega-toggle-block mega-logo-block mega-toggle-block-1' id='mega-toggle-block-1'><a class="mega-menu-logo" href="https://www.somagen.com" target="_self"><img class="mega-menu-logo" src="https://www.somagen.com/wp-content/uploads/2020/12/somagen-diagnostics-logo.png" /></a></div></div><div class="mega-toggle-blocks-center"><div class='mega-toggle-block mega-html-block mega-toggle-block-2' id='mega-toggle-block-2'><a style="display:none;" href="/important-information"><img src="/wp-content/themes/hello-theme-child/images/icon-information.png" alt="information" style="margin-top:4px; height: 30px;"></a></div></div><div class="mega-toggle-blocks-right"><div class='mega-toggle-block mega-menu-toggle-animated-block mega-toggle-block-3' id='mega-toggle-block-3'><button aria-label="" class="mega-toggle-animated mega-toggle-animated-slider" type="button" aria-expanded="false">
+              <span class="mega-toggle-animated-box">
+                <span class="mega-toggle-animated-inner"></span>
+              </span>
+            </button></div></div></div><ul id="mega-menu-menu-1" class="mega-menu max-mega-menu mega-menu-horizontal mega-no-js" data-event="click" data-effect="fade" data-effect-speed="200" data-effect-mobile="disabled" data-effect-speed-mobile="0" data-mobile-force-width="body" data-second-click="close" data-document-click="collapse" data-vertical-behaviour="standard" data-breakpoint="1024" data-unbind="true" data-mobile-state="collapse_all" data-hover-intent-timeout="300" data-hover-intent-interval="100" data-overlay-desktop="false" data-overlay-mobile="false">
+    <li class="mega-menu-item" style="background-color: #008068;">
+        <div id="nav-search-link" class="mobile mega-menu-link elementor-hidden-desktop elementor-element elementor-search-form--skin-full_screen elementor-widget elementor-widget-search-form" data-element_type="widget" data-settings="{&quot;skin&quot;:&quot;full_screen&quot;}" data-widget_type="search-form.default">
+            <div class="elementor-widget-container" style="text-align: center;">
+                <form class="elementor-search-form" role="search" action="/" method="get">
+                    <div class="elementor-search-form__toggle" style="color: #ffffff;">
+                        SEARCH
+                        <span class="elementor-screen-only">SEARCH</span>
+                    </div>
+                    <div class="elementor-search-form__container">
+                        <input placeholder="" class="elementor-search-form__input" type="search" name="s" title="Search" value="">
+                        <div class="dialog-lightbox-close-button dialog-close-button">
+                            <i class="eicon-close" aria-hidden="true"></i>
+                            <span class="elementor-screen-only">Close</span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </li>
+    
+    <li class="mega-menu-item" style="background-color: #ffffff;">
+        <div class="elementor-hidden-desktop" style="text-align:center; padding-top: 10px; padding-bottom: 10px">
+            <strong>Switch to:</strong>
+            <a href="#" class="visitor-switcher-mobile" style="color: #898989;"></a>
+             | <a href="https://www.somagen.com/fr/" style="color: #898989;">Français</a>                
+        </div>
+    </li>
+
+    <script type="text/javascript">
+        if (getCookie("visitor-type") == "healthcare-user") {
+            jQuery(".visitor-switcher-mobile").text("Patient");
+            jQuery(".visitor-switcher-mobile").attr("id", "patient-user");
+        } else {
+            jQuery(".visitor-switcher-mobile").text("Healthcare Provider");
+            jQuery(".visitor-switcher-mobile").attr("id", "healthcare-user");
+        }
+
+        // Go to the home page when a selection is clicked.
+        // This code is also referenced in the Elementor Cookie Popup.
+        // Formerly just used to reload the page when a selection is clicked.
+        jQuery( document ).ready( function( $ ) {
+            jQuery( document ).on( "click", ".visitor-switcher-mobile", function( event ) {
+                var visitor_type = jQuery( this ).attr("id");
+                setCookie("visitor-type", visitor_type);
+
+                //location.reload();
+                if ( getCookie("wp-wpml_current_language") === "fr" ) {
+                    location.replace( "/fr" );
+                } else {
+                    location.replace( "/" );
+                }
+            } );
+        } );
+    </script>
+<li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-has-children mega-menu-megamenu mega-align-bottom-left mega-menu-grid mega-menu-item-613' id='mega-menu-item-613'><a class="mega-menu-link" href="#" aria-haspopup="true" aria-expanded="false" tabindex="0">Products<span class="mega-indicator"></span></a>
+<ul class="mega-sub-menu">
+<li class='mega-menu-row' id='mega-menu-613-0'>
+<ul class="mega-sub-menu">
+<li class='mega-menu-column mega-menu-columns-2-of-12' id='mega-menu-613-0-0'>
+    <ul class="mega-sub-menu">
+<li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-has-children mega-menu-item-25469' id='mega-menu-item-25469'><a class="mega-menu-link" href="#" aria-label="Placeholder Text"><span class="mega-indicator"></span></a>
+        <ul class="mega-sub-menu">
+<li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-42742' id='mega-menu-item-42742'><a class="mega-menu-link" href="https://www.somagen.com/response-biomedical/#">Acute Care Diagnostics</a></li><li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-2126' id='mega-menu-item-2126'><a class="mega-menu-link" href="https://www.somagen.com/immunocap-specific-ige-tests/">Allergy Testing</a></li><li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-15663' id='mega-menu-item-15663'><a class="mega-menu-link" href="https://www.somagen.com/tosoh-aia360/">Clinical Chemistry</a></li><li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-2129' id='mega-menu-item-2129'><a class="mega-menu-link" href="https://www.somagen.com/polymedco/">Colorectal Cancer</a></li><li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-25471' id='mega-menu-item-25471'><a class="mega-menu-link" href="https://www.somagen.com/covid/">COVID-19</a></li><li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-25442' id='mega-menu-item-25442'><a class="mega-menu-link" href="https://www.somagen.com/streck-esr/">Erythrocyte Sedimentation Rate (ESR)</a></li>			</ul>
+</li>		</ul>
+</li><li class='mega-menu-column mega-menu-columns-2-of-12' id='mega-menu-613-0-1'>
+    <ul class="mega-sub-menu">
+<li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-has-children mega-menu-item-616' id='mega-menu-item-616'><a class="mega-menu-link" href="#" aria-label="Placeholder Text"><span class="mega-indicator"></span></a>
+        <ul class="mega-sub-menu">
+<li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-624' id='mega-menu-item-624'><a class="mega-menu-link" href="https://www.somagen.com/reproductive-medicine/">Fertility</a></li><li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-2127' id='mega-menu-item-2127'><a class="mega-menu-link" href="https://www.somagen.com/tosoh/">HbA1c | Diabetes</a></li><li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-2128' id='mega-menu-item-2128'><a class="mega-menu-link" href="https://www.somagen.com/immuno-concepts/">IFA Autoimmune Testing</a></li><li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-2125' id='mega-menu-item-2125'><a class="mega-menu-link" href="https://www.somagen.com/infectious-disease/">Infectious Disease</a></li><li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-25473' id='mega-menu-item-25473'><a class="mega-menu-link" href="https://www.somagen.com/molecular-pathology/">Molecular Pathology</a></li>			</ul>
+</li>		</ul>
+</li><li class='mega-menu-column mega-menu-columns-2-of-12' id='mega-menu-613-0-2'>
+    <ul class="mega-sub-menu">
+<li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-has-children mega-menu-item-626' id='mega-menu-item-626'><a class="mega-menu-link" href="#" aria-label="Placeholder Text"><span class="mega-indicator"></span></a>
+        <ul class="mega-sub-menu">
+<li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-623' id='mega-menu-item-623'><a class="mega-menu-link" href="https://www.somagen.com/sakura-home/">Pathology | Histology</a></li><li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-620' id='mega-menu-item-620'><a class="mega-menu-link" href="https://www.somagen.com/qc-better-together/">Quality Control</a></li><li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-6731' id='mega-menu-item-6731'><a class="mega-menu-link" href="https://www.somagen.com/elia-technology/">Solid Phase Autoimmune</a></li><li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-28726' id='mega-menu-item-28726'><a class="mega-menu-link" href="https://www.somagen.com/vivaproducts/">Urine Concentrators</a></li><li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-17338' id='mega-menu-item-17338'><a class="mega-menu-link" href="https://www.somagen.com/medtox-diagnostics/">Urine Drug Screening</a></li>			</ul>
+</li>		</ul>
+</li><li class='mega-menu-column mega-menu-columns-6-of-12' id='mega-menu-613-0-3'>
+    <ul class="mega-sub-menu">
+<li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-hide-on-mobile mega-menu-item-25550' id='mega-menu-item-25550'><a class="mega-menu-link" href="#"><a href="https://www.somagen.com/qc-better-together/" class="elementor-button-link elementor-button elementor-size-md" role="button">
+<span class="elementor-button-content-wrapper">
+    <span class="elementor-button-text">Learn More  ></span>
+</span>
+</a></a></li>		</ul>
+</li>	</ul>
+</li></ul>
+</li><li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-has-children mega-menu-megamenu mega-align-bottom-left mega-menu-grid mega-menu-item-615' id='mega-menu-item-615'><a class="mega-menu-link" href="#" aria-haspopup="true" aria-expanded="false" tabindex="0">Resources<span class="mega-indicator"></span></a>
+<ul class="mega-sub-menu">
+<li class='mega-menu-row' id='mega-menu-615-0'>
+<ul class="mega-sub-menu">
+<li class='mega-menu-column mega-menu-columns-3-of-12' id='mega-menu-615-0-0'>
+    <ul class="mega-sub-menu">
+<li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-has-children mega-menu-item-1636' id='mega-menu-item-1636'><a class="mega-menu-link" href="#">Orders<span class="mega-indicator"></span></a>
+        <ul class="mega-sub-menu">
+<li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-1647' id='mega-menu-item-1647'><a class="mega-menu-link" href="https://www.somagen.com/customer-service/">Ordering</a></li><li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-1649' id='mega-menu-item-1649'><a class="mega-menu-link" href="https://www.somagen.com/logistics/">Logistics</a></li>			</ul>
+</li>		</ul>
+</li><li class='mega-menu-column mega-menu-columns-3-of-12' id='mega-menu-615-0-1'>
+    <ul class="mega-sub-menu">
+<li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-has-children mega-menu-item-1637' id='mega-menu-item-1637'><a class="mega-menu-link" href="#">Inquiries<span class="mega-indicator"></span></a>
+        <ul class="mega-sub-menu">
+<li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-1643' id='mega-menu-item-1643'><a class="mega-menu-link" href="https://www.somagen.com/contact-territory-manager/">Account Executives</a></li><li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-26958' id='mega-menu-item-26958'><a class="mega-menu-link" href="https://www.somagen.com/contact-product-specialist/">Product Specialists</a></li><li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-26959' id='mega-menu-item-26959'><a class="mega-menu-link" href="https://www.somagen.com/contact-business-development/">Business Development</a></li>			</ul>
+</li>		</ul>
+</li><li class='mega-menu-column mega-menu-columns-3-of-12' id='mega-menu-615-0-2'>
+    <ul class="mega-sub-menu">
+<li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-has-children mega-menu-item-1638' id='mega-menu-item-1638'><a class="mega-menu-link" href="#">Support<span class="mega-indicator"></span></a>
+        <ul class="mega-sub-menu">
+<li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-1640' id='mega-menu-item-1640'><a class="mega-menu-link" href="https://www.somagen.com/somatek/">SOMATEK Support</a></li><li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-1641' id='mega-menu-item-1641'><a class="mega-menu-link" href="https://www.somagen.com/product-support-and-applications/">Instrument Service and Application Specialists</a></li>			</ul>
+</li>		</ul>
+</li><li class='mega-menu-column mega-menu-columns-3-of-12' id='mega-menu-615-0-3'>
+    <ul class="mega-sub-menu">
+<li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-hide-on-desktop mega-hide-on-mobile mega-menu-item-1652' id='mega-menu-item-1652'><a class="mega-menu-link" href="https://www.somagen.com/somagen-about-us/webinars/"><a href="https://www.somagen.com/territory-managers/" class="elementor-button-link elementor-button elementor-size-md" role="button">
+<span class="elementor-button-content-wrapper">
+    <span class="elementor-button-text">Learn More   ></span>
+</span>
+</a></a></li>		</ul>
+</li>	</ul>
+</li></ul>
+</li><li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-has-children mega-menu-megamenu mega-align-bottom-left mega-menu-grid mega-menu-item-634' id='mega-menu-item-634'><a class="mega-menu-link" href="#" aria-haspopup="true" aria-expanded="false" tabindex="0">Company<span class="mega-indicator"></span></a>
+<ul class="mega-sub-menu">
+<li class='mega-menu-row' id='mega-menu-634-0'>
+<ul class="mega-sub-menu">
+<li class='mega-menu-column mega-menu-columns-4-of-12' id='mega-menu-634-0-0'>
+    <ul class="mega-sub-menu">
+<li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-has-children mega-menu-item-1606' id='mega-menu-item-1606'><a class="mega-menu-link" href="#">Somagen<span class="mega-indicator"></span></a>
+        <ul class="mega-sub-menu">
+<li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-1609' id='mega-menu-item-1609'><a class="mega-menu-link" href="https://www.somagen.com/somagen-about-us/">About Us</a></li><li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-24450' id='mega-menu-item-24450'><a class="mega-menu-link" href="https://www.somagen.com/somagen-about-us/our-purpose/">What We Do</a></li><li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-1611' id='mega-menu-item-1611'><a class="mega-menu-link" href="https://www.somagen.com/somagen-about-us/working-at-somagen/">Working at Somagen</a></li><li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-24452' id='mega-menu-item-24452'><a class="mega-menu-link" href="https://www.somagen.com/somagen-about-us/our-values/">Our Values</a></li><li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-24453' id='mega-menu-item-24453'><a class="mega-menu-link" href="https://www.somagen.com/somagen-about-us/our-people/">Our People</a></li><li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-24454' id='mega-menu-item-24454'><a class="mega-menu-link" href="https://www.somagen.com/somagen-about-us/our-priorities/">Our Corporate Responsibility</a></li>			</ul>
+</li>		</ul>
+</li><li class='mega-menu-column mega-menu-columns-4-of-12' id='mega-menu-634-0-1'>
+    <ul class="mega-sub-menu">
+<li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-has-children mega-menu-item-1607' id='mega-menu-item-1607'><a class="mega-menu-link" href="#">News And Events<span class="mega-indicator"></span></a>
+        <ul class="mega-sub-menu">
+<li class='mega-menu-item mega-menu-item-type-post_type mega-menu-item-object-page mega-menu-item-637' id='mega-menu-item-637'><a class="mega-menu-link" href="https://www.somagen.com/blog/">Blog</a></li><li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-1616' id='mega-menu-item-1616'><a class="mega-menu-link" href="https://www.somagen.com/events-calendar/">Events Calendar</a></li>			</ul>
+</li>		</ul>
+</li><li class='mega-menu-column mega-menu-columns-4-of-12' id='mega-menu-634-0-2'>
+    <ul class="mega-sub-menu">
+<li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-has-children mega-menu-item-1608' id='mega-menu-item-1608'><a class="mega-menu-link" href="#">Careers At Somagen<span class="mega-indicator"></span></a>
+        <ul class="mega-sub-menu">
+<li class='mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-menu-item-1618' id='mega-menu-item-1618'><a class="mega-menu-link" href="https://www.somagen.com/jobs-at-somagen/">Job Search</a></li>			</ul>
+</li>		</ul>
+</li>	</ul>
+</li></ul>
+</li>
+    <li class="mega-menu-item">
+        <div id="nav-search-link" class="mega-menu-link elementor-hidden-tablet elementor-hidden-phone elementor-element elementor-search-form--skin-full_screen elementor-widget elementor-widget-search-form" data-element_type="widget" data-settings="{&quot;skin&quot;:&quot;full_screen&quot;}" data-widget_type="search-form.default">
+            <div class="elementor-widget-container">
+                <form class="elementor-search-form" role="search" action="/" method="get">
+                    <div class="elementor-search-form__toggle" style="color: #ffffff; font-size: 13px;">
+                        SEARCH <i aria-hidden="true" class="fas fa-search" style="position: absolute; top: 4px; right: 1rem; background-color: transparent; font-size: 26px;"></i>
+                        <span class="elementor-screen-only">SEARCH</span>
+                    </div>
+                    <div class="elementor-search-form__container">
+                        <i aria-hidden="true" class="fas fa-search"></i>
+                        <input placeholder="Search for products, solutions & information" class="elementor-search-form__input" type="search" name="s" title="Search" value="">
+                        <div class="dialog-lightbox-close-button dialog-close-button">
+                            <i class="eicon-close" aria-hidden="true"></i>
+                            <span class="elementor-screen-only">Close</span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </li>
+</ul></div>		</div>
+            </div>
+                </div>
+    </div>
+                </div>
+    </section>
+            </div>
+            <div data-elementor-type="wp-page" data-elementor-id="343" class="elementor elementor-343" data-elementor-post-type="page">
+                    <section class="elementor-section elementor-top-section elementor-element elementor-element-17debaf elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="17debaf" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;video&quot;,&quot;background_video_link&quot;:&quot;https:\/\/www.somagen.com\/wp-content\/uploads\/2021\/10\/shutterstock_1033184651.mp4&quot;,&quot;background_play_on_mobile&quot;:&quot;yes&quot;}">
+                            <div class="elementor-background-video-container">
+                                                <video class="elementor-background-video-hosted elementor-html5-video" autoplay muted playsinline loop></video>
+                                        </div>
+                            <div class="elementor-container elementor-column-gap-default">
+                <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-96e764a" data-id="96e764a" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+        <div class="elementor-widget-wrap elementor-element-populated">
+                    <div class="elementor-element elementor-element-e219998 elementor-widget elementor-widget-heading" data-id="e219998" data-element_type="widget" data-widget_type="heading.default">
+            <div class="elementor-widget-container">
+        <h2 class="elementor-heading-title elementor-size-default">Delivering a<br>better healthcare<br>JOURNEY</h2>		</div>
+            </div>
+            <div class="elementor-element elementor-element-8ccccc1 elementor-widget elementor-widget-text-editor" data-id="8ccccc1" data-element_type="widget" data-widget_type="text-editor.default">
+            <div class="elementor-widget-container">
+                        <p><strong>Dedicated to providing tomorrow’s healthcare technology to Canadians today</strong></p>						</div>
+            </div>
+            <div class="elementor-element elementor-element-758ee2b elementor-widget elementor-widget-button" data-id="758ee2b" data-element_type="widget" data-widget_type="button.default">
+            <div class="elementor-widget-container">
+                <div class="elementor-button-wrapper">
+        <a class="elementor-button elementor-button-link elementor-size-md" href="https://www.somagen.com/somagen-about-us/">
+                    <span class="elementor-button-content-wrapper">
+                                <span class="elementor-button-text">about us &nbsp; ></span>
+                </span>
+                </a>
+    </div>
+            </div>
+            </div>
+            <div class="elementor-element elementor-element-a9a0c84 elementor-search-form--skin-minimal elementor-widget elementor-widget-search-form" data-id="a9a0c84" data-element_type="widget" data-settings="{&quot;skin&quot;:&quot;minimal&quot;}" data-widget_type="search-form.default">
+            <div class="elementor-widget-container">
+                <search role="search">
+        <form class="elementor-search-form" action="https://www.somagen.com" method="get">
+                                            <div class="elementor-search-form__container">
+                <label class="elementor-screen-only" for="elementor-search-form-a9a0c84">Search</label>
+
+                                        <div class="elementor-search-form__icon">
+                        <i aria-hidden="true" class="fas fa-search"></i>							<span class="elementor-screen-only">Search</span>
+                    </div>
+                
+                <input id="elementor-search-form-a9a0c84" placeholder="Search for Products, Solutions &amp; Information" class="elementor-search-form__input" type="search" name="s" value="">
+                <input type='hidden' name='lang' value='en' />
+                
+                                </div>
+        </form>
+    </search>
+            </div>
+            </div>
+                </div>
+    </div>
+            <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-cf8626d" data-id="cf8626d" data-element_type="column">
+        <div class="elementor-widget-wrap">
+                        </div>
+    </div>
+                </div>
+    </section>
+            <section class="elementor-section elementor-top-section elementor-element elementor-element-642e803 elementor-section-full_width elementor-hidden-desktop elementor-hidden-tablet elementor-section-height-default elementor-section-height-default" data-id="642e803" data-element_type="section">
+                    <div class="elementor-container elementor-column-gap-default">
+                <div class="make-column-clickable-elementor elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-fade190" style="cursor: pointer;" data-column-clickable="https://www.somagen.com/customer-service/" data-column-clickable-blank="_self" data-id="fade190" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+        <div class="elementor-widget-wrap elementor-element-populated">
+                <div class="elementor-background-overlay"></div>
+                    <div class="elementor-element elementor-element-7867af3 elementor-widget elementor-widget-text-editor" data-id="7867af3" data-element_type="widget" data-widget_type="text-editor.default">
+            <div class="elementor-widget-container">
+                        <p>Customer Service</p>						</div>
+            </div>
+                </div>
+    </div>
+            <div class="make-column-clickable-elementor elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-5a4c82b" style="cursor: pointer;" data-column-clickable="https://www.somagen.com/events-calendar/" data-column-clickable-blank="_self" data-id="5a4c82b" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+        <div class="elementor-widget-wrap elementor-element-populated">
+                <div class="elementor-background-overlay"></div>
+                    <div class="elementor-element elementor-element-60be33f elementor-widget elementor-widget-text-editor" data-id="60be33f" data-element_type="widget" data-widget_type="text-editor.default">
+            <div class="elementor-widget-container">
+                        <p>Events</p>						</div>
+            </div>
+                </div>
+    </div>
+            <div class="make-column-clickable-elementor elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-b8f1c44" style="cursor: pointer;" data-column-clickable="https://www.somagen.com/contact/" data-column-clickable-blank="_self" data-id="b8f1c44" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+        <div class="elementor-widget-wrap elementor-element-populated">
+                <div class="elementor-background-overlay"></div>
+                    <div class="elementor-element elementor-element-2ad2ae7 elementor-widget elementor-widget-text-editor" data-id="2ad2ae7" data-element_type="widget" data-widget_type="text-editor.default">
+            <div class="elementor-widget-container">
+                        <p>Contact Us</p>						</div>
+            </div>
+                </div>
+    </div>
+            <div class="make-column-clickable-elementor elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-dc31645" style="cursor: pointer;" data-column-clickable="https://www.somagen.com/somatek/" data-column-clickable-blank="_self" data-id="dc31645" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+        <div class="elementor-widget-wrap elementor-element-populated">
+                <div class="elementor-background-overlay"></div>
+                    <div class="elementor-element elementor-element-f562405 elementor-widget elementor-widget-text-editor" data-id="f562405" data-element_type="widget" data-widget_type="text-editor.default">
+            <div class="elementor-widget-container">
+                        <p>Call For Service</p>						</div>
+            </div>
+                </div>
+    </div>
+                </div>
+    </section>
+            <section class="elementor-section elementor-top-section elementor-element elementor-element-bfcb4dc elementor-hidden-phone elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="bfcb4dc" data-element_type="section">
+                        <div class="elementor-background-overlay"></div>
+                        <div class="elementor-container elementor-column-gap-default">
+                <div class="make-column-clickable-elementor elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-85900f6" style="cursor: pointer;" data-column-clickable="https://www.somagen.com/customer-service/" data-column-clickable-blank="_self" data-id="85900f6" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+        <div class="elementor-widget-wrap elementor-element-populated">
+                    <section class="elementor-section elementor-inner-section elementor-element elementor-element-d62f417 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="d62f417" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                        <div class="elementor-background-overlay"></div>
+                        <div class="elementor-container elementor-column-gap-default">
+                <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-e97f7e4" data-id="e97f7e4" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+        <div class="elementor-widget-wrap">
+                        </div>
+    </div>
+            <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-1810765" data-id="1810765" data-element_type="column">
+        <div class="elementor-widget-wrap elementor-element-populated">
+                    <div class="elementor-element elementor-element-a9ad6ec elementor-widget elementor-widget-text-editor" data-id="a9ad6ec" data-element_type="widget" data-widget_type="text-editor.default">
+            <div class="elementor-widget-container">
+                        <p>customer service</p>						</div>
+            </div>
+                </div>
+    </div>
+                </div>
+    </section>
+                </div>
+    </div>
+            <div class="make-column-clickable-elementor elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-7b42a84" style="cursor: pointer;" data-column-clickable="https://www.somagen.com/events-calendar/" data-column-clickable-blank="_self" data-id="7b42a84" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+        <div class="elementor-widget-wrap elementor-element-populated">
+                    <section class="elementor-section elementor-inner-section elementor-element elementor-element-47e0412 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="47e0412" data-element_type="section">
+                    <div class="elementor-container elementor-column-gap-default">
+                <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-545a5ed" data-id="545a5ed" data-element_type="column">
+        <div class="elementor-widget-wrap">
+                        </div>
+    </div>
+            <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-6abe66a" data-id="6abe66a" data-element_type="column">
+        <div class="elementor-widget-wrap elementor-element-populated">
+                    <div class="elementor-element elementor-element-8ae5e71 elementor-widget elementor-widget-text-editor" data-id="8ae5e71" data-element_type="widget" data-widget_type="text-editor.default">
+            <div class="elementor-widget-container">
+                        <p>Events</p>						</div>
+            </div>
+                </div>
+    </div>
+                </div>
+    </section>
+                </div>
+    </div>
+            <div class="make-column-clickable-elementor elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-ee03fca" style="cursor: pointer;" data-column-clickable="https://www.somagen.com/contact/" data-column-clickable-blank="_self" data-id="ee03fca" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+        <div class="elementor-widget-wrap elementor-element-populated">
+                    <section class="elementor-section elementor-inner-section elementor-element elementor-element-198f025 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="198f025" data-element_type="section">
+                    <div class="elementor-container elementor-column-gap-default">
+                <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-7f62331" data-id="7f62331" data-element_type="column">
+        <div class="elementor-widget-wrap">
+                        </div>
+    </div>
+            <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-844629c" data-id="844629c" data-element_type="column">
+        <div class="elementor-widget-wrap elementor-element-populated">
+                    <div class="elementor-element elementor-element-c3daa67 elementor-widget elementor-widget-text-editor" data-id="c3daa67" data-element_type="widget" data-widget_type="text-editor.default">
+            <div class="elementor-widget-container">
+                        <p>Contact us</p>						</div>
+            </div>
+                </div>
+    </div>
+                </div>
+    </section>
+                </div>
+    </div>
+            <div class="make-column-clickable-elementor elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-89fe150" style="cursor: pointer;" data-column-clickable="https://www.somagen.com/somatek/" data-column-clickable-blank="_self" data-id="89fe150" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+        <div class="elementor-widget-wrap elementor-element-populated">
+                    <section class="elementor-section elementor-inner-section elementor-element elementor-element-8fc39ff elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="8fc39ff" data-element_type="section">
+                    <div class="elementor-container elementor-column-gap-default">
+                <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-eccfebd" data-id="eccfebd" data-element_type="column">
+        <div class="elementor-widget-wrap">
+                        </div>
+    </div>
+            <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-a19a674" data-id="a19a674" data-element_type="column">
+        <div class="elementor-widget-wrap elementor-element-populated">
+                    <div class="elementor-element elementor-element-952309b elementor-widget elementor-widget-text-editor" data-id="952309b" data-element_type="widget" data-widget_type="text-editor.default">
+            <div class="elementor-widget-container">
+                        <p>call for service</p>						</div>
+            </div>
+                </div>
+    </div>
+                </div>
+    </section>
+                </div>
+    </div>
+                </div>
+    </section>
+            <section class="elementor-section elementor-top-section elementor-element elementor-element-5602b84 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="5602b84" data-element_type="section">
+                    <div class="elementor-container elementor-column-gap-default">
+                <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-0db23cf" data-id="0db23cf" data-element_type="column">
+        <div class="elementor-widget-wrap elementor-element-populated">
+                    <div class="elementor-element elementor-element-bcf56bc elementor-widget elementor-widget-text-editor" data-id="bcf56bc" data-element_type="widget" data-widget_type="text-editor.default">
+            <div class="elementor-widget-container">
+                        <p><em>Explore</em></p>						</div>
+            </div>
+                </div>
+    </div>
+                </div>
+    </section>
+            <section class="elementor-section elementor-top-section elementor-element elementor-element-564b28a elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="564b28a" data-element_type="section">
+                    <div class="elementor-container elementor-column-gap-default">
+                <div class="make-column-clickable-elementor elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-3481961" style="cursor: pointer;" data-column-clickable="https://www.somagen.com/medtox-diagnostics/" data-column-clickable-blank="_self" data-id="3481961" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+        <div class="elementor-widget-wrap elementor-element-populated">
+                    <section class="elementor-section elementor-inner-section elementor-element elementor-element-feb9499 featured-product-image elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="feb9499" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                    <div class="elementor-container elementor-column-gap-default">
+                <div class="make-column-clickable-elementor elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-45a2c31" style="cursor: pointer;" data-column-clickable="https://www.somagen.com/polymedco/" data-column-clickable-blank="_self" data-id="45a2c31" data-element_type="column">
+        <div class="elementor-widget-wrap elementor-element-populated">
+                        </div>
+    </div>
+                </div>
+    </section>
+            <section class="elementor-section elementor-inner-section elementor-element elementor-element-8c6f726 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="8c6f726" data-element_type="section">
+                    <div class="elementor-container elementor-column-gap-default">
+                <div class="make-column-clickable-elementor elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-d4b54a3" style="cursor: pointer;" data-column-clickable="https://www.somagen.com/medtox-diagnostics/" data-column-clickable-blank="_self" data-id="d4b54a3" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+        <div class="elementor-widget-wrap elementor-element-populated">
+                    <div class="elementor-element elementor-element-03bfc4b elementor-widget elementor-widget-heading" data-id="03bfc4b" data-element_type="widget" data-widget_type="heading.default">
+            <div class="elementor-widget-container">
+        <h3 class="elementor-heading-title elementor-size-default">onsite drug testing with medtox</h3>		</div>
+            </div>
+                </div>
+    </div>
+            <div class="make-column-clickable-elementor elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-b65c50c" style="cursor: pointer;" data-column-clickable="https://www.somagen.com/medtox-diagnostics/" data-column-clickable-blank="_self" data-id="b65c50c" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+        <div class="elementor-widget-wrap elementor-element-populated">
+                    <div class="elementor-element elementor-element-57ec0bc elementor-widget elementor-widget-text-editor" data-id="57ec0bc" data-element_type="widget" data-widget_type="text-editor.default">
+            <div class="elementor-widget-container">
+                        View   &gt;						</div>
+            </div>
+                </div>
+    </div>
+                </div>
+    </section>
+                </div>
+    </div>
+            <div class="make-column-clickable-elementor elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-95609a3" style="cursor: pointer;" data-column-clickable="https://www.somagen.com/elia-technology/" data-column-clickable-blank="_self" data-id="95609a3" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+        <div class="elementor-widget-wrap elementor-element-populated">
+                    <section class="elementor-section elementor-inner-section elementor-element elementor-element-a1fc726 featured-product-image elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="a1fc726" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                    <div class="elementor-container elementor-column-gap-default">
+                <div class="make-column-clickable-elementor elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-52dfcac" style="cursor: pointer;" data-column-clickable="https://www.somagen.com/make-an-informed-choice/" data-column-clickable-blank="_self" data-id="52dfcac" data-element_type="column">
+        <div class="elementor-widget-wrap elementor-element-populated">
+                        </div>
+    </div>
+                </div>
+    </section>
+            <section class="elementor-section elementor-inner-section elementor-element elementor-element-01e9cfe elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="01e9cfe" data-element_type="section">
+                    <div class="elementor-container elementor-column-gap-default">
+                <div class="make-column-clickable-elementor elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-a4908fe" style="cursor: pointer;" data-column-clickable="https://www.somagen.com/elia-technology/" data-column-clickable-blank="_self" data-id="a4908fe" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+        <div class="elementor-widget-wrap elementor-element-populated">
+                    <div class="elementor-element elementor-element-3028092 elementor-widget elementor-widget-heading" data-id="3028092" data-element_type="widget" data-widget_type="heading.default">
+            <div class="elementor-widget-container">
+        <h3 class="elementor-heading-title elementor-size-default">autoimmunity - improve patient outcomes with EliA™ autoimmunity assays</h3>		</div>
+            </div>
+                </div>
+    </div>
+            <div class="make-column-clickable-elementor elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-77aeb5b" style="cursor: pointer;" data-column-clickable="https://www.somagen.com/elia-technology/" data-column-clickable-blank="_self" data-id="77aeb5b" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+        <div class="elementor-widget-wrap elementor-element-populated">
+                    <div class="elementor-element elementor-element-3a92b4f elementor-widget elementor-widget-text-editor" data-id="3a92b4f" data-element_type="widget" data-widget_type="text-editor.default">
+            <div class="elementor-widget-container">
+                        View   &gt;						</div>
+            </div>
+                </div>
+    </div>
+                </div>
+    </section>
+                </div>
+    </div>
+                </div>
+    </section>
+            <section class="elementor-section elementor-top-section elementor-element elementor-element-805ee8c elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="805ee8c" data-element_type="section">
+                    <div class="elementor-container elementor-column-gap-default">
+                <div class="make-column-clickable-elementor elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-3cd6479" style="cursor: pointer;" data-column-clickable="https://www.somagen.com/explore-the-autotec-a120/" data-column-clickable-blank="_self" data-id="3cd6479" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+        <div class="elementor-widget-wrap elementor-element-populated">
+                    <section class="elementor-section elementor-inner-section elementor-element elementor-element-e3c7e00 featured-product-image elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="e3c7e00" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                    <div class="elementor-container elementor-column-gap-default">
+                <div class="make-column-clickable-elementor elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-cb8a502" style="cursor: pointer;" data-column-clickable="https://www.somagen.com/explore-the-autotec-a120/" data-column-clickable-blank="_self" data-id="cb8a502" data-element_type="column">
+        <div class="elementor-widget-wrap elementor-element-populated">
+                        </div>
+    </div>
+                </div>
+    </section>
+            <section class="elementor-section elementor-inner-section elementor-element elementor-element-d72bdff elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="d72bdff" data-element_type="section">
+                    <div class="elementor-container elementor-column-gap-default">
+                <div class="make-column-clickable-elementor elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-872d753" style="cursor: pointer;" data-column-clickable="https://www.somagen.com/explore-the-autotec-a120/" data-column-clickable-blank="_self" data-id="872d753" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+        <div class="elementor-widget-wrap elementor-element-populated">
+                    <div class="elementor-element elementor-element-bb0a59d elementor-widget elementor-widget-heading" data-id="bb0a59d" data-element_type="widget" data-widget_type="heading.default">
+            <div class="elementor-widget-container">
+        <h3 class="elementor-heading-title elementor-size-default">automated tissue embedding
+</h3>		</div>
+            </div>
+                </div>
+    </div>
+            <div class="make-column-clickable-elementor elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-9848e14" style="cursor: pointer;" data-column-clickable="https://www.somagen.com/thermo-celiac-2023/" data-column-clickable-blank="_self" data-id="9848e14" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+        <div class="elementor-widget-wrap elementor-element-populated">
+                    <div class="elementor-element elementor-element-dffafbf elementor-widget elementor-widget-text-editor" data-id="dffafbf" data-element_type="widget" data-widget_type="text-editor.default">
+            <div class="elementor-widget-container">
+                        View &nbsp; &gt;						</div>
+            </div>
+                </div>
+    </div>
+                </div>
+    </section>
+                </div>
+    </div>
+            <div class="make-column-clickable-elementor elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-0b6512a" style="cursor: pointer;" data-column-clickable="https://www.somagen.com/meridian-immunocard-stat-strep-a/" data-column-clickable-blank="_self" data-id="0b6512a" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+        <div class="elementor-widget-wrap elementor-element-populated">
+                    <section class="elementor-section elementor-inner-section elementor-element elementor-element-176fa94 featured-product-image elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="176fa94" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                    <div class="elementor-container elementor-column-gap-default">
+                <div class="make-column-clickable-elementor elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-7a1b92c" style="cursor: pointer;" data-column-clickable="https://www.somagen.com/immunocap-specific-ige-tests/" data-column-clickable-blank="_self" data-id="7a1b92c" data-element_type="column">
+        <div class="elementor-widget-wrap elementor-element-populated">
+                        </div>
+    </div>
+                </div>
+    </section>
+            <section class="elementor-section elementor-inner-section elementor-element elementor-element-e62ecf1 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="e62ecf1" data-element_type="section">
+                    <div class="elementor-container elementor-column-gap-default">
+                <div class="make-column-clickable-elementor elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-2b42d16" style="cursor: pointer;" data-column-clickable="https://www.somagen.com/meridian-immunocard-stat-strep-a/" data-column-clickable-blank="_self" data-id="2b42d16" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+        <div class="elementor-widget-wrap elementor-element-populated">
+                    <div class="elementor-element elementor-element-7e0f536 elementor-widget elementor-widget-heading" data-id="7e0f536" data-element_type="widget" data-widget_type="heading.default">
+            <div class="elementor-widget-container">
+        <h3 class="elementor-heading-title elementor-size-default">group a strep - get definitive answers</h3>		</div>
+            </div>
+                </div>
+    </div>
+            <div class="make-column-clickable-elementor elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-8ed047b" style="cursor: pointer;" data-column-clickable="https://www.somagen.com/meridian-immunocard-stat-strep-a/" data-column-clickable-blank="_self" data-id="8ed047b" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+        <div class="elementor-widget-wrap elementor-element-populated">
+                    <div class="elementor-element elementor-element-28b347b elementor-widget elementor-widget-text-editor" data-id="28b347b" data-element_type="widget" data-widget_type="text-editor.default">
+            <div class="elementor-widget-container">
+                        View &nbsp; &gt;						</div>
+            </div>
+                </div>
+    </div>
+                </div>
+    </section>
+                </div>
+    </div>
+                </div>
+    </section>
+            <section class="elementor-section elementor-top-section elementor-element elementor-element-9bb9ade elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="9bb9ade" data-element_type="section">
+                    <div class="elementor-container elementor-column-gap-default">
+                <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-19375e3" data-id="19375e3" data-element_type="column">
+        <div class="elementor-widget-wrap elementor-element-populated">
+                    <div class="elementor-element elementor-element-791e85f elementor-widget elementor-widget-text-editor" data-id="791e85f" data-element_type="widget" data-widget_type="text-editor.default">
+            <div class="elementor-widget-container">
+                        <p><em>The Somagen Blog</em></p>						</div>
+            </div>
+                </div>
+    </div>
+                </div>
+    </section>
+            <section class="elementor-section elementor-top-section elementor-element elementor-element-bc50a3c elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="bc50a3c" data-element_type="section">
+                    <div class="elementor-container elementor-column-gap-default">
+                <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-2188129" data-id="2188129" data-element_type="column">
+        <div class="elementor-widget-wrap elementor-element-populated">
+                    <div class="elementor-element elementor-element-e5b3ce8 elementor-posts--thumbnail-top elementor-grid-3 elementor-grid-tablet-2 elementor-grid-mobile-1 elementor-widget elementor-widget-posts" data-id="e5b3ce8" data-element_type="widget" data-settings="{&quot;custom_columns&quot;:&quot;3&quot;,&quot;custom_columns_tablet&quot;:&quot;2&quot;,&quot;custom_columns_mobile&quot;:&quot;1&quot;,&quot;custom_row_gap&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:35,&quot;sizes&quot;:[]},&quot;custom_row_gap_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;custom_row_gap_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}" data-widget_type="posts.custom">
+            <div class="elementor-widget-container">
+              <div class="ecs-posts elementor-posts-container elementor-posts   elementor-grid elementor-posts--skin-custom" data-settings="{&quot;current_page&quot;:1,&quot;max_num_pages&quot;:4,&quot;load_method&quot;:&quot;&quot;,&quot;widget_id&quot;:&quot;e5b3ce8&quot;,&quot;post_id&quot;:343,&quot;theme_id&quot;:343,&quot;change_url&quot;:false,&quot;reinit_js&quot;:false}">
+          <article id="post-42926" class="elementor-post elementor-grid-item ecs-post-loop post-42926 post type-post status-publish format-standard has-post-thumbnail hentry category-general">
+    <style id="elementor-post-dynamic-1084">.elementor-1084 .elementor-element.elementor-element-c108268:not(.elementor-motion-effects-element-type-background), .elementor-1084 .elementor-element.elementor-element-c108268 > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image:url("https://www.somagen.com/wp-content/uploads/2024/06/iStock-1363355117-scaled.jpg");}</style>		<div data-elementor-type="loop" data-elementor-id="1084" class="elementor elementor-1084 post-42926 post type-post status-publish format-standard has-post-thumbnail hentry category-general" data-elementor-post-type="elementor_library">
+                <section class="elementor-section elementor-top-section elementor-element elementor-element-c74d2e0 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="c74d2e0" data-element_type="section">
+                    <div class="elementor-container elementor-column-gap-default">
+                <div class="make-column-clickable-elementor elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-0f40253" style="cursor: pointer;" data-column-clickable="https://www.somagen.com/general/the-importance-of-cell-stabilization-in-dna-testing/" data-column-clickable-blank="_self" data-id="0f40253" data-element_type="column">
+        <div class="elementor-widget-wrap elementor-element-populated">
+            <style>#post-42926 .elementor-1084 .elementor-element.elementor-element-c108268:not(.elementor-motion-effects-element-type-background), #post-42926 .elementor-1084 .elementor-element.elementor-element-c108268 > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image: url("https://www.somagen.com/wp-content/uploads/2024/06/iStock-1363355117-scaled.jpg");}</style>		<section class="elementor-section elementor-inner-section elementor-element elementor-element-c108268 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="c108268" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                    <div class="elementor-container elementor-column-gap-default">
+                <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-2e7e6af" data-id="2e7e6af" data-element_type="column">
+        <div class="elementor-widget-wrap">
+                        </div>
+    </div>
+                </div>
+    </section>
+            <section class="elementor-section elementor-inner-section elementor-element elementor-element-23be701 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="23be701" data-element_type="section">
+                    <div class="elementor-container elementor-column-gap-default">
+                <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-8c30353" data-id="8c30353" data-element_type="column">
+        <div class="elementor-widget-wrap elementor-element-populated">
+                    <div class="elementor-element elementor-element-70839d7 elementor-widget elementor-widget-post-info" data-id="70839d7" data-element_type="widget" data-widget_type="post-info.default">
+            <div class="elementor-widget-container">
+                <ul class="elementor-inline-items elementor-icon-list-items elementor-post-info">
+                            <li class="elementor-icon-list-item elementor-repeater-item-58fbbf4 elementor-inline-item" itemprop="datePublished">
+                    <a href="https://www.somagen.com/2024/06/24/">
+                                        <span class="elementor-icon-list-icon">
+                            <i aria-hidden="true" class="fas fa-calendar"></i>							</span>
+                                <span class="elementor-icon-list-text elementor-post-info__item elementor-post-info__item--type-date">
+                                    <time>June 24, 2024</time>					</span>
+                                </a>
+            </li>
+            </ul>
+            </div>
+            </div>
+            <div class="elementor-element elementor-element-e1eb71c elementor-widget elementor-widget-theme-post-title elementor-page-title elementor-widget-heading" data-id="e1eb71c" data-element_type="widget" data-widget_type="theme-post-title.default">
+            <div class="elementor-widget-container">
+        <h2 class="elementor-heading-title elementor-size-default">The Importance of Cell Stabilization in DNA testing.</h2>		</div>
+            </div>
+            <div class="elementor-element elementor-element-b7a9ee2 elementor-widget elementor-widget-text-editor" data-id="b7a9ee2" data-element_type="widget" data-widget_type="text-editor.default">
+            <div class="elementor-widget-container">
+                        Introduction When increased cell free DNA (cfDNA) is found in a stable blood sample, it can be a marker for various conditions, including cancer.						</div>
+            </div>
+            <div class="elementor-element elementor-element-ecfbd1c keep-reading elementor-widget elementor-widget-text-editor" data-id="ecfbd1c" data-element_type="widget" data-widget_type="text-editor.default">
+            <div class="elementor-widget-container">
+                        <p>Keep Reading  &gt;</p>						</div>
+            </div>
+                </div>
+    </div>
+                </div>
+    </section>
+                </div>
+    </div>
+                </div>
+    </section>
+            </div>
+            </article>
+            <article id="post-42520" class="elementor-post elementor-grid-item ecs-post-loop post-42520 post type-post status-publish format-standard has-post-thumbnail hentry category-general">
+            <div data-elementor-type="loop" data-elementor-id="1084" class="elementor elementor-1084 post-42520 post type-post status-publish format-standard has-post-thumbnail hentry category-general" data-elementor-post-type="elementor_library">
+                <section class="elementor-section elementor-top-section elementor-element elementor-element-c74d2e0 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="c74d2e0" data-element_type="section">
+                    <div class="elementor-container elementor-column-gap-default">
+                <div class="make-column-clickable-elementor elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-0f40253" style="cursor: pointer;" data-column-clickable="https://www.somagen.com/general/group-a-strep-understanding-a-common-pathogen/" data-column-clickable-blank="_self" data-id="0f40253" data-element_type="column">
+        <div class="elementor-widget-wrap elementor-element-populated">
+            <style>#post-42520 .elementor-1084 .elementor-element.elementor-element-c108268:not(.elementor-motion-effects-element-type-background), #post-42520 .elementor-1084 .elementor-element.elementor-element-c108268 > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image: url("https://www.somagen.com/wp-content/uploads/2024/01/iStock-587952472-scaled.jpg");}</style>		<section class="elementor-section elementor-inner-section elementor-element elementor-element-c108268 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="c108268" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                    <div class="elementor-container elementor-column-gap-default">
+                <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-2e7e6af" data-id="2e7e6af" data-element_type="column">
+        <div class="elementor-widget-wrap">
+                        </div>
+    </div>
+                </div>
+    </section>
+            <section class="elementor-section elementor-inner-section elementor-element elementor-element-23be701 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="23be701" data-element_type="section">
+                    <div class="elementor-container elementor-column-gap-default">
+                <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-8c30353" data-id="8c30353" data-element_type="column">
+        <div class="elementor-widget-wrap elementor-element-populated">
+                    <div class="elementor-element elementor-element-70839d7 elementor-widget elementor-widget-post-info" data-id="70839d7" data-element_type="widget" data-widget_type="post-info.default">
+            <div class="elementor-widget-container">
+                <ul class="elementor-inline-items elementor-icon-list-items elementor-post-info">
+                            <li class="elementor-icon-list-item elementor-repeater-item-58fbbf4 elementor-inline-item" itemprop="datePublished">
+                    <a href="https://www.somagen.com/2024/01/29/">
+                                        <span class="elementor-icon-list-icon">
+                            <i aria-hidden="true" class="fas fa-calendar"></i>							</span>
+                                <span class="elementor-icon-list-text elementor-post-info__item elementor-post-info__item--type-date">
+                                    <time>January 29, 2024</time>					</span>
+                                </a>
+            </li>
+            </ul>
+            </div>
+            </div>
+            <div class="elementor-element elementor-element-e1eb71c elementor-widget elementor-widget-theme-post-title elementor-page-title elementor-widget-heading" data-id="e1eb71c" data-element_type="widget" data-widget_type="theme-post-title.default">
+            <div class="elementor-widget-container">
+        <h2 class="elementor-heading-title elementor-size-default">Group A Strep, Understanding a Common Pathogen</h2>		</div>
+            </div>
+            <div class="elementor-element elementor-element-b7a9ee2 elementor-widget elementor-widget-text-editor" data-id="b7a9ee2" data-element_type="widget" data-widget_type="text-editor.default">
+            <div class="elementor-widget-container">
+                        In the vast microbial world, where countless organisms fight for domination, some stand out for their ability to reshape human health. Group A Streptococcus						</div>
+            </div>
+            <div class="elementor-element elementor-element-ecfbd1c keep-reading elementor-widget elementor-widget-text-editor" data-id="ecfbd1c" data-element_type="widget" data-widget_type="text-editor.default">
+            <div class="elementor-widget-container">
+                        <p>Keep Reading  &gt;</p>						</div>
+            </div>
+                </div>
+    </div>
+                </div>
+    </section>
+                </div>
+    </div>
+                </div>
+    </section>
+            </div>
+            </article>
+            <article id="post-42280" class="elementor-post elementor-grid-item ecs-post-loop post-42280 post type-post status-publish format-standard has-post-thumbnail hentry category-somagen-blog tag-esg tag-givingback tag-makeadifference tag-payitforward tag-teambuilding">
+            <div data-elementor-type="loop" data-elementor-id="1084" class="elementor elementor-1084 post-42280 post type-post status-publish format-standard has-post-thumbnail hentry category-somagen-blog tag-esg tag-givingback tag-makeadifference tag-payitforward tag-teambuilding" data-elementor-post-type="elementor_library">
+                <section class="elementor-section elementor-top-section elementor-element elementor-element-c74d2e0 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="c74d2e0" data-element_type="section">
+                    <div class="elementor-container elementor-column-gap-default">
+                <div class="make-column-clickable-elementor elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-0f40253" style="cursor: pointer;" data-column-clickable="https://www.somagen.com/somagen-blog/happy-new-year/" data-column-clickable-blank="_self" data-id="0f40253" data-element_type="column">
+        <div class="elementor-widget-wrap elementor-element-populated">
+            <style>#post-42280 .elementor-1084 .elementor-element.elementor-element-c108268:not(.elementor-motion-effects-element-type-background), #post-42280 .elementor-1084 .elementor-element.elementor-element-c108268 > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image: url("https://www.somagen.com/wp-content/uploads/2024/01/AdobeStock_301382029-scaled.jpeg");}</style>		<section class="elementor-section elementor-inner-section elementor-element elementor-element-c108268 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="c108268" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                    <div class="elementor-container elementor-column-gap-default">
+                <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-2e7e6af" data-id="2e7e6af" data-element_type="column">
+        <div class="elementor-widget-wrap">
+                        </div>
+    </div>
+                </div>
+    </section>
+            <section class="elementor-section elementor-inner-section elementor-element elementor-element-23be701 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="23be701" data-element_type="section">
+                    <div class="elementor-container elementor-column-gap-default">
+                <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-8c30353" data-id="8c30353" data-element_type="column">
+        <div class="elementor-widget-wrap elementor-element-populated">
+                    <div class="elementor-element elementor-element-70839d7 elementor-widget elementor-widget-post-info" data-id="70839d7" data-element_type="widget" data-widget_type="post-info.default">
+            <div class="elementor-widget-container">
+                <ul class="elementor-inline-items elementor-icon-list-items elementor-post-info">
+                            <li class="elementor-icon-list-item elementor-repeater-item-58fbbf4 elementor-inline-item" itemprop="datePublished">
+                    <a href="https://www.somagen.com/2024/01/15/">
+                                        <span class="elementor-icon-list-icon">
+                            <i aria-hidden="true" class="fas fa-calendar"></i>							</span>
+                                <span class="elementor-icon-list-text elementor-post-info__item elementor-post-info__item--type-date">
+                                    <time>January 15, 2024</time>					</span>
+                                </a>
+            </li>
+            </ul>
+            </div>
+            </div>
+            <div class="elementor-element elementor-element-e1eb71c elementor-widget elementor-widget-theme-post-title elementor-page-title elementor-widget-heading" data-id="e1eb71c" data-element_type="widget" data-widget_type="theme-post-title.default">
+            <div class="elementor-widget-container">
+        <h2 class="elementor-heading-title elementor-size-default">Happy New Year!</h2>		</div>
+            </div>
+            <div class="elementor-element elementor-element-b7a9ee2 elementor-widget elementor-widget-text-editor" data-id="b7a9ee2" data-element_type="widget" data-widget_type="text-editor.default">
+            <div class="elementor-widget-container">
+                        At this time of reflection and forward planning, we have a lot to be excited about. While we are passionate about all our business						</div>
+            </div>
+            <div class="elementor-element elementor-element-ecfbd1c keep-reading elementor-widget elementor-widget-text-editor" data-id="ecfbd1c" data-element_type="widget" data-widget_type="text-editor.default">
+            <div class="elementor-widget-container">
+                        <p>Keep Reading  &gt;</p>						</div>
+            </div>
+                </div>
+    </div>
+                </div>
+    </section>
+                </div>
+    </div>
+                </div>
+    </section>
+            </div>
+            </article>
+            </div>
+            </div>
+            </div>
+                </div>
+    </div>
+                </div>
+    </section>
+            <section class="elementor-section elementor-top-section elementor-element elementor-element-d3cfa84 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="d3cfa84" data-element_type="section">
+                    <div class="elementor-container elementor-column-gap-default">
+                <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-93dea2f" data-id="93dea2f" data-element_type="column">
+        <div class="elementor-widget-wrap elementor-element-populated">
+                    <div class="elementor-element elementor-element-572b031 elementor-widget elementor-widget-text-editor" data-id="572b031" data-element_type="widget" data-widget_type="text-editor.default">
+            <div class="elementor-widget-container">
+                        <p><a href="https://www.somagen.com/blog/">Browse Archive  &gt;</a></p>						</div>
+            </div>
+                </div>
+    </div>
+                </div>
+    </section>
+            <section class="elementor-section elementor-top-section elementor-element elementor-element-bb65c13 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="bb65c13" data-element_type="section">
+                    <div class="elementor-container elementor-column-gap-default">
+                <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-195861d" data-id="195861d" data-element_type="column">
+        <div class="elementor-widget-wrap">
+                        </div>
+    </div>
+                </div>
+    </section>
+            </div>
+            <div data-elementor-type="footer" data-elementor-id="674" class="elementor elementor-674 elementor-location-footer" data-elementor-post-type="elementor_library">
+                <section class="elementor-section elementor-top-section elementor-element elementor-element-e1787f9 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="e1787f9" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                        <div class="elementor-background-overlay"></div>
+                        <div class="elementor-container elementor-column-gap-default">
+                <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-3436196" data-id="3436196" data-element_type="column">
+        <div class="elementor-widget-wrap">
+                        </div>
+    </div>
+            <div class="make-column-clickable-elementor elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-e2f8226" style="cursor: pointer;" data-column-clickable="https://www.somagen.com/contact/" data-column-clickable-blank="_self" data-id="e2f8226" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+        <div class="elementor-widget-wrap elementor-element-populated">
+                    <div class="elementor-element elementor-element-fbba03c elementor-widget elementor-widget-text-editor" data-id="fbba03c" data-element_type="widget" data-widget_type="text-editor.default">
+            <div class="elementor-widget-container">
+                        <p>Questions about our products or services?</p>						</div>
+            </div>
+            <div class="elementor-element elementor-element-a4b6a4b elementor-widget elementor-widget-text-editor" data-id="a4b6a4b" data-element_type="widget" data-widget_type="text-editor.default">
+            <div class="elementor-widget-container">
+                        <p>Get in touch<br />with us  <i class="fas fa-angle-right"></i></p>						</div>
+            </div>
+                </div>
+    </div>
+            <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-135f2d9" data-id="135f2d9" data-element_type="column">
+        <div class="elementor-widget-wrap">
+                        </div>
+    </div>
+                </div>
+    </section>
+            <section class="elementor-section elementor-top-section elementor-element elementor-element-41b1c4c elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="41b1c4c" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                    <div class="elementor-container elementor-column-gap-default">
+                <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-95ba9ec" data-id="95ba9ec" data-element_type="column">
+        <div class="elementor-widget-wrap">
+                        </div>
+    </div>
+            <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-ad0027d" data-id="ad0027d" data-element_type="column" id="us">
+        <div class="elementor-widget-wrap elementor-element-populated">
+                    <div class="elementor-element elementor-element-62b3966 elementor-widget elementor-widget-text-editor" data-id="62b3966" data-element_type="widget" data-widget_type="text-editor.default">
+            <div class="elementor-widget-container">
+                        <p>Tel <a href="tel: 780 702 9500">780 702 9500</a><br />TF 1 <a href="tel: 800 661 9993">800 661 9993</a><br />Fax <a href="fax: 780 438 6595">780 438 6595</a></p><p>9220 25 Avenue NW<br />Edmonton, Alberta  T6N 1E1</p>						</div>
+            </div>
+                </div>
+    </div>
+            <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-46fd1f6" data-id="46fd1f6" data-element_type="column">
+        <div class="elementor-widget-wrap">
+                        </div>
+    </div>
+            <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-9109367" data-id="9109367" data-element_type="column">
+        <div class="elementor-widget-wrap">
+                        </div>
+    </div>
+                </div>
+    </section>
+            <section class="elementor-section elementor-top-section elementor-element elementor-element-5014879 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="5014879" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                    <div class="elementor-container elementor-column-gap-default">
+                <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-b768c58" data-id="b768c58" data-element_type="column">
+        <div class="elementor-widget-wrap elementor-element-populated">
+                    <div class="elementor-element elementor-element-c5c1141 elementor-widget elementor-widget-text-editor" data-id="c5c1141" data-element_type="widget" data-widget_type="text-editor.default">
+            <div class="elementor-widget-container">
+                        <p><a href="https://www.somagen.com/terms-of-use/">Terms of Use</a> <span class="green"> | </span> <a href="https://www.somagen.com/privacy-policy/">Privacy Policy</a> <span class="green"> | </span> <a href="https://www.somagen.com/cookies/">Cookies</a></p>						</div>
+            </div>
+                </div>
+    </div>
+            <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-623687c" data-id="623687c" data-element_type="column">
+        <div class="elementor-widget-wrap elementor-element-populated">
+                    <div class="elementor-element elementor-element-58a11a7 elementor-widget elementor-widget-text-editor" data-id="58a11a7" data-element_type="widget" data-widget_type="text-editor.default">
+            <div class="elementor-widget-container">
+                        <p>© 2021 Somagen Diagnostics. All rights reserved.</p>						</div>
+            </div>
+                </div>
+    </div>
+            <div class="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-48e0d22" data-id="48e0d22" data-element_type="column">
+        <div class="elementor-widget-wrap elementor-element-populated">
+                    <div class="elementor-element elementor-element-cdae106 elementor-widget elementor-widget-text-editor" data-id="cdae106" data-element_type="widget" data-widget_type="text-editor.default">
+            <div class="elementor-widget-container">
+                        Site by <a href="https://www.bubbleup.ca/" target="_blank" rel="no-follow">BubbleUP</a>  <img class="alignnone size-full wp-image-679" src="https://www.somagen.com/wp-content/uploads/2020/12/bubbleup-solo-mark-white.png" alt="" width="18" height="18" />						</div>
+            </div>
+                </div>
+    </div>
+                </div>
+    </section>
+            </div>
+    
+        <span id="scrollup-master" class="scrollup-button" title="Scroll Back to Top"
+              data-distance="300"
+        >
+                        <svg xmlns="http://www.w3.org/2000/svg" class="scrollup-svg-icon" width="32" height="32"
+                 viewBox="0 0 18 28"><path
+                        d="M16.8 20.5c0 0.1-0.1 0.3-0.2 0.4l-0.8 0.8c-0.1 0.1-0.2 0.2-0.4 0.2-0.1 0-0.3-0.1-0.4-0.2l-6.1-6.1-6.1 6.1c-0.1 0.1-0.2 0.2-0.4 0.2s-0.3-0.1-0.4-0.2l-0.8-0.8c-0.1-0.1-0.2-0.2-0.2-0.4s0.1-0.3 0.2-0.4l7.3-7.3c0.1-0.1 0.2-0.2 0.4-0.2s0.3 0.1 0.4 0.2l7.3 7.3c0.1 0.1 0.2 0.2 0.2 0.4zM16.8 14.5c0 0.1-0.1 0.3-0.2 0.4l-0.8 0.8c-0.1 0.1-0.2 0.2-0.4 0.2-0.1 0-0.3-0.1-0.4-0.2l-6.1-6.1-6.1 6.1c-0.1 0.1-0.2 0.2-0.4 0.2s-0.3-0.1-0.4-0.2l-0.8-0.8c-0.1-0.1-0.2-0.2-0.2-0.4s0.1-0.3 0.2-0.4l7.3-7.3c0.1-0.1 0.2-0.2 0.4-0.2s0.3 0.1 0.4 0.2l7.3 7.3c0.1 0.1 0.2 0.2 0.2 0.4z"></path></svg>
+                    </span>
+                <script>
+    ( function ( body ) {
+        'use strict';
+        body.className = body.className.replace( /\btribe-no-js\b/, 'tribe-js' );
+    } )( document.body );
+    </script>
+            <div data-elementor-type="popup" data-elementor-id="464" class="elementor elementor-464 elementor-location-popup" data-elementor-settings="{&quot;entrance_animation&quot;:&quot;fadeIn&quot;,&quot;exit_animation&quot;:&quot;none&quot;,&quot;entrance_animation_duration&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:0,&quot;sizes&quot;:[]},&quot;open_selector&quot;:&quot;#visitor-switcher&quot;,&quot;a11y_navigation&quot;:&quot;yes&quot;,&quot;triggers&quot;:{&quot;page_load&quot;:&quot;yes&quot;,&quot;page_load_delay&quot;:1},&quot;timing&quot;:{&quot;times_times&quot;:1,&quot;times&quot;:&quot;yes&quot;}}" data-elementor-post-type="elementor_library">
+                <section class="elementor-section elementor-top-section elementor-element elementor-element-b433fb2 elementor-section-full_width elementor-section-height-full elementor-section-height-default elementor-section-items-middle" data-id="b433fb2" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                    <div class="elementor-container elementor-column-gap-default">
+                <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-2949c20" data-id="2949c20" data-element_type="column">
+        <div class="elementor-widget-wrap elementor-element-populated">
+                    <div class="elementor-element elementor-element-c149194 elementor-widget elementor-widget-text-editor" data-id="c149194" data-element_type="widget" data-widget_type="text-editor.default">
+            <div class="elementor-widget-container">
+                        <p>Welcome To</p>						</div>
+            </div>
+            <div class="elementor-element elementor-element-c4bb0cd elementor-widget elementor-widget-image" data-id="c4bb0cd" data-element_type="widget" data-widget_type="image.default">
+            <div class="elementor-widget-container">
+                                                <img width="386" height="82" src="https://www.somagen.com/wp-content/uploads/2020/12/somagen-diagnostics-logo-white.png" class="attachment-large size-large wp-image-476" alt="" />													</div>
+            </div>
+            <div class="elementor-element elementor-element-83f7474 elementor-widget elementor-widget-text-editor" data-id="83f7474" data-element_type="widget" data-widget_type="text-editor.default">
+            <div class="elementor-widget-container">
+                        <p>I Am A</p>						</div>
+            </div>
+            <section class="elementor-section elementor-inner-section elementor-element elementor-element-164c9df elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="164c9df" data-element_type="section">
+                    <div class="elementor-container elementor-column-gap-default">
+                <div class="make-column-clickable-elementor elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-e9b7f2f" style="cursor: pointer;" data-column-clickable="#" data-column-clickable-blank="_self" data-id="e9b7f2f" data-element_type="column">
+        <div class="elementor-widget-wrap elementor-element-populated">
+                    <div class="elementor-element elementor-element-baaf39f close-popup elementor-widget elementor-widget-text-editor" data-id="baaf39f" data-element_type="widget" id="healthcare-user" data-widget_type="text-editor.default">
+            <div class="elementor-widget-container">
+                        <p>Healthcare<br />Provider</p>						</div>
+            </div>
+                </div>
+    </div>
+            <div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-91c3055" data-id="91c3055" data-element_type="column">
+        <div class="elementor-widget-wrap elementor-element-populated">
+                    <div class="elementor-element elementor-element-e961e57 elementor-widget elementor-widget-image" data-id="e961e57" data-element_type="widget" data-widget_type="image.default">
+            <div class="elementor-widget-container">
+                                                <img width="1" height="71" src="https://www.somagen.com/wp-content/uploads/2020/12/vertical-white-line.jpg" class="attachment-large size-large wp-image-479" alt="" />													</div>
+            </div>
+                </div>
+    </div>
+            <div class="make-column-clickable-elementor elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-d30d545" style="cursor: pointer;" data-column-clickable="#" data-column-clickable-blank="_self" data-id="d30d545" data-element_type="column">
+        <div class="elementor-widget-wrap elementor-element-populated">
+                    <div class="elementor-element elementor-element-a41d16e close-popup elementor-widget elementor-widget-text-editor" data-id="a41d16e" data-element_type="widget" id="patient-user" data-widget_type="text-editor.default">
+            <div class="elementor-widget-container">
+                        <p>Patient</p>						</div>
+            </div>
+                </div>
+    </div>
+                </div>
+    </section>
