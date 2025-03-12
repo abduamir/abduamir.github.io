@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results - Phoenix Airmid Biomedical</title>
+    <link rel="stylesheet" href="/aboutstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="/index.html"><img src="/images/PAB Logo Old.png" alt="Phoenix Airmid Logo"></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#" class="dropdown-trigger" data-menu="company-menu">Company</a></li>
+                <li><a href="#" class="dropdown-trigger" data-menu="products-menu">Products & Solutions</a></li>
+                <li><a href="#" class="dropdown-trigger" data-menu="resources-menu">Resources</a></li>
+                <li><a href="#" class="dropdown-trigger" data-menu="support-menu">Support</a></li>
+                <li><a href="#" class="dropdown-trigger" data-menu="news-menu">News & Events</a></li>
+            </ul>
+            <div class="search-container">
+                <input type="text" class="search-input" id="search-input" placeholder="Search...">
+                <button class="search-btn">🔍</button>
+            </div>
+            <div class="search-results-container"></div>
+
+            <div class="dropdown-menu" id="company-menu">
+                <a href="/pages/about.html">About Us</a>
+                <a href="/pages/what_we_do.html">What We Do</a>
+                <a href="/pages/values.html">Our Values</a>
+                <a href="/pages/our_people.html">Our People</a>
+                <a href="/pages/responsibility.html">Our Corporate Responsibility</a>
+                <a href="/pages/partners.html">Our Partners</a>
+            </div>
+
+            <div class="dropdown-menu" id="products-menu">
+                <div class="dropdown-content">
+                    <div class="product-categories">
+                        <h3>Product Categories</h3>
+                        <ul id="category-list">
+                            <li><a href="#" class="category-trigger" data-category="clinical-chemistry">Clinical Chemistry</a></li>
+                            <li><a href="#" class="category-trigger" data-category="hematology">Hematology</a></li>
+                            <li><a href="#" class="category-trigger" data-category="microbiology">Microbiology</a></li>
+                            <li><a href="#" class="category-trigger" data-category="molecular">Molecular</a></li>
+                            <li><a href="#" class="category-trigger" data-category="pathology">Pathology</a></li>
+                            <li><a href="#" class="category-trigger" data-category="transfusion-medicine">Transfusion Medicine</a></li>
+                            <li><a href="#" class="category-trigger" data-category="disinfection-systems">Disinfection Systems</a></li>
+                        </ul>
+                    </div>
+                    <div class="products">
+                        <h3>Products</h3>
+                        <ul id="products-list" class="scrollable-list"></ul>
+                    </div>
+                    <div class="solutions">
+                        <h3>Solutions</h3>
+                        <ul id="solutions-list" class="scrollable-list"></ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="dropdown-menu" id="resources-menu">
+                <div class="dropdown-category">
+                    <span>Orders</span>
+                    <ul>
+                        <li><a href="/pages/ordering.html">Ordering</a></li>
+                        <li><a href="/pages/logistics.html">Logistics</a></li>
+                    </ul>
+                </div>
+                <div class="dropdown-category">
+                    <span>Inquiries</span>
+                    <ul>
+                        <li><a href="/pages/account-executives.html">Account Executives</a></li>
+                        <li><a href="/pages/product-specialists.html">Product Specialists</a></li>
+                        <li><a href="/pages/business-development.html">Business Development</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="dropdown-menu" id="support-menu">
+                <a href="/pages/contact.html">Contact Us</a>
+                <a href="/pages/Instrument-Service-and-Application-Specialists.html">Instrument Service and Application Specialists</a>
+            </div>
+
+            <div class="dropdown-menu" id="news-menu">
+                <a href="/pages/news.html">Latest News</a>
+                <a href="/pages/events.html">Upcoming Events</a>
+            </div>
+        </nav>
+    </header>
+    <section class = "vertical-bar">
+        <div class="right-sidebar">
+            <div class="right-sidebar-content">
+                <a href="/pages/customer-service.html">
+                    <img src="/images/icons8-headset-50.png" alt="Customer Service">
+                    <span>Customer Service</span>
+                </a>
+                <a href="/pages/events.html">
+                    <img src="/images/icons8-calendar-100.png" alt="Events">
+                    <span>Events</span>
+                </a>
+                <a href="/pages/contact.html">
+                    <img src="/images/icons8-phone-100.png" alt="Contact Us">
+                    <span>Contact Us</span>
+                </a>
+                <a href="/pages/ordering.html">
+                    <img src="/images/icons8-megaphone-100.png" alt="Call for Service">
+                    <span>Call for Service</span>
+                </a>
+            </div>
+        </div>
+        
+    </section>
+    <!-- Banner Graphic Placeholder -->
+    <section class="banner">
+        <img src="aboutus.jpg" alt="About Us Banner">
+    </section>
+
+    <main class="about-container">
+        <!-- Left Sidebar Navigation -->
+        <aside class="left-sidebar">
+            <h3>Company</h3>
+            <ul>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="what_we_do.html">What We Do</a></li>
+                <li><a href="values.html">Our Values</a></li>
+                <li><a href="our_people.html">Our People</a></li>
+                <li><a href="responsibility.html">Our Corporate Responsibility</a></li>
+                <li><a href="partners.html">Our Partners</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <section class="content">
+            <h1>Our People</h1>
+            <p>At Phoenix, we are committed to delivering value to our communities, colleagues, customers, and stakeholders. We prioritize safety, well-being, and work-life balance while fostering an inclusive environment that promotes diversity, equity, and professional growth.</p>
+            <p>We ensure equitable opportunities for continuing education and career development, creating a culture that respects and values individual differences.</p>
+            <h2>Professional Growth and Education</h2>
+            <p>At Phoenix, our managers play a key role in supporting team members' learning and development by setting clear goals, providing regular feedback, and creating opportunities to acquire new skills.</p>
+            <p>We encourage ongoing training and professional development, actively supporting employees in their pursuit of continuous learning to help them achieve their career aspirations.</p>
+            <h2>Work-Life Balance</h2>
+            <p>We believe in fostering a corporate culture that prioritizes work-life balance. A healthy balance between work and personal life enhances professional satisfaction, boosts productivity, and strengthens morale while promoting overall well-being.</p>
+            <p>Phoenix is dedicated to providing relevant, impactful programs that support our employees in maintaining this balance.</p>
+            <h2>Staff Safety and Well-Being</h2>
+            <p>Phoenix places a strong emphasis on the physical and mental well-being of our employees.</p>
+            <p>We are fully committed to maintaining safe, clean, and healthy working conditions, continuously improving our Health & Safety standards</p>
+            <h2>Business Culture</h2>
+            <p>Our business culture is built on a shared commitment to advancing Canadian healthcare. At Phoenix, we embrace continuous improvement, personal accountability, and mutual respect. We demonstrate our dedication to innovation by staying agile and responsive to the evolving needs of our customers.</p>
+            <p>Accountability is reflected in our expertise and commitment to delivering the highest standards of service and support. Above all, we uphold respect in every interaction—with colleagues, customers, and partners alike.</p>
+            <p><strong>For more information about Phoenix Airmid Biomedical, please contact us at <a href="tel:18667180515">1 866 718-0515</a> or <a href="mailto:info@phoenixairmid.com">info@phoenixairmid.com</a>.</strong></p>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <div class="footer-map-container">
+
+        </div>
+        <div class="footer-info">
+            <p class="footer-left">1166 South Service Rd. W, Oakville, ON L6L 5T7</p>
+            <p class="footer-center">
+                Phone: 905-469-4253 &nbsp;|&nbsp; 
+                Fax: 905-825-9795 &nbsp;|&nbsp; 
+                Toll Free: 866-718-0515
+            </p>
+            <p class="footer-right">
+                Email: <a href="mailto:info@phoenixairmid.com">info@phoenixairmid.com</a>
+            </p>
+        </div>
+    </footer>    
+
+    <script src="/script.js"></script>
+</body>
+</html>

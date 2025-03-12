@@ -1,0 +1,603 @@
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow', sans-serif; /* Updated font */
+}
+
+body {
+    font-family: 'Barlow', sans-serif;
+}
+
+header {
+    background: #54A9C7;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+}
+
+/* NAVIGATION */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+/* Dropdown Menu Styling */
+.dropdown-menu {
+    position: fixed;
+    top: 83px;
+    left: 0;
+    width: 100vw;
+    height: calc(100vh - 60px);
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    z-index: 999; /* Already high enough */
+}
+
+.dropdown-menu.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Dropdown Category Styling */
+.dropdown-category {
+    margin-bottom: 20px; /* Space between categories */
+    text-align: center;
+}
+
+.dropdown-category span {
+    font-size: 1.2rem; /* Larger font for category titles */
+    font-weight: 600; /* Bold for emphasis */
+    color: #333; /* Dark grey for non-clickable text */
+    display: block; /* Ensure it's on its own line */
+    margin-bottom: 10px; /* Space between category title and subcategories */
+}
+
+.dropdown-category ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-category ul li {
+    margin: 5px 0; /* Space between subcategory items */
+}
+
+.dropdown-category ul li a {
+    font-size: 1rem; /* Smaller font for subcategories */
+    color: #666; /* Grey text color */
+    text-decoration: none;
+    padding: 10px 20px; /* Padding for clickable area */
+    display: block; /* Make the entire area clickable */
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.dropdown-category ul li a:hover {
+    background: rgba(0, 0, 0, 0.1); /* Light grey background on hover */
+    color: #333; /* Darken text on hover */
+}
+
+.dropdown-menu a {
+    font-family: 'Barlow', sans-serif; /* Updated font */
+    font-size: 1rem; /* Reduced font size */
+    color: #666; /* Grey text color */
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+}
+
+.dropdown-menu a:hover {
+    background: rgba(0, 0, 0, 0.1); /* Light grey background on hover */
+    color: #333; /* Optional: Darken the grey on hover */
+}
+
+/* ACTIVE DROPDOWN */
+.dropdown-menu.show {
+    opacity: 1;
+    visibility: visible;
+}
+/* Products & Solutions Specific Styling */
+#products-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    border-top: 2px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    position: fixed;
+    top: 83px; /* Flush with navbar */
+    left: 0;
+    width: 100vw; /* Full screen width */
+    height: calc(100vh - 60px); /* Covers everything except header */
+    background: #fff; /* Completely opaque white */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    z-index: 999;
+}
+
+.dropdown-menu.show {
+    display: flex;
+}
+
+.dropdown-content {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    justify-content: space-between;
+}
+
+.product-categories, .products, .solutions {
+    width: 30%;
+    text-align: left;
+    max-height: 314px; /* Adjusted height */
+    overflow-y: auto; /* Enable vertical scroll */
+}
+
+/* Custom Scrollbar Styling */
+.product-categories::-webkit-scrollbar, .products::-webkit-scrollbar, .solutions::-webkit-scrollbar {
+    width: 8px;
+    background: transparent; /* Make scrollbar track transparent */
+}
+
+.product-categories::-webkit-scrollbar-thumb, .products::-webkit-scrollbar-thumb, .solutions::-webkit-scrollbar-thumb {
+    background: #A3D4E0; /* Lighter blue */
+    border-radius: 10px; /* Elliptical shape */
+    transition: background 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    opacity: 0; /* Initially hidden */
+}
+
+.product-categories:hover, .products:hover, .solutions:hover {
+    overflow-y: scroll; /* Show scrollbar on hover */
+}
+
+.product-categories:hover::-webkit-scrollbar-thumb, .products:hover::-webkit-scrollbar-thumb, .solutions:hover::-webkit-scrollbar-thumb {
+    opacity: 1; /* Show on hover */
+}
+
+.product-categories::-webkit-scrollbar-thumb:hover, .products::-webkit-scrollbar-thumb:hover, .solutions::-webkit-scrollbar-thumb:hover {
+    background: #54A9C7; /* Darker blue on hover */
+    opacity: 1; /* Ensure visibility on hover */
+}
+
+.product-categories h3, .products h3, .solutions h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.product-categories ul, .products ul, .solutions ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.product-categories ul li, .products ul li, .solutions ul li {
+    margin: 5px 0;
+}
+
+.product-categories ul li a, .products ul li a, .solutions ul li a {
+    display: block;
+    padding: 8px;
+    text-decoration: none;
+    color: #333;
+    transition: background 0.3s;
+}
+
+.product-categories ul li a:hover, .products ul li a:hover, .solutions ul li a:hover {
+    background: #f0f0f0;
+}
+
+
+/* Rest of your CSS remains the same */
+
+
+/* SEARCH BAR */
+.search-container {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 20px;
+    padding: 5px;
+    overflow: hidden;
+}
+
+.search-input {
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+    font-size: 1rem;
+    width: 150px;
+    transition: width 0.3s ease-in-out;
+}
+
+.search-input:focus {
+    width: 200px;
+}
+
+.search-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    font-size: 1rem;
+    color: #0CB7F5;
+}
+
+.search-btn:hover {
+    color: #0CB7F5;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links {
+        margin-top: 10px;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: #416775;
+}
+
+/* SEARCH BAR STYLING */
+.search-container {
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 20px;
+    padding: 5px;
+    overflow: hidden;
+}
+
+.search-input {
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+    font-size: 1rem;
+    width: 150px;
+    transition: width 0.3s ease-in-out;
+}
+
+.search-input:focus {
+    width: 200px;
+}
+
+.search-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    font-size: 1rem;
+    color: #0CB7F5;
+}
+
+.search-btn:hover {
+    color: #0CB7F5;
+}
+
+/* ABOUT PAGE STYLING */
+.banner img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+
+.about-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.left-sidebar {
+    flex: 0 0 250px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+    border-right: 3px solid #54A9C7;
+    height: auto;
+    position: relative;
+}
+
+.left-sidebar h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #3D86A0;
+}
+
+.left-sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.left-sidebar ul li {
+    margin: 10px 0;
+}
+
+.left-sidebar ul li a {
+    text-decoration: none;
+    color: #0CB7F5;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.left-sidebar ul li a:hover {
+    color: #416775;
+}
+
+.content {
+    flex: 1;
+    background: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+    margin-left: 0;
+}
+
+.content h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #3D86A0;
+}
+
+.content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    color: #36454B;
+}
+
+footer {
+    background: #54A9C7;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1450px;
+    margin: auto;
+    flex-wrap: wrap;
+    padding: 10px 20px;
+    text-align: center;
+}
+.footer-info p {
+    white-space: nowrap;  /* Prevents line breaks */
+    /*overflow: hidden;      /* Hides overflow if too long */
+    text-overflow: ellipsis; /* Adds "..." if it overflows */
+}
+
+
+.footer-left {
+    flex: 1;
+    text-align: left;
+}
+
+.footer-center {
+    flex: 2;
+    text-align: center;
+}
+
+.footer-right {
+    flex: 1;
+    text-align: right;
+}
+
+.footer-right a {
+    color: #416775;
+    text-decoration: none;
+}
+
+.footer-right a:hover {
+    text-decoration: underline;
+}
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+    }
+    .left-sidebar {
+        width: 100%;
+        text-align: center;
+        border-right: none;
+        border-bottom: 3px solid #54A9C7;
+    }
+    .content {
+        margin-left: 0;
+    }
+}
+
+
+.right-sidebar {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    color: black;
+    width: 50px;
+    transition: width 0.3s ease-in-out;
+    overflow: hidden;
+    border-radius: 10px 0 0 10px;
+    border: 2px solid #0CB7F5;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.right-sidebar:hover {
+    width: 200px; /* Expands on hover */
+}
+
+.right-sidebar-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.right-sidebar-content a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    transition: background 0.3s, padding 0.3s ease-in-out;
+    width: 100%;
+}
+
+.right-sidebar-content img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    transition: margin 0.3s ease-in-out;
+}
+
+.right-sidebar-content span {
+    opacity: 0;
+    white-space: nowrap;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.right-sidebar:hover .right-sidebar-content span {
+    opacity: 1;
+}
+
+.right-sidebar:hover .right-sidebar-content img {
+    margin-right: 10px;
+}
+
+.partners {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.partner {
+    display: flex;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+    flex-direction: column; /* Stack items vertically */
+}
+
+.partner img {
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 20px; /* Add space below the logo */
+}
+
+.partner-content {
+    flex: 1;
+    text-align: center; /* Center align text */
+}
+
+.partner h3 {
+    font-size: 1.5rem;
+    color: #3D86A0;
+    margin-bottom: 10px;
+}
+
+.partner p {
+    font-size: 1rem;
+    color: #36454B;
+    margin-bottom: 15px;
+}
+
+.partner .learn-more-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #54A9C7;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+    margin-top: 10px; /* Add space above the button */
+}
+
+.partner .learn-more-btn:hover {
+    background: #3D86A0;
+}
+
+.partner:hover {
+    transform: translateY(-10px);
+}
+
+@media (max-width: 768px) {
+    .partner {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .partner img {
+        margin-bottom: 15px;
+        margin-right: 0;
+    }
+}
+

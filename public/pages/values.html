@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results - Phoenix Airmid Biomedical</title>
+    <link rel="stylesheet" href="/aboutstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="/index.html"><img src="/images/PAB Logo Old.png" alt="Phoenix Airmid Logo"></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#" class="dropdown-trigger" data-menu="company-menu">Company</a></li>
+                <li><a href="#" class="dropdown-trigger" data-menu="products-menu">Products & Solutions</a></li>
+                <li><a href="#" class="dropdown-trigger" data-menu="resources-menu">Resources</a></li>
+                <li><a href="#" class="dropdown-trigger" data-menu="support-menu">Support</a></li>
+                <li><a href="#" class="dropdown-trigger" data-menu="news-menu">News & Events</a></li>
+            </ul>
+            <div class="search-container">
+                <input type="text" class="search-input" id="search-input" placeholder="Search...">
+                <button class="search-btn">🔍</button>
+            </div>
+            <div class="search-results-container"></div>
+
+            <div class="dropdown-menu" id="company-menu">
+                <a href="/pages/about.html">About Us</a>
+                <a href="/pages/what_we_do.html">What We Do</a>
+                <a href="/pages/values.html">Our Values</a>
+                <a href="/pages/our_people.html">Our People</a>
+                <a href="/pages/responsibility.html">Our Corporate Responsibility</a>
+                <a href="/pages/partners.html">Our Partners</a>
+            </div>
+
+            <div class="dropdown-menu" id="products-menu">
+                <div class="dropdown-content">
+                    <div class="product-categories">
+                        <h3>Product Categories</h3>
+                        <ul id="category-list">
+                            <li><a href="#" class="category-trigger" data-category="clinical-chemistry">Clinical Chemistry</a></li>
+                            <li><a href="#" class="category-trigger" data-category="hematology">Hematology</a></li>
+                            <li><a href="#" class="category-trigger" data-category="microbiology">Microbiology</a></li>
+                            <li><a href="#" class="category-trigger" data-category="molecular">Molecular</a></li>
+                            <li><a href="#" class="category-trigger" data-category="pathology">Pathology</a></li>
+                            <li><a href="#" class="category-trigger" data-category="transfusion-medicine">Transfusion Medicine</a></li>
+                            <li><a href="#" class="category-trigger" data-category="disinfection-systems">Disinfection Systems</a></li>
+                        </ul>
+                    </div>
+                    <div class="products">
+                        <h3>Products</h3>
+                        <ul id="products-list" class="scrollable-list"></ul>
+                    </div>
+                    <div class="solutions">
+                        <h3>Solutions</h3>
+                        <ul id="solutions-list" class="scrollable-list"></ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="dropdown-menu" id="resources-menu">
+                <div class="dropdown-category">
+                    <span>Orders</span>
+                    <ul>
+                        <li><a href="/pages/ordering.html">Ordering</a></li>
+                        <li><a href="/pages/logistics.html">Logistics</a></li>
+                    </ul>
+                </div>
+                <div class="dropdown-category">
+                    <span>Inquiries</span>
+                    <ul>
+                        <li><a href="/pages/account-executives.html">Account Executives</a></li>
+                        <li><a href="/pages/product-specialists.html">Product Specialists</a></li>
+                        <li><a href="/pages/business-development.html">Business Development</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="dropdown-menu" id="support-menu">
+                <a href="/pages/contact.html">Contact Us</a>
+                <a href="/pages/Instrument-Service-and-Application-Specialists.html">Instrument Service and Application Specialists</a>
+            </div>
+
+            <div class="dropdown-menu" id="news-menu">
+                <a href="/pages/news.html">Latest News</a>
+                <a href="/pages/events.html">Upcoming Events</a>
+            </div>
+        </nav>
+    </header>
+    <section class = "vertical-bar">
+        <div class="right-sidebar">
+            <div class="right-sidebar-content">
+                <a href="/pages/customer-service.html">
+                    <img src="/images/icons8-headset-50.png" alt="Customer Service">
+                    <span>Customer Service</span>
+                </a>
+                <a href="/pages/events.html">
+                    <img src="/images/icons8-calendar-100.png" alt="Events">
+                    <span>Events</span>
+                </a>
+                <a href="/pages/contact.html">
+                    <img src="/images/icons8-phone-100.png" alt="Contact Us">
+                    <span>Contact Us</span>
+                </a>
+                <a href="/pages/ordering.html">
+                    <img src="/images/icons8-megaphone-100.png" alt="Call for Service">
+                    <span>Call for Service</span>
+                </a>
+            </div>
+        </div>
+        
+    </section>
+    <!-- Banner Graphic Placeholder -->
+    <section class="banner">
+        <img src="aboutus.jpg" alt="About Us Banner">
+    </section>
+
+    <main class="about-container">
+        <!-- Left Sidebar Navigation -->
+        <aside class="left-sidebar">
+            <h3>Company</h3>
+            <ul>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="what_we_do.html">What We Do</a></li>
+                <li><a href="values.html">Our Values</a></li>
+                <li><a href="our_people.html">Our People</a></li>
+                <li><a href="responsibility.html">Our Corporate Responsibility</a></li>
+                <li><a href="partners.html">Our Partners</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <section class="content">
+            <h1>Our Values</h1>
+            <h2>Our Values Define Us</h2>
+            <p><i>Integrity, Collaboration, Quality, Expertise, and Vision.</i></p>
+            <p>These principles are at the core of who we are and what we do.</p>
+            <h2>Integrity</h2>
+            <p>Integrity is a fundamental value at Phoenix. It embodies ethical behavior, accountability, honesty, and the highest standards of professionalism. </p>
+            <p>We deeply value the trust and loyalty of our stakeholders and are committed to upholding the highest ethical standards. For over 30 years, we have remained steadfast in our dedication to these principles, ensuring that integrity guides every decision we make.</p>
+            <h2>Collaboration</h2>
+            <p>We work closely with medical professionals and thought leaders worldwide to bring best-in-class diagnostic solutions to Canadian patients. Collaboration with our customers is essential—we listen, adapt, and find solutions that align with evolving needs. </p>
+            <p>Your feedback helps us strengthen partnerships with current and prospective manufacturers, ensuring that healthcare professionals and patients receive the most effective diagnostic tools available.</p>
+            <h2>Quality</h2>
+            <p>At Phoenix, we hold ourselves to the highest standards of quality in both our products and services. Our commitment to continuous investment and global sourcing allows us to bring the most advanced diagnostic technologies to Canada. </p>
+            <p>We carefully select partners who share our dedication to excellence, ensuring that quality remains at the forefront of everything we do.</p>
+            <h2>Expertise</h2>
+            <p>Our team at Phoenix is committed to being industry leaders. Through rigorous training, continuous education, and years of experience, we ensure that our customers receive expert support tailored to their needs.</p>
+            <p>As diagnostic technology evolves, we embrace lifelong learning to maintain our position at the cutting edge of innovation and service excellence.</p>
+            <h2>Vision</h2>
+            <p>Phoenix is dedicated to shaping the future of healthcare. We anticipate the needs of patients, clinicians, and diagnostic laboratories, proactively seeking out the most advanced technologies to enhance healthcare in Canada.</p>
+            <p>Our vision is to remain a leader in innovation, consistently delivering cutting-edge solutions that improve health and well-being across the country.</p>
+            <p><strong>For more information about Phoenix Airmid Biomedical, please contact us at <a href="tel:18667180515">1 866 718-0515</a> or <a href="mailto:info@phoenixairmid.com">info@phoenixairmid.com</a>.</strong></p>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <div class="footer-map-container">
+
+        </div>
+        <div class="footer-info">
+            <p class="footer-left">1166 South Service Rd. W, Oakville, ON L6L 5T7</p>
+            <p class="footer-center">
+                Phone: 905-469-4253 &nbsp;|&nbsp; 
+                Fax: 905-825-9795 &nbsp;|&nbsp; 
+                Toll Free: 866-718-0515
+            </p>
+            <p class="footer-right">
+                Email: <a href="mailto:info@phoenixairmid.com">info@phoenixairmid.com</a>
+            </p>
+        </div>
+    </footer>    
+
+    <script src="/script.js"></script>
+</body>
+</html>

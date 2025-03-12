@@ -1,0 +1,262 @@
+/* Layout fix for main content to avoid cutoff by fixed header */
+main {
+    margin-top: 80px; /* Offset for fixed header height */
+    padding: 2rem;
+    background: #f5f5f5; /* Light gray background for contrast */
+    min-height: calc(100vh - 80px - 60px); /* Adjust for header and footer */
+}
+
+/* Style the search results section */
+#search-results {
+    background: #fff; /* White background */
+    padding: 30px; /* Increased padding for breathing room */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Slightly stronger shadow for depth */
+    border-radius: 8px; /* Slightly larger rounding */
+    margin: 30px 0; /* More space above and below */
+    border-left: 4px solid #54A9C7; /* Add a left border for visual interest */
+    position: relative; /* Ensure header positioning works */
+}
+
+/* Style the search results header */
+.search-results-header {
+    font-size: 1.8rem; /* Slightly larger for prominence */
+    font-weight: 700; /* Bolder text */
+    color: #fff; /* White text for contrast */
+    background: linear-gradient(135deg, #54A9C7 0%, #3B8BAA 100%); /* Gradient background */
+    padding: 20px 25px; /* More padding for a larger appearance */
+    border-radius: 5px 5px 0 0; /* Rounded top corners */
+    margin: 0 -30px 20px -30px; /* Extend to edges */
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15); /* Stronger shadow for depth */
+    text-align: center;
+    position: relative;
+    top: 0;
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Vertically center content */
+    justify-content: center; /* Horizontally center content */
+    animation: fadeIn 0.5s ease-in-out; /* Fade-in animation */
+}
+
+/* Add a magnifying glass icon before the text */
+.search-results-header::before {
+    content: '🔍'; /* Magnifying glass emoji (can be replaced with an SVG or Font Awesome icon) */
+    font-size: 1.5rem;
+    margin-right: 10px;
+    color: #fff; /* Match text color */
+}
+
+/* Style the query part of the header */
+.search-results-header .query {
+    font-style: italic; /* Italicize the query */
+    font-weight: 400; /* Lighter weight for contrast */
+    color: #e6f3fa; /* Slightly lighter shade for distinction */
+}
+
+/* Fade-in animation for the header */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Style the search results section content (adjust for header) */
+#search-results h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #54A9C7;
+    margin-bottom: 20px;
+    text-align: center;
+    padding: 12px;
+    background: #e6f3fa;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    display: none; /* Hidden since we're using the dynamic header */
+}
+
+#search-results ul {
+    list-style: none;
+    padding: 0 15px;
+}
+
+#search-results ul li {
+    margin: 20px 0;
+    padding: 15px;
+    border-bottom: 1px solid #e6f3fa;
+    background: #fafafa;
+    border-radius: 4px;
+    transition: transform 0.2s ease, background 0.3s ease;
+}
+
+#search-results ul li:hover {
+    transform: translateY(-2px);
+    background: #f0faff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+#search-results ul li a {
+    text-decoration: none;
+    color: #0CB7F5;
+    font-size: 1.2rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+#search-results ul li a:hover {
+    color: #086A9B;
+}
+
+#search-results ul li a::before {
+    content: '📄';
+    margin-right: 10px;
+    font-size: 1rem;
+    color: #54A9C7;
+}
+
+#search-results ul li .description {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 5px;
+    line-height: 1.4;
+}
+
+#search-results p {
+    font-size: 1.2rem;
+    color: #666;
+    text-align: center;
+    padding: 30px;
+    background: #f9f9f9;
+    border-radius: 5px;
+    border: 1px dashed #ccc;
+}
+
+/* Fallback footer styling to match style.css */
+footer {
+    background: #54A9C7;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.footer-map-container {
+    display: none;
+}
+
+.footer-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1450px;
+    margin: auto;
+    flex-wrap: wrap;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.footer-info p {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.footer-left {
+    flex: 1;
+    text-align: left;
+}
+
+.footer-center {
+    flex: 2;
+    text-align: center;
+}
+
+.footer-right {
+    flex: 1;
+    text-align: right;
+}
+
+.footer-right a {
+    color: #416775;
+    text-decoration: none;
+}
+
+.footer-right a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    main {
+        padding: 1rem;
+    }
+
+    #search-results {
+        background: #fff;
+        padding: 30px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        margin: 30px 0;
+        border-left: 4px solid #54A9C7;
+        position: relative;
+        z-index: 1; /* Below sidebar (z-index: 3) */
+    }
+    
+    .search-results-header { /* Updated class */
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: #fff;
+        background: linear-gradient(135deg, #54A9C7 0%, #3B8BAA 100%);
+        padding: 20px 25px;
+        border-radius: 5px 5px 0 0;
+        margin: 0 -30px 20px -30px;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+        text-align: center;
+        position: static; /* Ensure it flows in #search-results */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        animation: fadeIn 0.5s ease-in-out;
+        z-index: 0; /* Explicitly low to stay below sidebar */
+    }
+    
+    .search-results-header::before {
+        content: '🔍';
+        font-size: 1.5rem;
+        margin-right: 10px;
+        color: #fff;
+    }
+    .search-results-header::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 50%;
+        height: 3px;
+        background: linear-gradient(to right, transparent, #fff, transparent);
+    }
+    #search-results ul li {
+        margin: 15px 0;
+        padding: 10px;
+    }
+
+    #search-results ul li a {
+        font-size: 1.1rem;
+    }
+
+    .footer-info {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .footer-left, .footer-center, .footer-right {
+        text-align: center;
+    }
+}
+
