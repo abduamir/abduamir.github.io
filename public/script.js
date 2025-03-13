@@ -67,7 +67,7 @@ async function performSearch() {
     }
     console.log('Query:', query);
     try {
-        const response = await fetch('/pages');
+        const response = await fetch('/api/pages');
         if (!response.ok) throw new Error('Failed to fetch page list');
         const pages = await response.json();
         console.log('Pages fetched:', pages);

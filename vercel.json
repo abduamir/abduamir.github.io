@@ -1,6 +1,5 @@
 {
     "routes": [
-      { "src": "/api/pages", "headers": { "Access-Control-Allow-Origin": "*" } }
+        { "src": "/api/pages", "headers": { "Access-Control-Allow-Origin": "*" } }
     ]
-  }
-  
+}

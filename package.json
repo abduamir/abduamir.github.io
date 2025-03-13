@@ -9,8 +9,16 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "dependencies": {
     "express": "^4.21.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abduamir/abduamir.github.io.git"
+  },
+  "bugs": {
+    "url": "https://github.com/abduamir/abduamir.github.io/issues"
+  },
+  "homepage": "https://github.com/abduamir/abduamir.github.io#readme",
+  "description": ""
 }
