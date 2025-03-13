@@ -1,7 +1,4 @@
 {
-    "engines": {
-        "node": "22.14.0"
-    },
     "routes": [
         { "src": "/api/pages", "headers": { "Access-Control-Allow-Origin": "*" } }
     ]
