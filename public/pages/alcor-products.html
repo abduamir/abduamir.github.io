@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Highlighted Products - Phoenix Airmid Biomedical</title>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css"> <!-- Main site styles -->
+    <link rel="stylesheet" href="/productstyle.css"> <!-- Updated product styles -->
+</head>
+<body>
+    <div class="page-wrapper">
+        <!-- Header (from reference files) -->
+        <header>
+            <nav>
+                <div class="logo">
+                    <a href="/index.html"><img src="/images/PAB Logo Old.png" alt="Phoenix Airmid Logo"></a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#" class="dropdown-trigger" data-menu="company-menu">Company</a></li>
+                    <li><a href="#" class="dropdown-trigger" data-menu="products-menu">Products & Solutions</a></li>
+                    <li><a href="#" class="dropdown-trigger" data-menu="resources-menu">Resources</a></li>
+                    <li><a href="#" class="dropdown-trigger" data-menu="support-menu">Support</a></li>
+                    <li><a href="#" class="dropdown-trigger" data-menu="news-menu">News & Events</a></li>
+                </ul>
+                <div class="search-container">
+                    <input type="text" class="search-input" id="search-input" placeholder="Search...">
+                    <button class="search-btn">🔍</button>
+                </div>
+                <div class="search-results-container"></div>
+
+                <!-- Dropdown Menus (from reference files) -->
+                <div class="dropdown-menu" id="company-menu">
+                    <a href="/pages/about.html">About Us</a>
+                    <a href="/pages/what_we_do.html">What We Do</a>
+                    <a href="/pages/values.html">Our Values</a>
+                    <a href="/pages/our_people.html">Our People</a>
+                    <a href="/pages/responsibility.html">Our Corporate Responsibility</a>
+                    <a href="/pages/partners.html">Our Partners</a>
+                </div>
+                <div class="dropdown-menu" id="products-menu">
+                    <div class="dropdown-content">
+                        <div class="product-categories">
+                            <h3>Product Categories</h3>
+                            <ul id="category-list">
+                                <li><a href="#" class="category-trigger" data-category="clinical-chemistry">Clinical Chemistry</a></li>
+                                <li><a href="#" class="category-trigger" data-category="hematology">Hematology</a></li>
+                                <li><a href="#" class="category-trigger" data-category="microbiology">Microbiology</a></li>
+                                <li><a href="#" class="category-trigger" data-category="EQA">EQA</a></li>
+                                <li><a href="#" class="category-trigger" data-category="pathology">Pathology</a></li>
+                                <li><a href="#" class="category-trigger" data-category="transfusion-medicine">Transfusion Medicine</a></li>
+                                <li><a href="#" class="category-trigger" data-category="disinfection-systems">Disinfection Systems</a></li>
+                                <li><a href="#" class="category-trigger" data-category="Biomarkers">Biomarkers</a></li>
+                                <li><a href="#" class="category-trigger" data-category="Pre-Analytical">Pre-Analytical</a></li>
+                            </ul>
+                        </div>
+                        <div class="products">
+                            <h3>Products</h3>
+                            <ul id="products-list" class="scrollable-list"></ul>
+                        </div>
+                        <div class="solutions">
+                            <h3>Solutions</h3>
+                            <ul id="solutions-list" class="scrollable-list"></ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="dropdown-menu" id="resources-menu">
+                    <div class="dropdown-category">
+                        <span>Orders</span>
+                        <ul>
+                            <li><a href="/pages/ordering.html">Ordering</a></li>
+                            <li><a href="/pages/logistics.html">Logistics</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown-category">
+                        <span>Inquiries</span>
+                        <ul>
+                            <li><a href="/pages/account-executives.html">Account Executives</a></li>
+                            <li><a href="/pages/product-specialists.html">Product Specialists</a></li>
+                            <li><a href="/pages/business-development.html">Business Development</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="dropdown-menu" id="support-menu">
+                    <a href="/pages/contact.html">Contact Us</a>
+                    <a href="/pages/Instrument-Service-and-Application-Specialists.html">Instrument Service and Application Specialists</a>
+                </div>
+                <div class="dropdown-menu" id="news-menu">
+                    <a href="/pages/news.html">Latest News</a>
+                    <a href="/pages/events.html">Upcoming Events</a>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Sidebar (from reference files) -->
+        <section class="vertical-bar">
+            <div class="sidebar">
+                <div class="sidebar-content">
+                    <a href="/pages/customer-service.html">
+                        <img src="/images/icons8-headset-50.png" alt="Customer Service">
+                        <span>Customer Service</span>
+                    </a>
+                    <a href="/pages/events.html">
+                        <img src="/images/icons8-calendar-100.png" alt="Events">
+                        <span>Events</span>
+                    </a>
+                    <a href="/pages/contact.html">
+                        <img src="/images/icons8-phone-100.png" alt="Contact Us">
+                        <span>Contact Us</span>
+                    </a>
+                    <a href="/pages/ordering.html">
+                        <img src="/images/icons8-megaphone-100.png" alt="Call for Service">
+                        <span>Call for Service</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content -->
+        <main>
+            <!-- Video Banner -->
+            <div class="video-banner">
+                <video autoplay loop muted playsinline>
+                    <source src="\images\ALCOR iSED Pro (International).mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+           <!-- Highlighted Products Section -->
+            <section class="highlighted-products">
+                <!-- Product 1 -->
+                <div class="product-item">
+                    <div class="product-image">
+                        <img src="/images/iSEDPro-Home.png" alt="Product 1">
+                    </div>
+                    <div class="product-details">
+                        <div class="product-details-content">
+                            <ul class="product-features">
+                                <li>Supports high-volume testing with a 120-sample hematology rack capacity</li>
+                                <li>Automated QC scheduling and onboard consumables storage for seamless operation</li>
+                                <li>STAT testing option for urgent samples, ensuring fast turnaround</li>
+                            </ul>
+                            <span class="toggle-specs" data-target="specs-table-1">> click for more information</span>
+                            <div class="specs-table" id="specs-table-1">
+                                <table>
+                                    <tr><th>Principle of Measure</th><td>Photometric rheology</td></tr>
+                                    <tr><th>Result Range</th><td>1-130 mm/hr</td></tr>
+                                    <tr><th>Onboard Sample Capacity</th><td>120 samples (12 hematology racks)</td></tr>
+                                    <tr><th>Test Throughput</th><td>Up to 180/hour</td></tr>
+                                    <tr><th>Sample Stability</th><td>28 hours for samples stored refrigerated or room temperature</td></tr>
+                                    <tr><th>Sample Rack Compatibility</th><td>Sysmex® hematology racks</td></tr>
+                                    <tr><th>Sample Type</th><td>Whole blood collected in a 13 x 75 mm EDTA tube</td></tr>
+                                    <tr><th>Sample Mixing</th><td>Automated onboard</td></tr>
+                                    <tr><th>Quality Control</th><td>Onboard SEDiTROL® Controls with automatic scheduling</td></tr>
+                                    <tr><th>STAT Function</th><td>STAT testing option</td></tr>
+                                    <tr><th>Washing</th><td>Automatic washing; no washing required before or after control use</td></tr>
+                                    <tr><th>Preventative Maintenance</th><td>Automatic scheduling of deep cleaning procedure based on test volume</td></tr>
+                                    <tr><th>Barcode Reader</th><td>Internal</td></tr>
+                                    <tr><th>Dimensions</th><td>495 x 553 x 670 mm (20 x 22 x 27 in)</td></tr>
+                                    <tr><th>Weight</th><td>38 Kg</td></tr>
+                                    <tr><th>LIS Connectivity</th><td>Bi-directional</td></tr>
+                                    <tr><th>Voltage</th><td>100-240VAC</td></tr>
+                                    <tr><th>Frequency</th><td>50-60 Hz</td></tr>
+                                    <tr><th>Power Consumption</th><td>500W</td></tr>
+                                </table>
+                            </div>
+                            <a href="/pages/alcor-list.html" class="view-catalogue-btn">View Full Catalogue</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-item">
+                    <div class="product-image">
+                        <img src="/images/iSED-Home.png" alt="Product 2">
+                    </div>
+                    <div class="product-details">
+                        <div class="product-details-content">
+                            <ul class="product-features">
+                                <li>Rapid results within 20 seconds with minimal hands-on time</li>
+                                <li>Continuous feed operation with no disposables, reducing waste</li>
+                                <li>Compact design with primary EDTA tube compatibility for pediatric samples</li>
+                            </ul>
+                            <span class="toggle-specs" data-target="specs-table-2">> click for more information</span>
+                            <div class="specs-table" id="specs-table-2">
+                                <table>
+                                    <tr><th>Principle of Measure</th><td>Quantitative Capillary Photometry</td></tr>
+                                    <tr><th>Result Range</th><td>1-130 mm/hr</td></tr>
+                                    <tr><th>Sample Capacity</th><td>20 samples (random access loading)</td></tr>
+                                    <tr><th>Test Throughput</th><td>Up to 180/hour</td></tr>
+                                    <tr><th>Sample Type</th><td>Primary EDTA tube; pediatric tube compatible</td></tr>
+                                    <tr><th>Sample Volume</th><td>500 µl whole blood (100 µl aspirated volume)</td></tr>
+                                    <tr><th>Sample Mixing</th><td>Automated on board</td></tr>
+                                    <tr><th>Quality Control</th><td>SEDiTROL® Controls</td></tr>
+                                    <tr><th>Barcode Reader</th><td>Internal</td></tr>
+                                    <tr><th>Printer</th><td>Internal</td></tr>
+                                    <tr><th>Dimensions (H x W x D)</th><td>36 x 27 x 35 (cm) / 14.17 x 10.63 x 13.78 (in)</td></tr>
+                                    <tr><th>Data Storage Capacity</th><td>>4 million</td></tr>
+                                    <tr><th>LIS Connectivity</th><td>LAN TCP/IP or serial RS232 DB9 port</td></tr>
+                                    <tr><th>Voltage</th><td>100-240VAC</td></tr>
+                                    <tr><th>Frequency</th><td>50-60 Hz</td></tr>
+                                    <tr><th>Power</th><td>60W</td></tr>
+                                </table>
+                            </div>
+                            <a href="/pages/alcor-list.html" class="view-catalogue-btn">View Full Catalogue</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-item">
+                    <div class="product-image">
+                        <img src="/images/miniiSED-Home.png" alt="Product 3">
+                    </div>
+                    <div class="product-details">
+                        <div class="product-details-content">
+                            <ul class="product-features">
+                                <li>Ultra-fast results in just 15 seconds for rapid ESR testing</li>
+                                <li>Compact footprint ideal for labs with limited space</li>
+                                <li>Closed testing environment minimizing the impact of external variables</li>
+                            </ul>
+                            <span class="toggle-specs" data-target="specs-table-3">> click for more information</span>
+                            <div class="specs-table" id="specs-table-3">
+                                <table>
+                                    <tr><th>Principle of Measure</th><td>Photometric Rheology</td></tr>
+                                    <tr><th>Result Range</th><td>1-130 mm/hr</td></tr>
+                                    <tr><th>Sample Capacity</th><td>1 sample</td></tr>
+                                    <tr><th>Test Throughput</th><td>Up to 180/hour</td></tr>
+                                    <tr><th>Sample Type</th><td>Primary EDTA tube; pediatric tube compatible</td></tr>
+                                    <tr><th>Sample Volume</th><td>500 µL whole blood (100 µL aspirated volume)</td></tr>
+                                    <tr><th>Sample Mixing</th><td>Automated on board</td></tr>
+                                    <tr><th>Quality Control</th><td>SEDiTROL® Controls</td></tr>
+                                    <tr><th>Barcode Reader</th><td>Internal</td></tr>
+                                    <tr><th>Printer</th><td>Optional external printer</td></tr>
+                                    <tr><th>Dimensions (H x W x D)</th><td>24 x 18 x 26 (cm) / 9.5 x 7.1 x 10.4 (in)</td></tr>
+                                    <tr><th>Data Storage Capacity</th><td>>4 million</td></tr>
+                                    <tr><th>LIS Connectivity</th><td>LAN TCP/IP</td></tr>
+                                    <tr><th>Voltage</th><td>100-240VAC</td></tr>
+                                    <tr><th>Frequency</th><td>50-60 Hz</td></tr>
+                                    <tr><th>Power</th><td>60W</td></tr>
+                                </table>
+                            </div>
+                            <a href="/pages/alcor-list.html" class="view-catalogue-btn">View Full Catalogue</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="external-link">
+                <a href="https://www.alcorscientific.com" target="_blank" rel="noopener noreferrer">
+                    Alcor Scientific Website <img src="/images/external-link.png" alt="External Link Icon">
+                </a>
+            </section>
+        </main>
+
+        <!-- Footer (from reference files) -->
+        <footer id="footer">
+            <div class="footer-info">
+                <p class="footer-left">1166 South Service Rd. W, Oakville, ON L6L 5T7</p>
+                <p class="footer-center">
+                    Phone: 905-469-4253  |  
+                    Fax: 905-825-9795  |  
+                    Toll Free: 866-718-0515
+                </p>
+                <p class="footer-right">
+                    Email: <a href="mailto:info@phoenixairmid.com">info@phoenixairmid.com</a>
+                </p>
+            </div>
+        </footer>
+    </div>
+</body>
+<script src="/script.js"></script>
+</html>

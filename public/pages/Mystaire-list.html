@@ -1,0 +1,1325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Highlighted Products - Phoenix Airmid Biomedical</title>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css"> <!-- Main site styles -->
+    <link rel="stylesheet" href="/list.css"> <!-- Updated product styles -->
+</head>
+<body>
+    <div class="page-wrapper">
+        <!-- Header (from reference files) -->
+        <header>
+            <nav>
+                <div class="logo">
+                    <a href="/index.html"><img src="/images/PAB Logo Old.png" alt="Phoenix Airmid Logo"></a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#" class="dropdown-trigger" data-menu="company-menu">Company</a></li>
+                    <li><a href="#" class="dropdown-trigger" data-menu="products-menu">Products & Solutions</a></li>
+                    <li><a href="#" class="dropdown-trigger" data-menu="resources-menu">Resources</a></li>
+                    <li><a href="#" class="dropdown-trigger" data-menu="support-menu">Support</a></li>
+                    <li><a href="#" class="dropdown-trigger" data-menu="news-menu">News & Events</a></li>
+                </ul>
+                <div class="search-container">
+                    <input type="text" class="search-input" id="search-input" placeholder="Search...">
+                    <button class="search-btn">🔍</button>
+                </div>
+                <div class="search-results-container"></div>
+
+                <!-- Dropdown Menus (from reference files) -->
+                <div class="dropdown-menu" id="company-menu">
+                    <a href="/pages/about.html">About Us</a>
+                    <a href="/pages/what_we_do.html">What We Do</a>
+                    <a href="/pages/values.html">Our Values</a>
+                    <a href="/pages/our_people.html">Our People</a>
+                    <a href="/pages/responsibility.html">Our Corporate Responsibility</a>
+                    <a href="/pages/partners.html">Our Partners</a>
+                </div>
+                <div class="dropdown-menu" id="products-menu">
+                    <div class="dropdown-content">
+                        <div class="product-categories">
+                            <h3>Product Categories</h3>
+                            <ul id="category-list">
+                                <li><a href="#" class="category-trigger" data-category="clinical-chemistry">Clinical Chemistry</a></li>
+                                <li><a href="#" class="category-trigger" data-category="hematology">Hematology</a></li>
+                                <li><a href="#" class="category-trigger" data-category="microbiology">Microbiology</a></li>
+                                <li><a href="#" class="category-trigger" data-category="EQA">EQA</a></li>
+                                <li><a href="#" class="category-trigger" data-category="pathology">Pathology</a></li>
+                                <li><a href="#" class="category-trigger" data-category="transfusion-medicine">Transfusion Medicine</a></li>
+                                <li><a href="#" class="category-trigger" data-category="disinfection-systems">Disinfection Systems</a></li>
+                                <li><a href="#" class="category-trigger" data-category="Biomarkers">Biomarkers</a></li>
+                                <li><a href="#" class="category-trigger" data-category="Pre-Analytical">Pre-Analytical</a></li>
+                            </ul>
+                        </div>
+                        <div class="products">
+                            <h3>Products</h3>
+                            <ul id="products-list" class="scrollable-list"></ul>
+                        </div>
+                        <div class="solutions">
+                            <h3>Solutions</h3>
+                            <ul id="solutions-list" class="scrollable-list"></ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="dropdown-menu" id="resources-menu">
+                    <div class="dropdown-category">
+                        <span>Orders</span>
+                        <ul>
+                            <li><a href="/pages/ordering.html">Ordering</a></li>
+                            <li><a href="/pages/logistics.html">Logistics</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown-category">
+                        <span>Inquiries</span>
+                        <ul>
+                            <li><a href="/pages/account-executives.html">Account Executives</a></li>
+                            <li><a href="/pages/product-specialists.html">Product Specialists</a></li>
+                            <li><a href="/pages/business-development.html">Business Development</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="dropdown-menu" id="support-menu">
+                    <a href="/pages/contact.html">Contact Us</a>
+                    <a href="/pages/Instrument-Service-and-Application-Specialists.html">Instrument Service and Application Specialists</a>
+                </div>
+                <div class="dropdown-menu" id="news-menu">
+                    <a href="/pages/news.html">Latest News</a>
+                    <a href="/pages/events.html">Upcoming Events</a>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Sidebar (from reference files) -->
+        <section class="vertical-bar">
+            <div class="sidebar">
+                <div class="sidebar-content">
+                    <a href="/pages/customer-service.html">
+                        <img src="/images/icons8-headset-50.png" alt="Customer Service">
+                        <span>Customer Service</span>
+                    </a>
+                    <a href="/pages/events.html">
+                        <img src="/images/icons8-calendar-100.png" alt="Events">
+                        <span>Events</span>
+                    </a>
+                    <a href="/pages/contact.html">
+                        <img src="/images/icons8-phone-100.png" alt="Contact Us">
+                        <span>Contact Us</span>
+                    </a>
+                    <a href="/pages/ordering.html">
+                        <img src="/images/icons8-megaphone-100.png" alt="Call for Service">
+                        <span>Call for Service</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    <!-- Main Content -->
+    <main>
+        <section class="catalogue container mx-auto">
+            <!-- Logo and Breadcrumb Container -->
+            <div class="logo-breadcrumb-container">
+                <!-- Company Logo -->
+                <div class="company-logo">
+                    <img src="/images/Mystaire.jpg" alt="Mystaire Logo">
+                </div>
+
+                <!-- Breadcrumb Navigation -->
+                <nav class="breadcrumb text-sm text-color-11 mb-8">
+                    <a href="/index.html" class="text-color-7 hover:text-color-6 hover:underline">Home</a>
+                    <span class="separator mx-2">></span>
+                    <a href="/pages/Mystaire-products.html" class="text-color-7 hover:text-color-6 hover:underline">Mystaire</a>
+                    <span class="separator mx-2">></span>
+                    <span class="current font-medium">Mystaire Products</span>
+                </nav>
+            </div>
+
+            <h1 class="text-4xl font-bold text-color-11 text-center mb-6">Full Catalogue - Mystaire</h1>
+
+            <!-- Product Table -->
+            <div class="product-table">
+                <table class="w-full border-collapse text-color-11 shadow-mikrogen_table rounded-lg">
+                    <thead>
+                        <tr class="bg-color-3 text-color-7">
+                            <th class="py-3 px-4 text-left font-medium">Product Name</th>
+                            <th class="py-3 px-4 text-left font-medium">Packaging</th>
+                            <th class="py-3 px-4 text-left font-medium">Product Number</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">4-Foot A2 Biological Safety Cabinet and stand </td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-48A2</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">6-Foot A2 Biological Safety Cabinet and stand </td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-72A2</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">30" Aura Elite ductless fume hood</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-AU30</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">30" Aura Elite ductless fume hood with Mobile Cart</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-AU30S</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">42" Aura Elite ductless fume hood</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-AU42</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">42" Aura Elite ductless fume hood with Mobile Cart</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-AU42S</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">54" Aura Elite ductless fume hood</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-AU54</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">54" Aura Elite ductless fume hood with Mobile Cart</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-AU54S</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Gas Phase Filter for Hydrocarbons,  Main for  Aura Elite 42</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-2804</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Gas Phase Filter for Hydrocarbons, Main for Aura Elite 30 and 54</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-3804</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Gas Phase Filter for Formaldehyde, Main for Aura Elite 42</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-2807</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Gas Phase Filter for Formaldehyde, Main for Aura Elite 30 and 54</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-3807</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Gas Phase Filter for Ammonia and Amines, Main for Aura Elite 42</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-2808</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Gas Phase Filter for Ammonia and Amines, Main for Aura Elite 30 and 54</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-3808</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Gas Phase Filter for Sulfur, Main for Aura Elite 42</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-2809</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Gas Phase Filter for Sulfur, Main for Aura Elite 30 and 54</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-3809</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Gas Phase Filter for Mineral Acids, Main for Aura Elite 42</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-2814</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Gas Phase Filter for Mineral Acids, Main for Aura Elite 30 and 54</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-3814</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Gas Phase Filter-Multi-purpose, Main for Aura Elite 42</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-2816</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Gas Phase Filter-Multi-purpose, Main for Aura Elite 30 and 54</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-3816</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Gas Phase Filter- Custom Blend, Main for Aura Elite 42</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-2817</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Gas Phase Filter- Custom Blend, Main for Aura Elite 30 and 54</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-3817</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">HEPA Filter, Main  for Aura Elite 42</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-2820</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">HEPA Filter, Main for Aura Elite 30 and 54</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-3820</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Gas Phase Filter for Hydrocarbons, Safety for Aura Elite 42</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-5904</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Gas Phase Filter for Hydrocarbons, Safety for Aura Elite 30 and 54</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-5804</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Gas Phase Filter for Formaldehyde, Safety for Aura Elite 42</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-5907</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Gas Phase Filter for Formaldehyde, Safety for Aura Elite 30 and 54</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-5807</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Gas Phase Filter for Ammonia and Amines, Safety for Aura Elite 42</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-5908</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Gas Phase Filter for Ammonia and Amines, Safety for Aura Elite 30 and 54</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-5808</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Gas Phase Filter for Sulfur, Safety for Aura Elite 42</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-5909</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Gas Phase Filter for Sulfur, Safety for Aura Elite 30 and 54</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-5809</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Gas Phase Filter for Mineral Acids, Safety for Aura Elite 42</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-5914</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Gas Phase Filter for Mineral Acids, Safety for Aura Elite 30 and 54</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-5814</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Gas Phase Filter- Custom Blend, Safety for Aura Elite 42</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-5917</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Gas Phase Filter- Custom Blend, Safety for Aura Elite 30 and 54</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-5817</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">HEPA Filter, Safety for Aura Elite 42</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-5920</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">HEPA Filter, Safety for Aura Elite 30 and 54</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-5820</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Pack of 12, Prefilters for Aura Elite</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-PRE24</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Mobile Cart, 30" wide X 36" high with locking casters</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">AU-250C</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Mobile Cart, 30" wide X 30" high with locking casters</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">AU-252C</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Mobile Cart, 42" wide X 36" high with locking casters</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">AU-550C</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Mobile Cart, 42" wide X 30" high with locking casters</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">AU-552C</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Mobile Cart, 54" wide X 36" high with locking casters</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">AU-750C</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Mobile Cart, 54" wide X 30" high with locking casters</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">AU-752C</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Mystaire Isola Vue 36" ductless filtered workstation</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-ISL36</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Mystaire Isola Vue 48" ductless filtered workstation</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-ISL48</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Mystaire Isola Vue 72" ductless filtered workstation</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-ISL72</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Mystaire Isola PRO 36" ductless filtered workstation</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-ISL36P</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Mystaire Isola PRO 48" ductless filtered workstation</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-ISL48P</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Mystaire Isola PRO 72" ductless filtered workstation</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-ISL72P</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Mystaire Isola EDGE 36" ductless filtered workstation</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-ISL36P2</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Mystaire Isola EDGE 48" ductless filtered workstation</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-ISL48P2</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Mystaire Isola EDGE 72" ductless filtered workstation</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-ISL72P2</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Gas Phase Filter for Hydrocarbons, Main for Isola 36 and 72</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-4004</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Gas Phase Filter for Hydrocarbons, Main for Isola 48</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-4104</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Gas Phase Filter for Formaldehyde, Main for Isola 36 and 72</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-4007</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Gas Phase Filter for Formaldehyde, Main for Isola 48</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-4107</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Gas Phase Filter for Ammonia and Amines, Main for Isola 36 and 72</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-4008</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Gas Phase Filter for Ammonia and Amines, Main for Isola 48</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-4108</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Gas Phase Filter for Sulfur, Main for Isola 36 and 72</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-4009</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Gas Phase Filter for Sulfur, Main for Isola 48</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-4109</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Gas Phase filter for Mercury, Main for Isola 36 and 72</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-4011</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Gas Phase filter for Mercury, Main for Isola 48</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-4111</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Gas Phase Filter for Mineral Acids, Main for Isola 36 and 72</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-4014</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Gas Phase Filter for Mineral Acids, Main for Isola 48</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-4114</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Gas Phase Filter-Multi-purpose, Main for Isola 36 and 72</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-4016</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Gas Phase Filter-Multi-purpose, Main for Isola 48</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-4116</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Gas Phase Filter- Custom Blend, Main for Isola 36 and 72</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-4017</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Gas Phase Filter- Custom Blend, Main for Isola 48</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-4117</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">HEPA Filter, Main for Isola 36 and 72</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-4020</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">HEPA Filter, Main for Isola 48</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-4120</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Dual Purpose Safety Filter for Isola 36 and 72</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-5800</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Dual Purpose Safety Filter for Isola 48</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-6500</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Pre-filter, Pack of 12 for Isola 36 and 72</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-PRE-24</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Pre-filter, Pack of 12 for Isola 48</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-PRE-20</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Isola 36" polypropylene base cabinet, 36" high</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-PBC36</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Isola 48" polypropylene base cabinet, 36" high</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-PBC48</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Isola 72" polypropylene base cabinet, 36" high</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-PBC72</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Isola 36" Powder Coated Stand (Color: White)</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-STD36</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Isola 48" Powder Coated Stand (Color: White)</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-STD48</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Isola 72" Powder Coated Stand (Color: White)</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-STD72</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Polypropylene Sink, 12"X12"X8" d</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-PSK12</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Polypropylene Sink, 15 3/4"X15 3/4" X 12" d</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-PSK16</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Polypropylene Sink, 19 5/8" X 15 3/4" X 12" d center drain</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-PSK18C</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Polypropylene Sink, 19 5/8" X 15 3/4" X 12" d left drain</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-PSK18L</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Polypropylene Sink, 4" X 4" X 4"d cup sink</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-PSK44</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Polypropylene Sink, 10" X 4" X 6" d</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-PSK47</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Powercord Access Port</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-PWP</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Gas Fixture, Remote control wall mount 45-degree barb connection, Argon, color: Violet</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-FXAG</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Gas Fixture, Remote control wall mount 45-degree barb connection, Air, color: Orange</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-FXAR</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name"> Duplex Electrical Outlet, installed on post</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-FXDX110</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">220V Single Electrical Outlet, installed on post</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MYFX220</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Water Fixture, Goose Neck Wall Mounted with remote control on post</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MYFXGSWM</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Gas Fixture, Remote control wall mount 45-degree barb connection, helium, color: Black</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-FXHE</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Gas Fixture, Remote control wall mount 45-degree barb connection, natural gas, color: Blue</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-FXNG</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Gas Fixture, Remote control wall mount 45-degree barb connection, nitrogen, color: Brown</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-FXNT</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Gas Fixture, Remote control wall mount 45-degree barb connection, vacuum, color: yellow</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-FXVM</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Water Fixture- 4 inch stud, Wall Mounted with remote control on post</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-FXWT4</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Water Fixture- 6 inch stud, Wall Mounted with remote control on post</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-FXWT6</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Water Fixture- DI Water, Wall Mounted with remote control on post</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-FXWTDI</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Four Casters, two which lock</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-WLKIT</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Economy ductless workstation, 24" wide X 22" deep X 28" high- requires one main filter, not included in price.</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-2400</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Spill Tray for MY-2400</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-2400T</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Vanometer installed for MY-2400 Workstation</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-VANO</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Latitude 36 Balance Enclosure, includes HEPA filter and pre-filter</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-LBE36</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Ductless Fume Extractor without arm, requires one main filter, not included in price.  </td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">FE-1200</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Ductless Fume Extractor with single arm, requires one main filter, not included in price. </td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">FE-1200A</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Ductless Fume Extractor with dual arm, requires one main filter, not included in price. </td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">FE-1200B</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Single Capture Arm, Replacement</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">FE-1210</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Dual Capture Arm, Replacement</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">FE-1215</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">36" Ductless Workstation, Requires one filter for operation, not included in price. 110 volt</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">FE-36</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Spill Tray for FE-36</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">FE-36ST</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Downflow Workstation, requires on main filter, not included in price. </td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">FE-WS6</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">32" Evidence Drying Cabinet, Includes (1) HEPA, (1) Carbon, (2) prefilters.  </td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">FR-3100</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">32" Evidence Drying Cabinet, Ducted Model</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">FR-3100D</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">64" Evidence Drying Cabinet, Includes (2) HEPA, (2) Carbon, (4) prefilters. </td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">FR-6100</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">64" Evidence Drying Cabient, Ducted Model</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">FR-6100D</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">CA Fuming Chamber, 39" wide X 53" high, Includes (1) MY-2818 carbon filter and (1) FE-2013 prefilter. </td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">CA-3000</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">CA Fuming Chamber, 39" wide X 53" high, Includes upgrade hotplate, (1) MY-2818 carbon filter and (1) FE-2013 prefilter. </td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">CA-3000-050</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">CA Fuming Chamber, 39" wide X 65" high, Includes (1) MY-2818 carbon filter and (1) FE-2013 prefilter. </td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">CA-6000</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">CA Fuming Chamber, 39" wide X 65" high, Includes upgrade hotplate, (1) MY-2818 carbon filter and (1) FE-2013 prefilter. </td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">CA-6000-050</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">CA Fuming Chamber, 72" wide X 94" high, Includes (2) MY-2818 carbon filter and (2) FE-2013 prefilter. </td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">CA-9000*</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">CA Fuming Chamber, 72" wide X 94" high, ducted</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">CA-9000D*</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">CA Fuming Chamber, 72" wide X 94" high, Includes hotplate upgrade, (2) MY-2818 carbon filter and (2) FE-2013 prefilter. </td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">CA-9000-050*</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">CA Fuming Chamber, 72" wide X 94" high, Includes hotplate upgrade, ducted</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">CA-9000D-050*</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">30" Benchtop Cyanoacrylate Fuming Chamber</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-CA30</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">30" Free Standing Cyanoacrylate Fuming Chamber</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-CA30T</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Ninhydrin Development Chamber, </td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-5000</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Ninhydrin Development Chamber, </td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-8000</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Fentanyl - 48" Latitude Fentanyl Series C ductless hood</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-LFH48</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Fentanyl - 72" Latitude Fentanyl Series C ductless hood</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-LFH72</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Pharmacy - 48" Latitude Series C ductless hood</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-LBE48</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Pharmacy - 72" Latitude Series C ductless hood</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-LBE72</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Package of 12, replacement prefilters for MY-LBE48/72 MY-LFH48/72</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-PRE36</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">HEPA Filter, for MY-LBE48/72 MY-LFH48/72</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-5920</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Mobile Cart for CA-3000 or CA-6000 ONLY, 39" wide X 25" high</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">CA-6000C</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Gas Phase Filter for Hydrocarbons- FE-2620; or half height filter for FE 1200 (A&B)</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">FE-1021B</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">HEPA Filter for FE-2620; or half height filter for FE 1200 (A&B)</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">FE-1021A</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Gas Phase Filter for Ammonia and Amines; or half height filter for FE 1200 (A&B)</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">FE-1021C</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Gas Phase Filter for Sulfur; or half height filter for FE 1200 (A&B)</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">FE-1021D</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Gas Phase Filter Multipurpose Applications- FE-2620; or half height filter for FE 1200 (A&B)</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">FE-1021E</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Gas Phase Filter for Formaldehyde- FE-2620; or half height filter for FE 1200 (A&B)</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">FE-1021K</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Gas Phase Filter for Mineral Acids- FE-2620; or half height filter for FE 1200 (A&B)</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">FE-1021J</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Gas Phase Filter for Hydrocarbons- MY-2400</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-1104</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Gas Phase Filter for Formaldehyde- MY-2400</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-1107</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Gas Phase Filter for Ammonia and Amines- MY-2400</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-1108</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Gas Phase Filter for Sulfur- MY-2400</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-1109</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Gas Phase Filter for Mineral Acids- MY-2400</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-1114</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">HEPA Filter for MY-2400</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-1420</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Pack of 12 Pre-filters for MY-2400</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-PRE4</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Gas Phase Filter for Hydrocarbons- FE-1200, A & B</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">FE-1004</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Gas Phase Filter for Mineral Acids- FE-1200, A & B</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">FE-1014</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Gas Phase Filter for Multi-Application / AC,ACI,AMN,SUL</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">FE-1016</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Gas Phase Filter - Custom</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">FE-1017</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">HEPA Filter for FE-1200, A & B</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">FE-1020</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Gas Phase Filter for Formaldehyde- FE-1200, A & B</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">FE-1007</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Gas Phase Filter for Ammonia- FE-1200, A&B</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">FE-1008</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Gas Phase Filter for Sulfur- FE-1200, A&B</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">FE-1009</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Particle Filter for FE-36 ONLY</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">FE-36PF</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Gas Phase Filter for Hydrocarbons- FE-36 ONLY</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">FE-36CF</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">HEPA Filter for FE-36 ONLY</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">FE-36HF</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">HEPA Filter for FE-WS6</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">FE-5020</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">HEPA Filter for FE-PCR</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">FE-7020</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Gas Phase Filter for Hydrocarbons- FE-WS6</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">FE-5004</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Gas Phase Filter for Formaldehyde- FE-WS6</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">FE-5007</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Gas Phase Filter for Mineral Acids- FE-WS6</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">FE-5014</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Pre-filter, Package of 10</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">FE-1013</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Pre-filter, Package of 6</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">FE-2013</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Pre-filter, Package of 6</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">FE-3013</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Pre-filter, Package of 5</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">FE-7013</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Gas Phase Filter for Odors of Decomposition, FR3100 &6100 Models ONLY</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">FE-1019</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Gas Phase Filter for Odors of Decomposition, FR3000 & 6000 Models ONLY</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">FE-1018</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Cyanoacrylate Filter for CA Chambers, 3000-9000 models</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-2818</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Audible & Visible Low Temp and RH alarm for FE-8000</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">FE-TRA</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Special Coated Coil for corrosion resistance- FE-8000</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">FE-CC</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Locking Door Option for FE-8000</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">FE-DL</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Humidifier replacement and adaptor</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">FHUMID</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Replacement Circulation Fan Assembly for CA Chamber</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">F0344ACA30</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">24" CleanPrep PCR Workstation, Circulation Free Enclosure with Timed UV Light. </td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-DB24</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">36" CleanPrep PCR Workstation, Circulation Free Enclosure with Timed UV Light. </td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-DB36</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">48" CleanPrep PCR Workstation, Circulation Free Enclosure with Timed UV Light. </td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-DB48</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">24" PCRPREP PCR Workstation with Class 100 Vertical Laminar Flow Air and Timed UV light. </td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-PCR24</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">32" PCRPREP PCR Workstation with Class 100 Vertical Laminar Flow Air and Timed UV light. </td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-PCR32</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">48" PCRPREP PCR Workstation with Class 100 Vertical Laminar Flow Air and Timed UV light. </td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-PCR48</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Optional Waste Pump for Securedry with timed shutoff, 110 V</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-FDR10</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Optional UV Light Kit for SecureDry, </td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-FDR20</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">32" SecureDry forensic evidence drying cabinet with advanced vapor management filtration. </td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-FDR32</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">32" SecureDry forensic evidence drying cabinet, ducted </td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-FDR32TE</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">36" SecureDry forensic evidence drying cabinet with advanced vapor management filtration. </td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-FDR36</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">48" SecureDry forensic evidence drying cabinet with advanced vapor management filtration. </td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-FDR48</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">64" SecureDry forensic evidence drying cabinet with advanced vapor management filtration. </td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-FDR64</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">64" SecureDry forensic evidence drying cabinet with advanced vapor management filtration, dual chamber. </td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-FDR64D</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">64" SecureDry forensic evidence drying cabinet, ducted </td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-FDR64TE</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">72" SecureDry forensic evidence drying cabinet with advanced vapor management filtration, single chamber. </td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-FDR72</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">72" SecureDry forensic evidence drying cabinet with advanced vapor management filtration, dual chamber. </td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-FDR72D</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Hard surface disinfectant spray, 16 oz. pump spray bottle, 12 bottles per case</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-FDR76</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Extra Stainless Steel Shelf</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-FDR40SS</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">SecureDry Starter Ki</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-FDR90</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Cart/Trolley for MY-PCR24 and MY-DB24 Workstation</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-9001</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Cart/Trolley for MY-PCR32 Workstation. 32" wide X 24" deep X 34" high- complete with four casters, 2 locking and 2 free motion.</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-9002</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Cart/Trolley for MY-DB36 Workstation. 36" wide X 24" deep X 34" high- complete with four casters, 2 locking and 2 free motion.</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-9003</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Cart/Trolley for MY-PCR48 and MY-DB48 Workstation. 48" wide X 24" deep X 34" high- complete with four casters, 2 locking and 2 free motion.</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-9004</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">42" wide Horizontal Laminar Flow Clean Bench</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-HLF4U</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">56" wide Horizontal Laminar Flow Clean Bench</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-HLF6U</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">HEPA Filter for MY-HLF4 1 required for Operation</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-HLF40</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Pre-filter for MY-HLF4, pack of 12</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-HLFP4</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">HEPA for MY-HLF6</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-HEPA56</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Pre-filter for MY-HLF6, pack of 12</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-HLF6P</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Carbon Filter for SecureDry</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-1021S</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Carbon half-height filter for FR-3000 & FR-6000</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">FE-1021M</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">HEPA filter for MY-PCR24 and MY-PCR48 (requires 2)</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-HEPA18</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">HEPA filter for MY-PCR32 and "MY-FDR" SecureDry series of units.</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-HEPA</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Pack of 12 Pre-filters for MY-PCR24</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-PRE2</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Pack of 12 Pre-filters for MY-PCR32</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-PRELF</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Pack of 12 Pre-filters for MY-PCR48</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-PRE7</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Pack of 12 Trace Evidence Pre-filters for SecureDry Evidence Drying Cabinets</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-PRE</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Pack of 4, Shortwave UV Bulb for MY-PCR32 and MY-PCR24</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-UVB4</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">MY-ISO5 24" wide vertical laminar flow workstation. Price includes HEPA filter, initial prefilter, fluorescent light and slip hatch. </td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-VLF24</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">MY-ISO5 32" wide vertical laminar flow workstation. Price includes HEPA filter, initial prefilter, fluorescent light and slip hatch. </td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-VLF32</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">MY-ISO5 48" wide vertical laminar flow workstation. Price includes HEPA filters, initial prefilters, fluorescent lights and slip hatch. </td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-VLF48</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">IV Bar for the MY-VLF24</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-IVB24</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">IV Bar for the MY-VLF32</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-IVB32</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">IV Bar for the MY-VLF48</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-IVB48</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Slip hatch port</td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MY-PWP</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">48" Wide Horizontal Laminar Flow Clean Bench, </td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MYHLF48SW</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">72" Wide Horizontal Laminar Flow Clean Bench, </td>
+                            <td class="py-3 px-4" data-label="Packaging">-</td>
+                            <td class="py-3 px-4" data-label="Product Number">MYHLF72SW</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="pagination" style="display: flex; justify-content: center; align-items: center;"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (constant across pages) -->
+    <footer id="footer">
+        <div class="footer-info">
+            <p class="footer-left">1166 South Service Rd. W, Oakville, ON L6L 5T7</p>
+            <p class="footer-center">
+                Phone: 905-469-4253  |  
+                Fax: 905-825-9795  |  
+                Toll Free: 866-718-0515
+            </p>
+            <p class="footer-right">
+                Email: <a href="mailto:info@phoenixairmid.com">info@phoenixairmid.com</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for toggling categories -->
+    <script>
+        function toggleCategory(element) {
+            const list = element.nextElementSibling;
+            const arrow = element.querySelector('.toggle-arrow');
+            if (list.style.display === 'none' || list.style.display === '') {
+                list.style.display = 'block';
+                arrow.textContent = '▼';
+            } else {
+                list.style.display = 'none';
+                arrow.textContent = '>';
+            }
+        }
+    </script>
+</body>
+<script src="/script.js"></script>
+</html>

@@ -170,8 +170,21 @@ nav {
 .product-categories, .products, .solutions {
     width: 30%;
     text-align: left;
-    max-height: 314px; /* Adjusted height */
+    max-height: 395px; /* Adjusted height */
     overflow-y: auto; /* Enable vertical scroll */
+}
+
+/* Reorder the columns */
+.product-categories {
+    order: 0; /* Stays on the left (default) */
+}
+
+.solutions {
+    order: 1; /* Moves to the middle */
+}
+
+.products {
+    order: 2; /* Moves to the right */
 }
 
 /* Custom Scrollbar Styling */
@@ -226,11 +239,6 @@ nav {
 .product-categories ul li a:hover, .products ul li a:hover, .solutions ul li a:hover {
     background: #f0f0f0;
 }
-
-
-/* Rest of your CSS remains the same */
-
-
 /* SEARCH BAR */
 .search-container {
     display: flex;
@@ -333,135 +341,35 @@ nav {
     color: #0CB7F5;
 }
 
-/* HERO SECTION */
-
-
-
-.btn {
-    background: transparent;
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    font-size: 1.2rem;
-    border: 2px solid #fff;
-    border-radius: 5px;
-    transition: color 0.3s ease-in-out;
+/* Partner Logos Banner */
+.partner-logos {
+    padding: 20px 0;
+    background: #fff; /* Match the background color of the banner */
+    text-align: center;
 }
 
-.btn:hover {
-    background: #0CB7F5;
-    border-color: #0CB7F5;
-}
-
-/* TILE SECTION */
-.tiles {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 2rem;
-    max-width: 1100px;
+.partner-logos-container {
+    max-width: 1200px;
     margin: 0 auto;
 }
 
-.tile {
-    background: #fff;
-    padding: 20px;
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
-    text-align: left;
-    transition: transform 0.5s ease-in-out;
+.partner-logos-image {
+    width: 100%;
+    max-width: 1200px;
+    height: auto; /* Ensure proportional scaling */
+    display: block;
+    margin: 0 auto;
+    /* Remove object-fit to avoid interference with image map scaling */
 }
 
-.tile:hover {
-    transform: scale(1.05);
-}
-
-.tile a {
-    text-decoration: none;
-    color: #0CB7F5;
-    font-weight: bold;
-}
-
-/* FOOTER STYLING */
-footer {
-    background: #54A9C7;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-}
-
-.footer-info {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1450px;
-    margin: auto;
-    flex-wrap: wrap;
-    padding: 10px 20px;
-    text-align: center;
-}
-.footer-info p {
-    white-space: nowrap;  /* Prevents line breaks */
-    /*overflow: hidden;      /* Hides overflow if too long */
-    text-overflow: ellipsis; /* Adds "..." if it overflows */
-}
-
-
-.footer-left {
-    flex: 1;
-    text-align: left;
-}
-
-.footer-center {
-    flex: 2;
-    text-align: center;
-}
-
-.footer-right {
-    flex: 1;
-    text-align: right;
-}
-
-.footer-right a {
-    color: #416775;
-    text-decoration: none;
-}
-
-.footer-right a:hover {
-    text-decoration: underline;
-}
-
-
-
-/* RESPONSIVE DESIGN */
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .nav-links {
-        margin-top: 10px;
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .footer-info {
-        flex-direction: column;
-        text-align: center;
-        gap: 10px;
-    }
-
-    .footer-left, .footer-center, .footer-right {
-        text-align: center;
-    }
-}
-
+/* HERO SECTION */
 #slideshow {
     position: relative;
     width: 100%;
     max-width: 100%;
     height: 500px;
     overflow: hidden;
+    margin-top: 83px; /* Account for fixed header height */
 }
 
 .slide {
@@ -506,7 +414,7 @@ footer {
 .slide:nth-child(4) img {
     object-fit: cover; /* Ensure the image covers the entire space */
     position: relative; /* Allow manual adjustment */
-    top: 20px; /* Adjust this value to move the image up or down */
+    top: 0px; /* Adjust this value to move the image up or down */
 }
 
 /* Slide 5 specific styling */
@@ -528,8 +436,8 @@ footer {
 
 .slide-text {
     position: absolute;
-    bottom: 20%; /* Adjust this value to move the text and button up or down */
-    left: 10%;
+    left: 2%; /* Move text slightly more to the left */
+    bottom: 10%; /* Move text slightly lower on the y axis */
     color: white;
     padding: 20px;
     border-radius: 5px;
@@ -604,6 +512,155 @@ footer {
     opacity: 1;
 }
 
+.btn {
+    background: transparent;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    transition: color 0.3s ease-in-out;
+}
+
+.btn:hover {
+    background: #0CB7F5;
+    border-color: #0CB7F5;
+}
+
+/* TILE SECTION */
+.tiles {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Smaller tiles */
+    gap: 20px; /* Balanced spacing */
+    padding: 2rem;
+    max-width: 1000px; /* Slightly narrower */
+    margin: 0 auto;
+}
+
+.tile {
+    background: linear-gradient(135deg, #f8faff, #e6f2fa); /* Pearl white with a slight blue tint */
+    padding: 20px; /* Comfortable padding */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-align: center; /* Center-align content */
+    border-radius: 8px; /* Rounded corners for a softer look */
+    border: 2px solid #54A9C7; /* Bold blue accent border */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    color: #333; /* Dark text for contrast */
+}
+
+.tile:hover {
+    transform: translateY(-5px); /* Subtle lift on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+.tile a {
+    text-decoration: none;
+    color: #0CB7F5; /* Bold blue for links */
+    font-weight: bold;
+    font-size: 1.1rem; /* Slightly larger font */
+    display: block;
+    margin-top: 10px;
+    transition: color 0.3s ease-in-out;
+}
+
+.tile a:hover {
+    color: #086A9B; /* Darker blue accent on hover */
+}
+
+.tile p {
+    font-size: 0.9rem; /* Smaller text for descriptions */
+    margin-top: 10px;
+    line-height: 1.4;
+    color: #555; /* Muted dark grey for secondary text */
+}
+
+/* FOOTER STYLING */
+footer {
+    background: #54A9C7;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1450px;
+    margin: auto;
+    flex-wrap: wrap;
+    padding: 10px 20px;
+    text-align: center;
+}
+.footer-info p {
+    white-space: nowrap;  /* Prevents line breaks */
+    /*overflow: hidden;      /* Hides overflow if too long */
+    text-overflow: ellipsis; /* Adds "..." if it overflows */
+}
+
+.footer-left {
+    flex: 1;
+    text-align: left;
+}
+
+.footer-center {
+    flex: 2;
+    text-align: center;
+}
+
+.footer-right {
+    flex: 1;
+    text-align: right;
+}
+
+.footer-right a {
+    color: #416775;
+    text-decoration: none;
+}
+
+.footer-right a:hover {
+    text-decoration: underline;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links {
+        margin-top: 10px;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer-info {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .footer-left, .footer-center, .footer-right {
+        text-align: center;
+    }
+
+    #slideshow {
+        margin-top: 120px; /* Adjust for mobile header height */
+        height: 300px; /* Reduce height on mobile */
+    }
+
+    .partner-logos {
+        padding: 10px 0;
+    }
+
+    .partner-logos-image {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
 .sidebar {
     position: fixed;
     right: 0;
@@ -664,6 +721,7 @@ footer {
 .sidebar:hover .sidebar-content img {
     margin-right: 10px;
 }
+
 /* Overlay Styling */
 .overlay {
     position: fixed;
@@ -708,5 +766,79 @@ footer {
     color: red;
     margin-top: 10px;
     display: none;
+}
+
+/* Toggle Link Styling */
+.toggle-specs {
+    font-family: 'Barlow', sans-serif;
+    font-size: 14px; /* Small font size */
+    color: #09769e; /* Blue text, typical for links */
+    text-decoration: none; /* No underline by default */
+    cursor: pointer;
+    margin-bottom: 15px; /* Space below the link */
+    display: inline-block; /* Ensure it aligns with the content */
+}
+
+.toggle-specs:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Specs Table Styling */
+.specs-table {
+    display: none; /* Hidden by default */
+    margin-bottom: 20px; /* Space below the table */
+    width: 100%; /* Full width of the parent container */
+    max-width: 600px; /* Prevent the table from becoming too wide */
+}
+
+.specs-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Barlow', sans-serif;
+    font-size: 14px;
+    color: #333;
+}
+
+.specs-table th,
+.specs-table td {
+    padding: 8px 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.specs-table th {
+    background-color: #f5f5f5;
+    font-weight: 600;
+}
+
+.specs-table td {
+    background-color: #fff;
+}
+
+/* Ensure the table integrates smoothly on mobile */
+@media (max-width: 1920px) {
+    .toggle-specs {
+        font-size: 13px; /* Slightly smaller on mobile */
+        margin-bottom: 12px;
+    }
+
+    .specs-table {
+        margin-bottom: 15px;
+    }
+
+    .specs-table table {
+        font-size: 13px;
+    }
+
+    .specs-table th,
+    .specs-table td {
+        padding: 6px 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .specs-table {
+        max-width: 100%; /* Full width on mobile */
+    }
 }
 

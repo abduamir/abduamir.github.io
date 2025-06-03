@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Highlighted Products - Phoenix Airmid Biomedical</title>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css"> <!-- Main site styles -->
+    <link rel="stylesheet" href="/productstyle.css"> <!-- Updated product styles -->
+  <style>
+    /* Basic tab styling */
+    .tabs {
+      display: flex;
+      justify-content: center;
+      margin: 20px 0;
+    }
+    .tab-btn {
+      background: #f0f0f0;
+      border: none;
+      padding: 10px 20px;
+      margin: 0 5px;
+      cursor: pointer;
+      font-family: 'Barlow', sans-serif;
+      font-size: 1rem;
+      transition: background 0.3s;
+    }
+    .tab-btn.active, .tab-btn:hover {
+      background: #54A9C7;
+      color: #fff;
+    }
+    .tab-content .tab-panel {
+      display: none;
+    }
+    .tab-content .tab-panel.active {
+      display: block;
+    }
+    /* Consumables item styling */
+    .consumables-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: space-around;
+    }
+    .consumable-item {
+      width: 45%;
+      border: 2px solid #54A9C7;
+      padding: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .consumable-item img {
+      width: 100%;
+      height: auto;
+    }
+    .consumable-title {
+      margin: 10px 0;
+      cursor: pointer;
+      color: #09769e;
+      font-family: 'Barlow', sans-serif;
+      font-size: 1.1rem;
+    }
+    .consumable-details {
+      display: none;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrapper">
+    <!-- Header: reused from your energium file (&#8203;:contentReference[oaicite:6]{index=6}&#8203;:contentReference[oaicite:7]{index=7}) -->
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="/index.html"><img src="/images/PAB Logo Old.png" alt="Phoenix Airmid Logo"></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#" class="dropdown-trigger" data-menu="company-menu">Company</a></li>
+                <li><a href="#" class="dropdown-trigger" data-menu="products-menu">Products & Solutions</a></li>
+                <li><a href="#" class="dropdown-trigger" data-menu="resources-menu">Resources</a></li>
+                <li><a href="#" class="dropdown-trigger" data-menu="support-menu">Support</a></li>
+                <li><a href="#" class="dropdown-trigger" data-menu="news-menu">News & Events</a></li>
+            </ul>
+            <div class="search-container">
+                <input type="text" class="search-input" id="search-input" placeholder="Search...">
+                <button class="search-btn">🔍</button>
+            </div>
+            <div class="search-results-container"></div>
+
+            <!-- Dropdown Menus (from reference files) -->
+            <div class="dropdown-menu" id="company-menu">
+                <a href="/pages/about.html">About Us</a>
+                <a href="/pages/what_we_do.html">What We Do</a>
+                <a href="/pages/values.html">Our Values</a>
+                <a href="/pages/our_people.html">Our People</a>
+                <a href="/pages/responsibility.html">Our Corporate Responsibility</a>
+                <a href="/pages/partners.html">Our Partners</a>
+            </div>
+            <div class="dropdown-menu" id="products-menu">
+                <div class="dropdown-content">
+                    <div class="product-categories">
+                        <h3>Product Categories</h3>
+                        <ul id="category-list">
+                            <li><a href="#" class="category-trigger" data-category="clinical-chemistry">Clinical Chemistry</a></li>
+                            <li><a href="#" class="category-trigger" data-category="hematology">Hematology</a></li>
+                            <li><a href="#" class="category-trigger" data-category="microbiology">Microbiology</a></li>
+                            <li><a href="#" class="category-trigger" data-category="EQA">EQA</a></li>
+                            <li><a href="#" class="category-trigger" data-category="pathology">Pathology</a></li>
+                            <li><a href="#" class="category-trigger" data-category="transfusion-medicine">Transfusion Medicine</a></li>
+                            <li><a href="#" class="category-trigger" data-category="disinfection-systems">Disinfection Systems</a></li>
+                            <li><a href="#" class="category-trigger" data-category="Biomarkers">Biomarkers</a></li>
+                            <li><a href="#" class="category-trigger" data-category="Pre-Analytical">Pre-Analytical</a></li>
+                        </ul>
+                    </div>
+                    <div class="products">
+                        <h3>Products</h3>
+                        <ul id="products-list" class="scrollable-list"></ul>
+                    </div>
+                    <div class="solutions">
+                        <h3>Solutions</h3>
+                        <ul id="solutions-list" class="scrollable-list"></ul>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown-menu" id="resources-menu">
+                <div class="dropdown-category">
+                    <span>Orders</span>
+                    <ul>
+                        <li><a href="/pages/ordering.html">Ordering</a></li>
+                        <li><a href="/pages/logistics.html">Logistics</a></li>
+                    </ul>
+                </div>
+                <div class="dropdown-category">
+                    <span>Inquiries</span>
+                    <ul>
+                        <li><a href="/pages/account-executives.html">Account Executives</a></li>
+                        <li><a href="/pages/product-specialists.html">Product Specialists</a></li>
+                        <li><a href="/pages/business-development.html">Business Development</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="dropdown-menu" id="support-menu">
+                <a href="/pages/contact.html">Contact Us</a>
+                <a href="/pages/Instrument-Service-and-Application-Specialists.html">Instrument Service and Application Specialists</a>
+            </div>
+            <div class="dropdown-menu" id="news-menu">
+                <a href="/pages/news.html">Latest News</a>
+                <a href="/pages/events.html">Upcoming Events</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Sidebar: reused from your energium file -->
+    <section class="vertical-bar">
+        <div class="sidebar">
+            <div class="sidebar-content">
+                <a href="/pages/customer-service.html">
+                    <img src="/images/icons8-headset-50.png" alt="Customer Service">
+                    <span>Customer Service</span>
+                </a>
+                <a href="/pages/events.html">
+                    <img src="/images/icons8-calendar-100.png" alt="Events">
+                    <span>Events</span>
+                </a>
+                <a href="/pages/contact.html">
+                    <img src="/images/icons8-phone-100.png" alt="Contact Us">
+                    <span>Contact Us</span>
+                </a>
+                <a href="/pages/ordering.html">
+                    <img src="/images/icons8-megaphone-100.png" alt="Call for Service">
+                    <span>Call for Service</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+    <!-- Smaller Banner (adjusted styles for better fit) -->
+    <div class="image-banner" style="padding:0; margin:0 auto 20px; text-align:center; max-width:100%;">
+      <img src="/images/cellpathbanner.jpg" alt="Small Banner" style="display:block; width:100%; height:auto; max-width:100%;">
+    </div>
+
+      <!-- Tabs navigation -->
+      <div class="tabs">
+        <button class="tab-btn active" data-tab="equipment">Equipment</button>
+        <button class="tab-btn" data-tab="consumables">Consumables</button>
+      </div>
+
+      <!-- Tab content panels -->
+      <div class="tab-content">
+        <!-- Equipment Tab Panel: replicates product showcase from energium page -->
+        <div id="equipment" class="tab-panel active">
+          <section class="highlighted-products">
+            <!-- Example product item 1 -->
+            <div class="product-item">
+              <div class="product-image">
+                <img src="/images/tissuebath.png" alt="Equipment 1">
+              </div>
+              <div class="product-details">
+                <div class="product-details-content">
+                  <ul class="product-features">
+                    <li>Small footprint ensures minimal bench space is taken</li>
+                    <li>Ultra-fast heating system reduces waiting time before the instrument is ready for use</li>
+                    <li>Variable analogue temperature control to meet user needs</li>
+                    <li>Deep bowl (60mm) allows slides to be used at any angle to pick up section</li>
+                    <li>Incorporated miniature circuit breakers for added safety</li>
+                    <li>SKU: JAW-0100-00I</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="product-item">
+                <div class="product-image">
+                  <img src="/images/hotplate.png" alt="Equipment 1">
+                </div>
+                <div class="product-details">
+                  <div class="product-details-content">
+                    <ul class="product-features">
+                      <li>Ultra-fast heating system</li>
+                      <li>Small footprint</li>
+                      <li>Matte black hotplate surface provides a contrast for section visualisation</li>
+                      <li>Anti-microbial powder coat finish</li>
+                      <li>Dimensions: 145mm x 145mm x 65mm (D x W x H)</li>
+                      <li>SKU: JAY-0200-00A</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-item">
+                <div class="product-image">
+                  <img src="/images/forceps.png" alt="Equipment 1">
+                </div>
+                <div class="product-details">
+                  <div class="product-details-content">
+                    <ul class="product-features">
+                      <li>LED light within the forceps improves visualisation when handling small biopsies</li>
+                      <li>Operate at a temperature between 63-70°C, preventing tissue from sticking and ensuring specimen safety</li>
+                      <li>Smooth forceps are ideal for handling fragile tissue specimens which are easily marked</li>
+                      <li>Cable armour at the junction of the forceps and power cable prevents fracture and improves reliability</li>
+                      <li>Finger grip moulded in polyurethane remains cool to touch when in use and increases comfort during long embedding sessions</li>
+                      <li>SKU: GZH</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-item">
+                <div class="product-image">
+                  <img src="/images/dryer.png" alt="Equipment 1">
+                </div>
+                <div class="product-details">
+                  <div class="product-details-content">
+                    <ul class="product-features">
+                      <li>Fan assisted heating reduces section drying time to approximately 10 minutes, compared to 35-40 minutes when using conventional ovens</li>
+                      <li>Optional LEAN Timer Systems and LEAN identifier rack ensure each rack has exact drying times</li>
+                      <li>Small footprint allows close positioning to the microtome to speed up the workflow in the laboratory</li>
+                      <li>Digital temperature control guarantees heat accuracy within the chamber</li>
+                      <li>Anti-microbial finish (Silver Ion) to inhibit bacteria and virus growth</li>
+                      <li>SKU: JAX-0400-00A</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="product-item">
+                <div class="product-image">
+                  <img src="/images/squarebath.png" alt="Equipment 1">
+                </div>
+                <div class="product-details">
+                  <div class="product-details-content">
+                    <ul class="product-features">
+                      <li>Selectable white, red, green and blue LED back lighting with dimmer control improves section visualisation</li>
+                      <li>Easily removable/replaceable LED light array without the use of specialist tools</li>
+                      <li>Small footprint takes up minimal bench space at the microtome</li>
+                      <li>Digital temperature control accurate to + or – 0.5°C at 45°C</li>
+                      <li>Optional easy to use drop-on lid improves heating efficiency and control, whilst protecting water from contamination</li>
+                      <li>SKU: JAW-0300-00A</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            <!-- You can add more product items as needed -->
+          </section>
+        </div>
+
+        <!-- Consumables Tab Panel -->
+        <div id="consumables" class="tab-panel">
+          <div class="consumables-container">
+            <!-- Consumable Item 1 -->
+            <div class="consumable-item">
+              <div class="consumable-image">
+                <img src="/images/cassettes.jpg" alt="Consumable 1" style="width: 50%; height: auto;">
+              </div>
+              <div class="consumable-title toggle-details" data-target="details-consumable1">
+                Cassettes
+              </div>
+              <div class="consumable-details" id="details-consumable1">
+                <!-- Embedding a PDF page via an iframe; adjust width/height as needed -->
+                <iframe src="/images/cassettes.pdf" width="100%" height="400px"></iframe>
+              </div>
+            </div>
+            <!-- Consumable Item 2 -->
+            <div class="consumable-item">
+              <div class="consumable-image">
+                <img src="/images/slides.jpg" alt="Consumable 2" style="width: 50%; height: auto;">
+              </div>
+              <div class="consumable-title toggle-details" data-target="details-consumable2">
+                Slides
+              </div>
+              <div class="consumable-details" id="details-consumable2">
+                <iframe src="/images/slides.pdf" width="100%" height="400px"></iframe>
+              </div>
+            </div>
+            <!-- Consumable Item 3 -->
+            <div class="consumable-item">
+              <div class="consumable-image">
+                <img src="/images/blades.jpg" alt="Consumable 3" style="width: 50%; height: auto;">
+              </div>
+              <div class="consumable-title toggle-details" data-target="details-consumable3">
+                Blades
+              </div>
+              <div class="consumable-details" id="details-consumable3">
+                <iframe src="/images/blades.pdf" width="100%" height="400px"></iframe>
+              </div>
+            </div>
+            <!-- Consumable Item 4 -->
+            <div class="consumable-item">
+              <div class="consumable-image">
+                <img src="/images/filters.jpg" alt="Consumable 4" style="width: 50%; height: auto;">
+              </div>
+              <div class="consumable-title toggle-details" data-target="details-consumable4">
+                Filters
+              </div>
+              <div class="consumable-details" id="details-consumable4">
+                <iframe src="/images/filters.pdf" width="100%" height="400px"></iframe>
+              </div>
+            </div>
+
+            <!-- Consumable Item 5 -->
+
+            <div class="consumable-item">
+                <div class="consumable-image">
+                  <img src="/images/transport.jpg" alt="Consumable 5" style="width: 50%; height: auto;">
+                </div>
+                <div class="consumable-title toggle-details" data-target="details-consumable5">
+                  Transport & Archiving
+                </div>
+                <div class="consumable-details" id="details-consumable5">
+                  <iframe src="/images/transport.pdf" width="100%" height="400px"></iframe>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    <p style="text-align: center; margin-top: 20px; font-family: 'Barlow', sans-serif; font-size: 1.2rem;">
+        <strong>For more information on these products, please <a href="/pages/contact.html" style="color: #09769e; text-decoration: none;">contact us</a></strong>
+    </p>
+    </main>
+
+    <!-- Footer: reused from your energium page (&#8203;:contentReference[oaicite:10]{index=10}&#8203;:contentReference[oaicite:11]{index=11}) -->
+    <footer>
+      <div class="footer-info">
+        <p class="footer-left">1166 South Service Rd. W, Oakville, ON L6L 5T7</p>
+        <p class="footer-center">
+          Phone: 905-469-4253  |  Fax: 905-825-9795  |  Toll Free: 866-718-0515
+        </p>
+        <p class="footer-right">
+          Email: <a href="mailto:info@phoenixairmid.com">info@phoenixairmid.com</a>
+        </p>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Shared functionality from your existing script -->
+  <script src="/script.js"></script>
+  <!-- Custom inline script for tab and dropdown functionality -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Tab switching
+      const tabButtons = document.querySelectorAll('.tab-btn');
+      const tabPanels = document.querySelectorAll('.tab-panel');
+      
+      tabButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          // Remove active status from all tabs and panels
+          tabButtons.forEach(btn => btn.classList.remove('active'));
+          tabPanels.forEach(panel => panel.classList.remove('active'));
+          // Activate the clicked tab and corresponding panel
+          this.classList.add('active');
+          const targetPanel = document.getElementById(this.getAttribute('data-tab'));
+          if (targetPanel) {
+            targetPanel.classList.add('active');
+          }
+        });
+      });
+
+      // Consumables dropdown toggles
+      const toggles = document.querySelectorAll('.toggle-details');
+      toggles.forEach(function(toggle) {
+        toggle.addEventListener('click', function() {
+          const targetId = this.getAttribute('data-target');
+          const details = document.getElementById(targetId);
+          if (details.style.display === 'block') {
+            details.style.display = 'none';
+          } else {
+            details.style.display = 'block';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

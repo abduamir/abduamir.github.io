@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Highlighted Products - Phoenix Airmid Biomedical</title>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css"> <!-- Main site styles -->
+    <link rel="stylesheet" href="/list.css"> <!-- Updated product styles -->
+</head>
+<body>
+    <div class="page-wrapper">
+        <!-- Header (from reference files) -->
+        <header>
+            <nav>
+                <div class="logo">
+                    <a href="/index.html"><img src="/images/PAB Logo Old.png" alt="Phoenix Airmid Logo"></a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#" class="dropdown-trigger" data-menu="company-menu">Company</a></li>
+                    <li><a href="#" class="dropdown-trigger" data-menu="products-menu">Products & Solutions</a></li>
+                    <li><a href="#" class="dropdown-trigger" data-menu="resources-menu">Resources</a></li>
+                    <li><a href="#" class="dropdown-trigger" data-menu="support-menu">Support</a></li>
+                    <li><a href="#" class="dropdown-trigger" data-menu="news-menu">News & Events</a></li>
+                </ul>
+                <div class="search-container">
+                    <input type="text" class="search-input" id="search-input" placeholder="Search...">
+                    <button class="search-btn">🔍</button>
+                </div>
+                <div class="search-results-container"></div>
+
+                <!-- Dropdown Menus (from reference files) -->
+                <div class="dropdown-menu" id="company-menu">
+                    <a href="/pages/about.html">About Us</a>
+                    <a href="/pages/what_we_do.html">What We Do</a>
+                    <a href="/pages/values.html">Our Values</a>
+                    <a href="/pages/our_people.html">Our People</a>
+                    <a href="/pages/responsibility.html">Our Corporate Responsibility</a>
+                    <a href="/pages/partners.html">Our Partners</a>
+                </div>
+                <div class="dropdown-menu" id="products-menu">
+                    <div class="dropdown-content">
+                        <div class="product-categories">
+                            <h3>Product Categories</h3>
+                            <ul id="category-list">
+                                <li><a href="#" class="category-trigger" data-category="clinical-chemistry">Clinical Chemistry</a></li>
+                                <li><a href="#" class="category-trigger" data-category="hematology">Hematology</a></li>
+                                <li><a href="#" class="category-trigger" data-category="microbiology">Microbiology</a></li>
+                                <li><a href="#" class="category-trigger" data-category="EQA">EQA</a></li>
+                                <li><a href="#" class="category-trigger" data-category="pathology">Pathology</a></li>
+                                <li><a href="#" class="category-trigger" data-category="transfusion-medicine">Transfusion Medicine</a></li>
+                                <li><a href="#" class="category-trigger" data-category="disinfection-systems">Disinfection Systems</a></li>
+                                <li><a href="#" class="category-trigger" data-category="Biomarkers">Biomarkers</a></li>
+                                <li><a href="#" class="category-trigger" data-category="Pre-Analytical">Pre-Analytical</a></li>
+                            </ul>
+                        </div>
+                        <div class="products">
+                            <h3>Products</h3>
+                            <ul id="products-list" class="scrollable-list"></ul>
+                        </div>
+                        <div class="solutions">
+                            <h3>Solutions</h3>
+                            <ul id="solutions-list" class="scrollable-list"></ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="dropdown-menu" id="resources-menu">
+                    <div class="dropdown-category">
+                        <span>Orders</span>
+                        <ul>
+                            <li><a href="/pages/ordering.html">Ordering</a></li>
+                            <li><a href="/pages/logistics.html">Logistics</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown-category">
+                        <span>Inquiries</span>
+                        <ul>
+                            <li><a href="/pages/account-executives.html">Account Executives</a></li>
+                            <li><a href="/pages/product-specialists.html">Product Specialists</a></li>
+                            <li><a href="/pages/business-development.html">Business Development</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="dropdown-menu" id="support-menu">
+                    <a href="/pages/contact.html">Contact Us</a>
+                    <a href="/pages/Instrument-Service-and-Application-Specialists.html">Instrument Service and Application Specialists</a>
+                </div>
+                <div class="dropdown-menu" id="news-menu">
+                    <a href="/pages/news.html">Latest News</a>
+                    <a href="/pages/events.html">Upcoming Events</a>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Sidebar (from reference files) -->
+        <section class="vertical-bar">
+            <div class="sidebar">
+                <div class="sidebar-content">
+                    <a href="/pages/customer-service.html">
+                        <img src="/images/icons8-headset-50.png" alt="Customer Service">
+                        <span>Customer Service</span>
+                    </a>
+                    <a href="/pages/events.html">
+                        <img src="/images/icons8-calendar-100.png" alt="Events">
+                        <span>Events</span>
+                    </a>
+                    <a href="/pages/contact.html">
+                        <img src="/images/icons8-phone-100.png" alt="Contact Us">
+                        <span>Contact Us</span>
+                    </a>
+                    <a href="/pages/ordering.html">
+                        <img src="/images/icons8-megaphone-100.png" alt="Call for Service">
+                        <span>Call for Service</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    <!-- Main Content -->
+    <main>
+        <section class="catalogue container mx-auto">
+            <!-- Logo and Breadcrumb Container -->
+            <div class="logo-breadcrumb-container">
+                <!-- Company Logo -->
+                <div class="company-logo">
+                    <img src="/images/CSMedical.jpg" alt="CS Medical Logo">
+                </div>
+
+                <!-- Breadcrumb Navigation -->
+                <nav class="breadcrumb text-sm text-color-11 mb-8">
+                    <a href="/index.html" class="text-color-7 hover:text-color-6 hover:underline">Home</a>
+                    <span class="separator mx-2">></span>
+                    <a href="/pages/CSMedical-products.html" class="text-color-7 hover:text-color-6 hover:underline">CS Medical</a>
+                    <span class="separator mx-2">></span>
+                    <span class="current font-medium">CS Medical Products</span>
+                </nav>
+            </div>
+
+            <h1 class="text-4xl font-bold text-color-11 text-center mb-6">Full Catalogue - CS Medical</h1>
+
+            <!-- Product Table -->
+            <div class="product-table">
+                <table class="w-full border-collapse text-color-11 shadow-mikrogen_table rounded-lg">
+                    <thead>
+                        <tr class="bg-color-3 text-color-7">
+                            <th class="py-3 px-4 text-left font-medium">Product Name</th>
+                            <th class="py-3 px-4 text-left font-medium">Packaging</th>
+                            <th class="py-3 px-4 text-left font-medium">Product Number</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">TD-100</td>
+                            <td class="py-3 px-4" data-label="Packaging">1</td>
+                            <td class="py-3 px-4" data-label="Product Number">CS-TD100S</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">TD5 Disinfectant</td>
+                            <td class="py-3 px-4" data-label="Packaging">32 bottles per case</td>
+                            <td class="py-3 px-4" data-label="Product Number">TD5</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">TD8 Disinfectant</td>
+                            <td class="py-3 px-4" data-label="Packaging">32 bottles per case</td>
+                            <td class="py-3 px-4" data-label="Product Number">TD8</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Replacement Vapor Management Filter for TD100</td>
+                            <td class="py-3 px-4" data-label="Packaging">1</td>
+                            <td class="py-3 px-4" data-label="Product Number">CS-TDFGLT</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Pre-Installation Kit for TD100</td>
+                            <td class="py-3 px-4" data-label="Packaging">1</td>
+                            <td class="py-3 px-4" data-label="Product Number">CS-TDIK</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Starter Kit for TD100</td>
+                            <td class="py-3 px-4" data-label="Packaging">1</td>
+                            <td class="py-3 px-4" data-label="Product Number">CS-TDSK</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Thermal Paper Roll</td>
+                            <td class="py-3 px-4" data-label="Packaging">Pack of 3</td>
+                            <td class="py-3 px-4" data-label="Product Number">CS-200295</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Thermal Paper for iSed/TD100/TEEClean/TD200</td>
+                            <td class="py-3 px-4" data-label="Packaging">pack of 12</td>
+                            <td class="py-3 px-4" data-label="Product Number">PAB-DS-05233-12</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Thermal Paper for iSed/TD100/TEEClean/TD200</td>
+                            <td class="py-3 px-4" data-label="Packaging">pack of 3</td>
+                            <td class="py-3 px-4" data-label="Product Number">DS-05233</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Replacement Drain Filter</td>
+                            <td class="py-3 px-4" data-label="Packaging">1</td>
+                            <td class="py-3 px-4" data-label="Product Number">CS-200499</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Fuse. 10 AMP</td>
+                            <td class="py-3 px-4" data-label="Packaging">1</td>
+                            <td class="py-3 px-4" data-label="Product Number">CS-200258</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">TEEZyme Contoured Enzymatic Sponge for TEE probes</td>
+                            <td class="py-3 px-4" data-label="Packaging">Box of 100 Sponges</td>
+                            <td class="py-3 px-4" data-label="Product Number">CS-200750</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">TEEZyme Sponge Caddy</td>
+                            <td class="py-3 px-4" data-label="Packaging">1</td>
+                            <td class="py-3 px-4" data-label="Product Number">CS-200780</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">PullUP Bio-Barrier Sleeve</td>
+                            <td class="py-3 px-4" data-label="Packaging">Box of 100</td>
+                            <td class="py-3 px-4" data-label="Product Number">CS-200905</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">PullUP TEE Probe Cover</td>
+                            <td class="py-3 px-4" data-label="Packaging">Box of 100</td>
+                            <td class="py-3 px-4" data-label="Product Number">CS-200915</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">TEEZyme MC, 1 Gallon Container</td>
+                            <td class="py-3 px-4" data-label="Packaging">4 Containers per case</td>
+                            <td class="py-3 px-4" data-label="Product Number">CS-201910</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">T-Porter Tie Bands, 100- Red & 100- Green</td>
+                            <td class="py-3 px-4" data-label="Packaging">Pack of 200</td>
+                            <td class="py-3 px-4" data-label="Product Number">CS-200920</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">T-Porter TEE Transport Device</td>
+                            <td class="py-3 px-4" data-label="Packaging">1</td>
+                            <td class="py-3 px-4" data-label="Product Number">CS-200950</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">HLD Tracker</td>
+                            <td class="py-3 px-4" data-label="Packaging">1</td>
+                            <td class="py-3 px-4" data-label="Product Number">CS-200870</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">QwikDry TEE Probe Drying Clothes</td>
+                            <td class="py-3 px-4" data-label="Packaging">100 clothes per case</td>
+                            <td class="py-3 px-4" data-label="Product Number">CS-200880</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Master Spill Kit</td>
+                            <td class="py-3 px-4" data-label="Packaging">1</td>
+                            <td class="py-3 px-4" data-label="Product Number">CS-200850</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">QwikDry Caddy</td>
+                            <td class="py-3 px-4" data-label="Packaging">1</td>
+                            <td class="py-3 px-4" data-label="Product Number">CS-200890</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Nephros Starter Kit, includes 2 filters and installation hardware</td>
+                            <td class="py-3 px-4" data-label="Packaging">1</td>
+                            <td class="py-3 px-4" data-label="Product Number">CS-200895</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Nephros Annual Maintenance Kit, Includes 2 filters</td>
+                            <td class="py-3 px-4" data-label="Packaging">1</td>
+                            <td class="py-3 px-4" data-label="Product Number">CS-200900</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Solucide Hard Surface Disinfectant Spray, 16 oz. pump spray bottle, </td>
+                            <td class="py-3 px-4" data-label="Packaging">4 bottles per case</td>
+                            <td class="py-3 px-4" data-label="Product Number">CS-200710-4</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">TransPorter Mobile Transportation Cart for TPorter</td>
+                            <td class="py-3 px-4" data-label="Packaging">1</td>
+                            <td class="py-3 px-4" data-label="Product Number">CS-200980</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Brooker Probe Holder</td>
+                            <td class="py-3 px-4" data-label="Packaging">1</td>
+                            <td class="py-3 px-4" data-label="Product Number">CS-200970</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Tporter Carrier</td>
+                            <td class="py-3 px-4" data-label="Packaging">1</td>
+                            <td class="py-3 px-4" data-label="Product Number">CS-201240</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Electrical lead for TD 100</td>
+                            <td class="py-3 px-4" data-label="Packaging">1</td>
+                            <td class="py-3 px-4" data-label="Product Number">ULT-PC-31EX</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Mounting Bracket for ULT-2020 and Printer</td>
+                            <td class="py-3 px-4" data-label="Packaging">1</td>
+                            <td class="py-3 px-4" data-label="Product Number">200844</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">TD 200 complete system</td>
+                            <td class="py-3 px-4" data-label="Packaging">1</td>
+                            <td class="py-3 px-4" data-label="Product Number">CS-TD200SC</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">TD-12 AquaCide High Level Disinfectant</td>
+                            <td class="py-3 px-4" data-label="Packaging">32 bottles</td>
+                            <td class="py-3 px-4" data-label="Product Number">CS-TD-12</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">TD 200 vapour management kit</td>
+                            <td class="py-3 px-4" data-label="Packaging">1</td>
+                            <td class="py-3 px-4" data-label="Product Number">CS-TDFPAA</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Peracetic Acid Clean-Up Kit</td>
+                            <td class="py-3 px-4" data-label="Packaging">1</td>
+                            <td class="py-3 px-4" data-label="Product Number">200990</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Starter Kit, TD 200</td>
+                            <td class="py-3 px-4" data-label="Packaging">1</td>
+                            <td class="py-3 px-4" data-label="Product Number">CS-T2-SK</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">TEEClean Automated TEE Probe Cleaner</td>
+                            <td class="py-3 px-4" data-label="Packaging">1</td>
+                            <td class="py-3 px-4" data-label="Product Number">CS-TCD100S5C</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">TEEClean Automated TEE Probe Cleaner with TD-8</td>
+                            <td class="py-3 px-4" data-label="Packaging">1</td>
+                            <td class="py-3 px-4" data-label="Product Number">CS-TCD100S8C</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">TEEZyme enzymatic cleaner for TEEClean</td>
+                            <td class="py-3 px-4" data-label="Packaging">2-500 ml bottles per case</td>
+                            <td class="py-3 px-4" data-label="Product Number">201200</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">Nephros water filter kit for TEEClean</td>
+                            <td class="py-3 px-4" data-label="Packaging">4 per case</td>
+                            <td class="py-3 px-4" data-label="Product Number">201340</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">TEEClean Vapor Management Kit, Main and Drain filters</td>
+                            <td class="py-3 px-4" data-label="Packaging">1</td>
+                            <td class="py-3 px-4" data-label="Product Number">201900</td>
+                        </tr>
+                        <tr class="bg-color-3">
+                            <td class="py-3 px-4" data-label="Product Name">TEEClean Logbook</td>
+                            <td class="py-3 px-4" data-label="Packaging">1</td>
+                            <td class="py-3 px-4" data-label="Product Number">201870</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 px-4" data-label="Product Name">Probe Valet, Biohazard Transport Bag for Endocavity and Surface Ultrasound Probes</td>
+                            <td class="py-3 px-4" data-label="Packaging">100 bags per box</td>
+                            <td class="py-3 px-4" data-label="Product Number">PV-100</td>
+                        </tr>
+        </tbody>
+    </table>
+    <div class="pagination" style="display: flex; justify-content: center; align-items: center;"></div>
+</div>
+        </section>
+    </main>
+
+    <!-- Footer (constant across pages) -->
+    <footer id="footer">
+        <div class="footer-info">
+            <p class="footer-left">1166 South Service Rd. W, Oakville, ON L6L 5T7</p>
+            <p class="footer-center">
+                Phone: 905-469-4253  |  
+                Fax: 905-825-9795  |  
+                Toll Free: 866-718-0515
+            </p>
+            <p class="footer-right">
+                Email: <a href="mailto:info@phoenixairmid.com">info@phoenixairmid.com</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for toggling categories -->
+    <script>
+        function toggleCategory(element) {
+            const list = element.nextElementSibling;
+            const arrow = element.querySelector('.toggle-arrow');
+            if (list.style.display === 'none' || list.style.display === '') {
+                list.style.display = 'block';
+                arrow.textContent = '▼';
+            } else {
+                list.style.display = 'none';
+                arrow.textContent = '>';
+            }
+        }
+    </script>
+</body>
+<script src="/script.js"></script>
+</html>

@@ -1,3 +1,137 @@
+// Shared Pagination Variables
+const productsPerPage = 25;
+let currentPage = 1;
+let currentCategory = null; // Null unless tabs are used
+
+// Tab and Pagination Logic
+console.log('Tab script is running');
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM fully loaded');
+
+    // Common Setup
+    const productList = document.querySelector('.product-table tbody');
+    const paginationContainer = document.querySelector('.pagination');
+    const tabButtons = document.querySelectorAll('.catalogue .tabs .tab-btn');
+
+    if (!productList) {
+        console.warn('Product table not found');
+        return;
+    }
+
+    const tableRows = Array.from(productList.children);
+    console.log('Table rows found:', tableRows.length);
+
+    // Tab Logic (Optional)
+    if (tabButtons.length > 0) {
+        console.log('Tab buttons found:', tabButtons.length);
+
+        function showCategory(category) {
+            console.log('Showing category:', category);
+            currentCategory = category; // Track for pagination
+
+            if (category === 'all') {
+                // Show all rows if category is 'all'
+                tableRows.forEach(row => {
+                    row.classList.add('tab-active');
+                });
+            } else {
+                // Filter rows by category
+                tableRows.forEach(row => {
+                    const rowCategory = row.getAttribute('data-category');
+                    row.classList.toggle('tab-active', rowCategory === category);
+                });
+            }
+
+            currentPage = 1; // Reset to page 1 on category change
+            updateProductDisplay();
+        }
+
+        tabButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                console.log('Tab clicked:', this.getAttribute('data-tab'));
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+                const category = this.getAttribute('data-tab');
+                showCategory(category);
+            });
+        });
+
+        // Dynamically determine the initial category
+        // Look for the tab with the 'active' class, or default to the first tab
+        const initialTab = Array.from(tabButtons).find(btn => btn.classList.contains('active')) || tabButtons[0];
+        if (initialTab) {
+            const initialCategory = initialTab.getAttribute('data-tab');
+            console.log('Initial category:', initialCategory);
+            showCategory(initialCategory);
+        } else {
+            console.warn('No tab buttons found, showing all rows');
+            tableRows.forEach(row => row.classList.add('tab-active'));
+            updateProductDisplay();
+        }
+    } else {
+        console.log('No tabs on this page, proceeding with all rows');
+        // For non-tabbed pages, mark all rows as tab-active by default
+        tableRows.forEach(row => row.classList.add('tab-active'));
+        updateProductDisplay(); // Run pagination immediately
+    }
+
+    // Shared Pagination Functions
+    function updateProductDisplay() {
+        // Filter to tab-active rows (all rows if no tabs)
+        const activeRows = tableRows.filter(row => row.classList.contains('tab-active'));
+        console.log('Active rows:', activeRows.length, 'Category:', currentCategory || 'All');
+
+        const totalPages = Math.ceil(activeRows.length / productsPerPage);
+        const start = (currentPage - 1) * productsPerPage;
+        const end = start + productsPerPage;
+
+        tableRows.forEach(row => {
+            const isActive = row.classList.contains('tab-active');
+            const indexInActive = activeRows.indexOf(row);
+            const isInPageRange = isActive && indexInActive >= start && indexInActive < end;
+            row.classList.toggle('page-active', isInPageRange);
+        });
+
+        createPaginationButtons(totalPages);
+    }
+
+    function createPaginationButtons(totalPages) {
+        if (!paginationContainer) return;
+        paginationContainer.innerHTML = '';
+
+        // Hide pagination if 25 or fewer rows
+        const activeRows = tableRows.filter(row => row.classList.contains('tab-active'));
+        if (activeRows.length <= productsPerPage) {
+            console.log('No pagination needed:', activeRows.length, 'rows');
+            return;
+        }
+
+        const createButton = (text, page) => {
+            const button = document.createElement('button');
+            button.textContent = text;
+            button.classList.add('page-btn');
+            if (page === currentPage) button.classList.add('active');
+            button.addEventListener('click', () => {
+                currentPage = page;
+                updateProductDisplay();
+            });
+            return button;
+        };
+
+        if (currentPage > 1) {
+            paginationContainer.appendChild(createButton('Previous', currentPage - 1));
+        }
+
+        for (let i = 1; i <= totalPages; i++) {
+            paginationContainer.appendChild(createButton(i, i));
+        }
+
+        if (currentPage < totalPages) {
+            paginationContainer.appendChild(createButton('Next', currentPage + 1));
+        }
+    }
+});
+
 // Levenshtein Distance function
 function levenshteinDistance(a, b) {
     const matrix = Array(b.length + 1).fill(null).map(() =>
@@ -120,7 +254,7 @@ async function performSearch() {
 // Display search results
 function displayResults(results) {
     const resultsContainer = document.getElementById('search-results');
-    const header = resultsContainer.querySelector('.results-header'); // Updated selector
+    const header = resultsContainer.querySelector('.results-header');
     if (!resultsContainer || !header) return;
 
     const query = getQueryParameter('query') || '';
@@ -162,7 +296,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Consolidated Dropdown Logic
 document.addEventListener("DOMContentLoaded", () => {
-    const triggers = document.querySelectorAll(".dropdown-trigger");
+    const triggers = document.querySelectorAll(".dropdown-trigger, .view-products-btn");
     let activeMenu = null;
 
     triggers.forEach((trigger) => {
@@ -186,10 +320,15 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+    // Click-outside handler
     document.addEventListener("click", (event) => {
-        if (!event.target.closest("nav")) {
+        if (!event.target.closest("nav") && !event.target.closest(".tile")) {
             document.querySelectorAll(".dropdown-menu").forEach((menu) => {
                 menu.classList.remove("show");
+                menu.style.position = '';
+                menu.style.top = '';
+                menu.style.left = '';
+                menu.style.width = '';
             });
             activeMenu = null;
         }
@@ -203,83 +342,156 @@ document.addEventListener("DOMContentLoaded", () => {
     const productsData = {
         'clinical-chemistry': {
             products: [
-                'Helena ColoScreen and ColoScreen-ES',
-                'Immunodiagnostic Systems (IDS) ELISA and RIA Products',
-                'BÜHLMANN Gamma-hydroxybutyric acid (GHB)',
-                'BÜHLMANN Cellular Allergy Products'
+                { name: 'Control OPTI™ B-Cassette Blood Gas', url: '/pages/optimedical-list.html' },
+                { name: 'Control OPTI™ SRC Level 1', url: '/pages/optimedical-list.html' },
+                { name: 'Control OPTI™ SRC Level 3', url: '/pages/optimedical-list.html' },
+                { name: 'OPTI 1 Calibration Gas Bottle', url: '/pages/optimedical-list.html' },
+                { name: 'OPTI-Check Vials, Tri-level', url: '/pages/optimedical-list.html' },
+                { name: 'More Products...', url: '/pages/optimedical-list.html' }
             ],
             solutions: [
-                'Piccolo Xpress Chemistry Analyzer',
-                'BÜHLMANN fCAL® turbo and fPELA® turbo'
+                { name: 'OPTI CCA-TS2 Blood Gas and Electrolyte Analyzer', url: '/pages/optimedical-products.html' }
             ]
         },
         'hematology': {
-            products: ['ALCOR SEDiTROL® Quality Control'],
-            solutions: ['ALCOR ESR Analyzers']
-        },
-        'microbiology': {
             products: [
-                'C-Reactive Protein (CRP)',
-                'Rheumajet RF',
-                'Rheumajet ASO'
+                { name: 'Seditrol® Quality Control', url: '/pages/alcor-list.html' },
+                { name: 'iWASH™ Wash Fluid', url: '/pages/alcor-list.html' },
+                { name: 'miniiWASH™ Wash Fluid', url: '/pages/alcor-list.html' },
+                { name: 'miniiWASTE™ Container', url: '/pages/alcor-list.html' },
+                { name: 'WASTE Container', url: '/pages/alcor-list.html' },
+                { name: 'Test Card; 500 test credits', url: '/pages/alcor-list.html' },
+                { name: 'Test Card; 1000 test credits', url: '/pages/alcor-list.html' },
+                { name: 'More Products...', url: '/pages/alcor-list.html' }
             ],
             solutions: [
-                'QIAGEN QIAstat-Dx Syndromic Testing Analyzer',
-                'QIAGEN QuantiFERON-TB Gold Plus'
+                { name: 'iSED', url: '/pages/alcor-products.html' },
+                { name: 'iSED Pro', url: '/pages/alcor-products.html' },
+                { name: 'miniiSED', url: '/pages/alcor-products.html' }
             ]
         },
-        'molecular': {
+        'microbiology': {
+            products: [],
+            solutions: [
+                {
+                    name: 'Fujirebio – Lumipulse, Autoblot',
+                    url: '/pages/fujirebio-products.html',
+                    products: [
+                        { name: 'ELISA', url: '/pages/fujirebio-list.html' },
+                        { name: 'Blots', url: '/pages/fujirebio-list.html' }
+                    ]
+                },
+                {
+                    name: 'Mikrogen – Carl',
+                    url: '/pages/mikrogen-products.html',
+                    products: [
+                        { name: 'ELISA', url: '/pages/mikrogen-list.html' },
+                        { name: 'Blots', url: '/pages/mikrogen-list.html' }
+                    ]
+                },
+                {
+                    name: 'Dynex – DSX',
+                    url: '/pages/dynex-list.html',
+                    products: [
+                        { name: 'View All Products...', url: '/pages/dynex-list.html' },
+                    ]
+                },
+                {
+                    name: 'Stratec - Gemini',
+                    url: '/pages/stratec-list.html',
+                    products: [
+                        { name: 'View All Products...', url: '/pages/stratec-list.html' },
+                    ]
+                },
+                {
+                    name: 'Phoenix',
+                    url: '#',
+                    products: [
+                        { name: 'ELISA', url: '/pages/phoenix-list.html' }
+                    ]
+                },
+                
+                {
+                    name: 'Alltest',
+                    url: '#',
+                    products: [
+                        { name: 'Rapid Testing', url: '/pages/alltest-list.html' }
+                    ]
+                }
+            ]
+        },
+        'EQA': {
             products: [
-                'PCR Kits',
-                'DNA/RNA Extraction Kits'
+                { name: 'PCR Kits', url: '/products/pcr-kits' },
+                { name: 'DNA/RNA Extraction Kits', url: '/products/dna-rna-extraction-kits' }
             ],
             solutions: [
-                'Real-Time PCR Systems',
-                'Next-Generation Sequencing (NGS) Platforms'
+                { name: 'Real-Time PCR Systems', url: '/solutions/real-time-pcr-systems' },
+                { name: 'Next-Generation Sequencing (NGS) Platforms', url: '/solutions/ngs-platforms' }
             ]
         },
         'pathology': {
             products: [
-                'Histology Reagents',
-                'Immunohistochemistry (IHC) Antibodies'
+                { name: 'Cassettes', url: '/pages/cellpath-products.html' },
+                { name: 'Blades', url: '/pages/cellpath-products.html' },
+                { name: 'Filters', url: '/pages/cellpath-products.html' },
+                { name: 'Slides', url: '/pages/cellpath-products.html' },
+                { name: 'More Products...', url: '/pages/cellpath-products.html' }
             ],
             solutions: [
-                'Automated Staining Systems',
-                'Digital Pathology Solutions'
+                { name: 'TISSUE SECTION BATH (ROUND)', url: '/pages/cellpath-products.html' },
+                { name: 'MINI HOTPLATE/ORIENTATOR', url: '/pages/cellpath-products.html' },
+                { name: 'CELLCEPS+ HEATED FORCEP - SMOOTH', url: '/pages/cellpath-products.html' },
+                { name: 'HIGH CAPACITY SECTION DRYER', url: '/pages/cellpath-products.html' }
             ]
         },
         'transfusion-medicine': {
             products: [
-                'Blood Collection Tubes',
-                'Blood Typing Reagents'
+                { name: 'Blood Collection Tubes', url: '/products/blood-collection-tubes' },
+                { name: 'Blood Typing Reagents', url: '/products/blood-typing-reagents' }
             ],
             solutions: [
-                'Automated Blood Typing Analyzers',
-                'Blood Bank Management Software'
+                { name: 'Automated Blood Typing Analyzers', url: '/solutions/automated-blood-typing-analyzers' },
+                { name: 'Blood Bank Management Software', url: '/solutions/blood-bank-management-software' }
             ]
         },
         'disinfection-systems': {
             products: [
-                'Glycinex™ Disinfectant Neutralizer',
-                'QwikDry TEE Probe Drying Cloth',
-                'TD-12® AquaCide High-Level Disinfectant',
-                'TD-5',
-                'TD-8',
-                'TD-12',
-                'TEEZyme® for TEEClean',
-                'TEEZyme®MC Enzymatic Cleaner',
-                'TEEZyme™ TEE Probe Enzymatic Sponge',
-                'TPorter TEE Probe Transport Device'
+                { name: 'Glycinex™ Disinfectant Neutralizer', url: '/pages/csmedical-list.html' },
+                { name: 'QwikDry TEE Probe Drying Cloth', url: '/pages/csmedical-list.html' },
+                { name: 'TD-5', url: '/pages/csmedical-list.html' },
+                { name: 'TD-8', url: '/pages/csmedical-list.html' },
+                { name: 'TD-12', url: '/pages/csmedical-list.html' },
+                { name: 'TEEZyme® for TEEClean', url: '/pages/csmedical-list.html' },
+                { name: 'TEEZyme®MC Enzymatic Cleaner', url: '/pages/csmedical-list.html' }
             ],
             solutions: [
-                'AC600 Endoscopy Workstations',
-                'ACVP50 – Ultrasound Workstation',
-                'Automated Room Disinfection Systems',
-                'Blood Irradiation – RADGIL2 – XRay Irradiator',
-                'Surface Disinfection Solutions',
-                'TD 100® Automated TEE Probe Disinfector',
-                'TD 200® Automated TEE Probe Disinfector',
-                'TEEClean® Automated TEE Probe Cleaner Disinfector'
+                { name: 'TD 100® Automated TEE Probe Disinfector', url: '/pages/csmedical-products.html' },
+                { name: 'TD 200® Automated TEE Probe Disinfector', url: '/pages/csmedical-products.html' },
+                { name: 'TEEClean® Automated TEE Probe Cleaner Disinfector', url: '/pages/csmedical-products.html' }
+            ]
+        },
+        'Biomarkers': {
+            products: [
+                { name: 'Neurobiomarkers', url: '/pages/fujirebio-list.html' },
+                { name: 'Cardiobiomarkers', url: '/products/cardiobiomarkers' }
+            ],
+            solutions: [
+                { name: 'Lumipulse G1200', url: '/pages/fujirebio-products.html' }
+            ]
+        },
+        'Pre-Analytical': {
+            products: [],
+            solutions: [
+                { name: 'HENd', url: '/pages/energium-products.html' },
+                { name: 'HENm', url: '/pages/energium-products.html' }
+            ]
+        },
+        'Food-Sensitivity': {
+            products: [],
+            solutions: [
+                { name: 'HENd', url: '/pages/energium-products.html' },
+                { name: 'HENm', url: '/pages/energium-products.html' }
             ]
         }
     };
@@ -287,24 +499,97 @@ document.addEventListener("DOMContentLoaded", () => {
     categoryTriggers.forEach(trigger => {
         trigger.addEventListener('mouseenter', function () {
             const category = this.getAttribute('data-category');
-            console.log(`🖱 Hover detected on: ${this.textContent}`); // Debug
+            console.log(`🖱 Hover detected on category: ${category}`); // Debug
             productsList.innerHTML = '';
             solutionsList.innerHTML = '';
 
-            if (productsData[category]) {
-                productsData[category].products.forEach(product => {
+            if (!productsData[category]) {
+                console.warn(`No data found for category: ${category}`);
+                solutionsList.innerHTML = '<li>No solutions available</li>';
+                productsList.innerHTML = '<li>N/A</li>';
+                return;
+            }
+
+            if (category === 'microbiology') {
+                // Special handling for microbiology
+                console.log('Processing microbiology solutions:', productsData[category].solutions);
+                productsData[category].solutions.forEach(solution => {
+                    if (!solution.name || !solution.url || !Array.isArray(solution.products)) {
+                        console.warn('Invalid solution data:', solution);
+                        return;
+                    }
+
                     const li = document.createElement('li');
-                    li.innerHTML = `<a href="#">${product}</a>`;
-                    productsList.appendChild(li);
+                    const a = document.createElement('a');
+                    a.href = solution.url;
+                    a.textContent = solution.name;
+                    li.appendChild(a);
+                    solutionsList.appendChild(li);
+                    console.log(`Added solution: ${solution.name} with URL: ${solution.url}`); // Debug
+
+                    // Add hover event listener to each solution
+                    li.addEventListener('mouseenter', () => {
+                        console.log(`🖱 Hover on solution: ${solution.name}`);
+                        productsList.innerHTML = ''; // Clear products list
+                        if (solution.products.length === 0) {
+                            productsList.innerHTML = '<li>No products available</li>';
+                        } else {
+                            solution.products.forEach(product => {
+                                if (!product.name || !product.url) {
+                                    console.warn('Invalid product data:', product);
+                                    return;
+                                }
+                                const productLi = document.createElement('li');
+                                productLi.innerHTML = `<a href="${product.url}">${product.name}</a>`;
+                                productsList.appendChild(productLi);
+                                console.log(`Added product: ${product.name} with URL: ${product.url}`); // Debug
+                            });
+                        }
+                    });
                 });
 
-                productsData[category].solutions.forEach(solution => {
-                    const li = document.createElement('li');
-                    li.innerHTML = `<a href="#">${solution}</a>`;
-                    solutionsList.appendChild(li);
-                });
+                // Set initial products list state
+                productsList.innerHTML = '<li>Please hover over a solution to see products</li>';
+            } else {
+                // Default handling for other categories
+                console.log(`Processing category: ${category}`);
+                if (productsData[category].products.length === 0) {
+                    productsList.innerHTML = '<li>No products available</li>';
+                } else {
+                    productsData[category].products.forEach(product => {
+                        if (!product.name || !product.url) {
+                            console.warn('Invalid product data:', product);
+                            return;
+                        }
+                        const li = document.createElement('li');
+                        li.innerHTML = `<a href="${product.url}">${product.name}</a>`;
+                        productsList.appendChild(li);
+                    });
+                }
+
+                if (productsData[category].solutions.length === 0) {
+                    solutionsList.innerHTML = '<li>No solutions available</li>';
+                } else {
+                    productsData[category].solutions.forEach(solution => {
+                        if (!solution.name || !solution.url) {
+                            console.warn('Invalid solution data:', solution);
+                            return;
+                        }
+                        const li = document.createElement('li');
+                        li.innerHTML = `<a href="${solution.url}">${solution.name}</a>`;
+                        solutionsList.appendChild(li);
+                    });
+                }
             }
         });
+    });
+
+    // Reset products list when leaving solutions column (for microbiology)
+    solutionsList.addEventListener('mouseleave', () => {
+        if (document.querySelector('.category-trigger[data-category="microbiology"]:hover')) {
+            console.log('Mouse left solutions list, resetting products');
+            productsList.innerHTML = '<li>Please hover over a solution to see products</li>';
+        }
     });
 });
 
@@ -389,6 +674,37 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
     }
+
+    // Toggle Specs Table Logic
+    const toggleSpecs = document.querySelectorAll('.toggle-specs');
+    toggleSpecs.forEach(trigger => {
+        trigger.addEventListener('click', function () {
+            const targetId = this.getAttribute('data-target');
+            const targetTable = document.getElementById(targetId);
+            const isOpen = targetTable.style.display === 'block';
+
+            // Close all tables within the same product item
+            const parentProductItem = this.closest('.product-item');
+            const allTablesInItem = parentProductItem.querySelectorAll('.specs-table');
+            const allTriggersInItem = parentProductItem.querySelectorAll('.toggle-specs');
+
+            allTablesInItem.forEach(table => {
+                table.style.display = 'none';
+            });
+            allTriggersInItem.forEach(t => {
+                t.textContent = t.textContent.replace('▼', '>');
+            });
+
+            // Toggle the clicked table
+            if (!isOpen) {
+                targetTable.style.display = 'block';
+                this.textContent = this.textContent.replace('>', '▼');
+            } else {
+                targetTable.style.display = 'none';
+                this.textContent = this.textContent.replace('▼', '>');
+            }
+        });
+    });
 });
 
 const expandBtn = document.querySelector('.expand-btn');
@@ -396,4 +712,15 @@ if (expandBtn) {
     expandBtn.addEventListener('click', function() {
         document.querySelector('.vertical-bar').classList.toggle('expanded');
     });
+}
+
+function toggleMoreInfo(element) {
+    const table = element.nextElementSibling; // The .more-info-table div
+    const isVisible = table.style.display === 'block';
+
+    // Toggle table visibility
+    table.style.display = isVisible ? 'none' : 'block';
+
+    // Toggle the active class to change the arrow
+    element.classList.toggle('active', !isVisible);
 }

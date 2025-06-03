@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
-    <link src= "Flatit  QuietSansRegular.otf" rel="stylesheet">
+    <link src="Flatit QuietSansRegular.otf" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Phoenix Airmid Biomedical</title>
@@ -92,32 +92,31 @@
 </div>
 <script>
     function accept() {
-    document.getElementById('overlay').style.display = 'none';
-    document.body.style.overflow = 'auto'; // Re-enable scrolling
-    localStorage.setItem('overlayAccepted', 'true');
-    document.body.style.pointerEvents = 'auto'; // Re-enable pointer events for the rest of the page
-    console.log('Overlay accepted and stored in localStorage.');
-}
-
-function decline() {
-    alert('You must click "I Accept" to access the website.');
-}
-
-window.addEventListener('load', function() {
-    // Check if overlay has been accepted
-    if (!localStorage.getItem('overlayAccepted')) {
-        document.body.style.pointerEvents = 'none'; // Disable pointer events for the rest of the page
-        document.getElementById('overlay').style.pointerEvents = 'auto'; // Enable pointer events for the overlay
-        document.getElementById('overlay').style.display = 'flex';
-        console.log('Overlay displayed.');
-    } else {
-        document.body.style.pointerEvents = 'auto'; // Re-enable pointer events for the rest of the page
         document.getElementById('overlay').style.display = 'none';
         document.body.style.overflow = 'auto'; // Re-enable scrolling
-        console.log('Overlay already accepted.');
+        localStorage.setItem('overlayAccepted', 'true');
+        document.body.style.pointerEvents = 'auto'; // Re-enable pointer events for the rest of the page
+        console.log('Overlay accepted and stored in localStorage.');
     }
-});
 
+    function decline() {
+        alert('You must click "I Accept" to access the website.');
+    }
+
+    window.addEventListener('load', function() {
+        // Check if overlay has been accepted
+        if (!localStorage.getItem('overlayAccepted')) {
+            document.body.style.pointerEvents = 'none'; // Disable pointer events for the rest of the page
+            document.getElementById('overlay').style.pointerEvents = 'auto'; // Enable pointer events for the overlay
+            document.getElementById('overlay').style.display = 'flex';
+            console.log('Overlay displayed.');
+        } else {
+            document.body.style.pointerEvents = 'auto'; // Re-enable pointer events for the rest of the page
+            document.getElementById('overlay').style.display = 'none';
+            document.body.style.overflow = 'auto'; // Re-enable scrolling
+            console.log('Overlay already accepted.');
+        }
+    });
 </script>
 <body>
     <header>
@@ -155,10 +154,13 @@ window.addEventListener('load', function() {
                             <li><a href="#" class="category-trigger" data-category="clinical-chemistry">Clinical Chemistry</a></li>
                             <li><a href="#" class="category-trigger" data-category="hematology">Hematology</a></li>
                             <li><a href="#" class="category-trigger" data-category="microbiology">Microbiology</a></li>
-                            <li><a href="#" class="category-trigger" data-category="molecular">Molecular</a></li>
+                            <li><a href="#" class="category-trigger" data-category="EQA">EQA</a></li>
                             <li><a href="#" class="category-trigger" data-category="pathology">Pathology</a></li>
                             <li><a href="#" class="category-trigger" data-category="transfusion-medicine">Transfusion Medicine</a></li>
                             <li><a href="#" class="category-trigger" data-category="disinfection-systems">Disinfection Systems</a></li>
+                            <li><a href="#" class="category-trigger" data-category="Biomarkers">Biomarkers</a></li>
+                            <li><a href="#" class="category-trigger" data-category="Pre-Analytical">Pre-Analytical</a></li>
+                            <li><a href="#" class="category-trigger" data-category="Food-Sensitivity">Food Sensitivity</a></li>
                         </ul>
                     </div>
                     <div class="products">
@@ -201,82 +203,112 @@ window.addEventListener('load', function() {
             </div>
         </nav>
     </header>
+
     <!-- Slideshow Section -->
     <section id="slideshow">
-      <!-- Slide 1: Diagnostic Kits -->
-      <div class="slide fade">
-        <img src="/images/dreampath.jpg" alt="Dreampath">
-        <div class="slide-text">
-        <h2>Dreampath Sample Management Solutions</h2>
-        <p>Never lose a tissue sample again</p>
-        <a href="/pages/dreampath-products.html" class="btn">Learn More</a> <!-- Updated href -->
-        </div>
-      </div>
-      
-      <!-- Slide 2: Automation Solutions -->
-      <div class="slide fade">
-        <img src="/images/radgil.jpg" alt="Automation Solutions">
-        <div class="slide-text">
-            <h2>RADGIL2 – XRay blood irradiator</h2>
-            <p>Smarter, Safer X-Ray Irradiation</p>
-            <a href="/pages/dreampath-products.html" class="btn">Learn More</a> <!-- Updated href -->
+        <!-- Slide 1: Diagnostic Kits -->
+        <div class="slide fade">
+            <img src="/images/dreampath.jpg" alt="Dreampath">
+            <div class="slide-text">
+                <h2>Dreampath Sample Management Solutions</h2>
+                <p>Never lose a tissue sample again</p>
+                <a href="/pages/dreampath-products.html" class="btn">Learn More</a>
             </div>
-          </div>
-    
-      <!-- Slide 3: Research Products -->
-      <div class="slide fade">
-        <img src="/images/teeclean.png" alt="TEEClean®">
-        <div class="slide-text">
-            <h2>TEEClean® Automated TEE Probe Cleaner Disinfector</h2>
-            <p>Revolutionizing probe disinfection with unmatched efficiency</p>
-            <a href="/pages/csmedical-products.html" class="btn">Learn More</a> <!-- Updated href -->
         </div>
-      </div>
-    
-      <!-- Slide 4: Disinfection Systems -->
-      <div class="slide fade">
-        <img src="/images/ised.jpg" alt="iSED">
-        <div class="slide-text">
-            <h2>iSED® ESR Analyzer</h2>
-            <p>Bringing Efficiency to ESR</p>
-            <a href="/pages/alcor-products.html" class="btn">Learn More</a> <!-- Updated href -->
+        
+        <!-- Slide 2: Automation Solutions -->
+        <div class="slide fade">
+            <img src="/images/radgil.jpg" alt="Automation Solutions">
+            <div class="slide-text">
+                <h2>RADGIL2 – XRay blood irradiator</h2>
+                <p>Smarter, Safer X-Ray Irradiation</p>
+                <a href="/pages/gilardoni-products.html" class="btn">Learn More</a>
+            </div>
         </div>
-      </div>
+    
+        <!-- Slide 3: Research Products -->
+        <div class="slide fade">
+            <img src="/images/teeclean.png" alt="TEEClean®">
+            <div class="slide-text">
+                <h2>TEEClean® Automated TEE Probe Cleaner Disinfector</h2>
+                <p>Revolutionizing probe disinfection with unmatched efficiency</p>
+                <a href="/pages/csmedical-products.html" class="btn">Learn More</a>
+            </div>
+        </div>
+    
+        <!-- Slide 4: Disinfection Systems -->
+        <div class="slide fade">
+            <img src="/images/ised.jpg" alt="iSED">
+            <div class="slide-text">
+                <h2>iSED® ESR Analyzer</h2>
+                <p>Bringing Efficiency to ESR</p>
+                <a href="/pages/alcor-products.html" class="btn">Learn More</a>
+            </div>
+        </div>
 
-      <!-- Slide 5: Laboratory Equipment -->
-      <div class="slide fade">
-        <img src="/images/LUMIPULSE G1200_recolour.jpg" alt="Laboratory Equipment">
-        <div class="slide-text">
-            <h2>LUMIPULSE® G1200</h2>
-            <p>Precision Neuro Biomarker Testing for Early Disease Detection</p>
-            <a href="/pages/lab-equipment.html" class="btn">Learn More</a>
+        <!-- Slide 5: Laboratory Equipment -->
+        <div class="slide fade">
+            <img src="/images/LUMIPULSE G1200_recolour.jpg" alt="Laboratory Equipment">
+            <div class="slide-text">
+                <h2>LUMIPULSE® G1200</h2>
+                <p>Precision Neuro Biomarker Testing for Early Disease Detection</p>
+                <a href="/pages/fujirebio-products.html" class="btn">Learn More</a>
+            </div>
         </div>
-      </div>
 
-      <!-- Slide 6: Clinical Trials -->
-      <div class="slide fade">
-        <img src="/images/microtome.jpg" alt="Clinical Trials">
-        <div class="slide-text">
-            <h2>MYR Automated Rotary Microtome</h2>
-            <p>Precision Cutting for Superior Histology Results</p>
-            <a href="/pages/clinical-trials.html" class="btn">Learn More</a>
+        <!-- Slide 6: Clinical Trials -->
+        <div class="slide fade">
+            <img src="/images/microtome.jpg" alt="Clinical Trials">
+            <div class="slide-text">
+                <h2>MYR Automated Rotary Microtome</h2>
+                <p>Precision Cutting for Superior Histology Results</p>
+                <a href="/pages/clinical-trials.html" class="btn">Learn More</a>
+            </div>
         </div>
-      </div>
     
-      <!-- Navigation Arrows -->
-      <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
-      <a class="next" onclick="changeSlide(1)">&#10095;</a>
+        <!-- Navigation Arrows -->
+        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+        <a class="next" onclick="changeSlide(1)">&#10095;</a>
     
-      <!-- Slide Indicators -->
-      <div class="dots">
-        <span class="dot" onclick="setSlide(0)"></span>
-        <span class="dot" onclick="setSlide(1)"></span>
-        <span class="dot" onclick="setSlide(2)"></span>
-        <span class="dot" onclick="setSlide(3)"></span>
-        <span class="dot" onclick="setSlide(4)"></span>
-        <span class="dot" onclick="setSlide(5)"></span>
-      </div>
-    </section></div>
+        <!-- Slide Indicators -->
+        <div class="dots">
+            <span class="dot" onclick="setSlide(0)"></span>
+            <span class="dot" onclick="setSlide(1)"></span>
+            <span class="dot" onclick="setSlide(2)"></span>
+            <span class="dot" onclick="setSlide(3)"></span>
+            <span class="dot" onclick="setSlide(4)"></span>
+            <span class="dot" onclick="setSlide(5)"></span>
+        </div>
+    </section>
+
+    <section class="partner-logos">
+        <div class="partner-logos-container">
+            <img src="/images/PartnersLogosBanner1.jpg" alt="Partner Logos Banner" class="partner-logos-image" usemap="#image-map">
+            <map name="image-map">
+                    <area target="" alt="Alcor" title="Alcor" href="/pages/alcor-products.html" coords="25,53,420,342" shape="rect">
+                    <area target="" alt="CSMedical" title="CSMedical" href="/pages/csmedical-products.html" coords="431,61,844,336" shape="rect">
+                    <area target="" alt="Energium" title="Energium" href="/pages/energium-products.html" coords="872,54,1250,336" shape="rect">
+                    <area target="" alt="ESFEQA" title="ESFEQA" href="/pages/esfeqa-list.html" coords="1289,44,1617,350" shape="rect">
+                    <area target="" alt="Fujirebio" title="Fujirebio" href="/pages/fujirebio-products.html" coords="1649,47,2037,340" shape="rect">
+                    <area target="" alt="Gilardoni" title="Gilardoni" href="/pages/gilardoni-products.html" coords="2058,40,2387,354" shape="rect">
+                    <area target="" alt="LabSystems" title="LabSystems" href="/pages/labsystems-list.html" coords="2415,28,2789,349" shape="rect">
+                    <area target="" alt="Omega DX" title="Omega DX" href="/pages/omega-list.html" coords="2807,21,3146,338" shape="rect">
+                    <area target="" alt="Mikrogen" title="Mikrogen" href="/pages/mikrogen-products.html" coords="3160,44,3559,326" shape="rect">
+                    <area target="" alt="OptiMedical" title="OptiMedical" href="/pages/optimedical-products.html" coords="3594,51,3986,347" shape="rect">
+                    <area target="" alt="BC Biomedical" title="BC Biomedical" href="/pages/bcbiomedical-list.html" coords="25,405,487,644" shape="rect">
+                    <area target="" alt="Mystaire" title="Mystaire" href="/pages/mystaire-list.html" coords="498,396,918,653" shape="rect">
+                    <area target="" alt="All Test" title="All Test" href="/pages/alltest-list.html" coords="943,403,1204,654" shape="rect">
+                    <area target="" alt="CellPath" title="CellPath" href="/pages/cellpath-products.html" coords="1218,410,1571,664" shape="rect">
+                    <area target="" alt="Myr" title="Myr" href="/pages/myr-products.html" coords="2002,421,2178,639" shape="rect">
+                    <area target="" alt="Primera" title="Primera" href="/pages/primera-list.html" coords="2192,419,2542,649" shape="rect">
+                    <area target="" alt="Dynex" title="Dynex" href="/pages/dynex-list.html" coords="2556,424,2930,650" shape="rect">
+                    <area target="" alt="Stratec" title="Stratec" href="/pages/stratec-list.html" coords="3594,408,3989,647" shape="rect">
+            </map>
+        </div>
+      </section>
+      
+
+
     <section class="vertical-bar">
         <div class="sidebar">
             <div class="sidebar-content">
@@ -300,33 +332,29 @@ window.addEventListener('load', function() {
         </div>
     </section>
 
+    
+
     <section class="tiles">
         <div class="tile">
             <h2>About Phoenix</h2>
             <p>We are a multi-divisional distributor in the biotech market. We pride ourselves in providing the highest standard of quality products, customer service, technical support, and laboratory automation options.</p>
-            <a href="about.html">Learn More</a>
+            <a href="/pages/about.html">Learn More</a>
         </div>
+        
         <div class="tile">
             <h2>Diagnostic Kits</h2>
             <p>We distribute a wide range of quality autoimmune, infectious disease, and molecular diagnostic products – and continually look to bring new and revolutionary test kits to the Canadian market.</p>
-            <a href="diagnostic-kits.html">View Products</a>
+            <a href="#" class="view-products-btn" data-menu="products-menu">View Products</a>
         </div>
         <div class="tile">
             <h2>Disinfection Systems</h2>
             <p>This product line provides complete reprocessing solutions and accessories for TEE and ultrasound probes. The TD-100 is the only automated TEE probe disinfector available and offers many advantages over manual processing.</p>
-            <a href="disinfection-systems.html">Explore Solutions</a>
-        </div>
-        <div class="tile">
-            <h2>News/Events</h2>
-            <p>From industry trade shows, to community involvement, and new product launches – we're always up to new things:</p>
-            <a href="news.html">See what's happening at Phoenix!</a>
+            <a href="/pages/csmedical-products.html">Explore Solutions</a>
         </div>
     </section>
 
     <footer id="footer">
-        <div class="footer-map-container">
-
-        </div>
+        <div class="footer-map-container"></div>
         <div class="footer-info">
             <p class="footer-left">1166 South Service Rd. W, Oakville, ON L6L 5T7</p>
             <p class="footer-center">
@@ -339,6 +367,14 @@ window.addEventListener('load', function() {
             </p>
         </div>
     </footer>    
-    <script src="script.js"></script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="/script.js"></script>
+    <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9236c7462cb842c6',t:'MTc0MjQ5MDE1OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/image-map-resizer/1.0.10/js/imageMapResizer.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    imageMapResize();
+  });
+</script>      
 </body>
 </html>

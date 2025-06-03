@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Highlighted Products - Phoenix Airmid Biomedical</title>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css"> <!-- Main site styles -->
+    <link rel="stylesheet" href="/productstyle.css"> <!-- Updated product styles -->
+</head>
+<body>
+    <div class="page-wrapper">
+        <!-- Header (from reference files) -->
+        <header>
+            <nav>
+                <div class="logo">
+                    <a href="/index.html"><img src="/images/PAB Logo Old.png" alt="Phoenix Airmid Logo"></a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#" class="dropdown-trigger" data-menu="company-menu">Company</a></li>
+                    <li><a href="#" class="dropdown-trigger" data-menu="products-menu">Products & Solutions</a></li>
+                    <li><a href="#" class="dropdown-trigger" data-menu="resources-menu">Resources</a></li>
+                    <li><a href="#" class="dropdown-trigger" data-menu="support-menu">Support</a></li>
+                    <li><a href="#" class="dropdown-trigger" data-menu="news-menu">News & Events</a></li>
+                </ul>
+                <div class="search-container">
+                    <input type="text" class="search-input" id="search-input" placeholder="Search...">
+                    <button class="search-btn">🔍</button>
+                </div>
+                <div class="search-results-container"></div>
+
+                <!-- Dropdown Menus (from reference files) -->
+                <div class="dropdown-menu" id="company-menu">
+                    <a href="/pages/about.html">About Us</a>
+                    <a href="/pages/what_we_do.html">What We Do</a>
+                    <a href="/pages/values.html">Our Values</a>
+                    <a href="/pages/our_people.html">Our People</a>
+                    <a href="/pages/responsibility.html">Our Corporate Responsibility</a>
+                    <a href="/pages/partners.html">Our Partners</a>
+                </div>
+                <div class="dropdown-menu" id="products-menu">
+                    <div class="dropdown-content">
+                        <div class="product-categories">
+                            <h3>Product Categories</h3>
+                            <ul id="category-list">
+                                <li><a href="#" class="category-trigger" data-category="clinical-chemistry">Clinical Chemistry</a></li>
+                                <li><a href="#" class="category-trigger" data-category="hematology">Hematology</a></li>
+                                <li><a href="#" class="category-trigger" data-category="microbiology">Microbiology</a></li>
+                                <li><a href="#" class="category-trigger" data-category="EQA">EQA</a></li>
+                                <li><a href="#" class="category-trigger" data-category="pathology">Pathology</a></li>
+                                <li><a href="#" class="category-trigger" data-category="transfusion-medicine">Transfusion Medicine</a></li>
+                                <li><a href="#" class="category-trigger" data-category="disinfection-systems">Disinfection Systems</a></li>
+                                <li><a href="#" class="category-trigger" data-category="Biomarkers">Biomarkers</a></li>
+                                <li><a href="#" class="category-trigger" data-category="Pre-Analytical">Pre-Analytical</a></li>
+                            </ul>
+                        </div>
+                        <div class="products">
+                            <h3>Products</h3>
+                            <ul id="products-list" class="scrollable-list"></ul>
+                        </div>
+                        <div class="solutions">
+                            <h3>Solutions</h3>
+                            <ul id="solutions-list" class="scrollable-list"></ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="dropdown-menu" id="resources-menu">
+                    <div class="dropdown-category">
+                        <span>Orders</span>
+                        <ul>
+                            <li><a href="/pages/ordering.html">Ordering</a></li>
+                            <li><a href="/pages/logistics.html">Logistics</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown-category">
+                        <span>Inquiries</span>
+                        <ul>
+                            <li><a href="/pages/account-executives.html">Account Executives</a></li>
+                            <li><a href="/pages/product-specialists.html">Product Specialists</a></li>
+                            <li><a href="/pages/business-development.html">Business Development</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="dropdown-menu" id="support-menu">
+                    <a href="/pages/contact.html">Contact Us</a>
+                    <a href="/pages/Instrument-Service-and-Application-Specialists.html">Instrument Service and Application Specialists</a>
+                </div>
+                <div class="dropdown-menu" id="news-menu">
+                    <a href="/pages/news.html">Latest News</a>
+                    <a href="/pages/events.html">Upcoming Events</a>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Sidebar (from reference files) -->
+        <section class="vertical-bar">
+            <div class="sidebar">
+                <div class="sidebar-content">
+                    <a href="/pages/customer-service.html">
+                        <img src="/images/icons8-headset-50.png" alt="Customer Service">
+                        <span>Customer Service</span>
+                    </a>
+                    <a href="/pages/events.html">
+                        <img src="/images/icons8-calendar-100.png" alt="Events">
+                        <span>Events</span>
+                    </a>
+                    <a href="/pages/contact.html">
+                        <img src="/images/icons8-phone-100.png" alt="Contact Us">
+                        <span>Contact Us</span>
+                    </a>
+                    <a href="/pages/ordering.html">
+                        <img src="/images/icons8-megaphone-100.png" alt="Call for Service">
+                        <span>Call for Service</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content -->
+        <main>
+            <!-- Video Banner -->
+            <div class="image-banner">
+                <img src="/images/teeclean2.png" alt="CS Medical Page">
+            </div>
+
+            <section class="video-and-info-wrapper">
+                <div class="youtube-embed">
+                    <iframe 
+                        width="840" height="474" 
+                        src="https://www.youtube.com/embed/U-oDnaW8BAI" 
+                        title="TEEClean® Automated TEE Probe Cleaner Disinfector" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            
+                <div class="info-card-single">
+                    <h2>Device Disinfection</h2>
+                    <h4>Setting Standards- Exceeding Expectations</h4>
+            
+                    <p>
+                        Phoenix Airmid Biomedical can help your facility achieve both cleaning and high-level disinfection of endocavity, surface, and TEE ultrasound probes and deliver patient safety by reducing healthcare-associated infections (HAIs) through automated probe reprocessing. Ensure that the cleanliness of your probes complies with all state and federal regulations through automated cleaning and Health Canada licensed disinfectants. Let Phoenix Airmid Biomedical help you maintain a safe and clean environment where you can focus on what matters most: the patient.
+                    </p>
+            </section>
+
+           <!-- Highlighted Products Section -->
+            <section class="highlighted-products">
+                <!-- Product 1 -->
+                <div class="product-item">
+                    <div class="product-image">
+                        <img src="/images/teecleanproduct.png" alt="Product 1">
+                    </div>
+                    <div class="product-details">
+                        <div class="product-details-content">
+                            <ul class="product-features">
+                                <li>5-minute high-level disinfection of TEE probes</li>
+                                <li>7" color touch screen display with vivid user icons for easy operation</li>
+                                <li>Data entry with integrated barcode scanner or manual keyboard entry</li>
+                            </ul>
+                            <span class="toggle-specs" data-target="specs-table-1">> click for more information</span>
+                            <div class="specs-table" id="specs-table-1">
+                                <table>
+                                    <tr><th colspan="2">Actual Size</th></tr>
+                                    <tr><th>Width</th><td>24" [60.96 cm]</td></tr>
+                                    <tr><th>Depth</th><td>12" [30.4 cm]</td></tr>
+                                    <tr><th>Height</th><td>44" [112 cm]</td></tr>
+                                    <tr><th>Weight</th><td>90 lbs. [40.82 kg]</td></tr>
+                                
+                                    <tr><th colspan="2">Space and Site Requirements</th></tr>
+                                    <tr><th>Width</th><td>36" [91.44 cm]</td></tr>
+                                    <tr><th>Depth</th><td>12" [30.4 cm]</td></tr>
+                                    <tr><th>Height from Floor</th><td>72" [180 cm]</td></tr>
+                                
+                                    <tr><th colspan="2">Electrical Requirements</th></tr>
+                                    <tr><th>Service</th><td>120V~ (VAC), 20 Amp, 60 Hz-dedicated circuit terminated in 20 Amp hospital grade GFCI double wall receptacle</td></tr>
+                                    <tr><th>Ratings</th><td>120 V~, 60 Hz, 8A</td></tr>
+                                    <tr><th>Fusing</th><td>10A or equivalent</td></tr>
+                                
+                                    <tr><th colspan="2">Water Supply Requirements</th></tr>
+                                    <tr><th>Delivery Pressure</th><td>Regulated to 20-25 PSI using a Watts 263A with a pressure gauge and female 1/4" NPT outlet (or equivalent)</td></tr>
+                                    <tr><th>Flow Rate</th><td>1 gpm at 20 PSI minimum</td></tr>
+                                    <tr><th>Temperature</th><td>Cold water supply, 50°-80° F</td></tr>
+                                    <tr><th>Shut-Off</th><td>A shut-off valve is recommended</td></tr>
+                                    <tr><th>Connection</th><td>10-feet of 1/4" ID Tubing (provided in installation kit)</td></tr>
+                                    <tr><th>Quality</th><td>EPA quality drinking water at the point of use</td></tr>
+                                    <tr><th>Water Usage</th><td>Approximately 1.75 gallons per processing cycle</td></tr>
+                                
+                                    <tr><th colspan="2">Drain Requirements</th></tr>
+                                    <tr><th>Drain</th><td>1-1/2" Drain pipe no more than 18" above the floor. A special drain connection fitting is provided in the starter kit.</td></tr>
+                                </table>
+                                
+                            </div>
+                            <a href="/pages/csmedical-list.html" class="view-catalogue-btn">View Full Catalogue</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-item">
+                    <div class="product-image">
+                        <img src="/images/td200.png" alt="Product 2">
+                    </div>
+                    <div class="product-details">
+                        <div class="product-details-content">
+                            <ul class="product-features">
+                                <li>High-level disinfection complete in 3 minutes</li>
+                                <li>Built-in advanced vapor management system captures and neutralizes disinfectant fumes</li>
+                                <li>Microprocessor-controlled for ease of use by medical personnel</li>
+                            </ul>
+                            <span class="toggle-specs" data-target="specs-table-2">> click for more information</span>
+                            <div class="specs-table" id="specs-table-2">
+                                <table>
+                                    <tr><th colspan="2">Actual Size</th></tr>
+                                    <tr><th>Width</th><td>24" [60.96 cm]</td></tr>
+                                    <tr><th>Depth</th><td>8" [20.32 cm]</td></tr>
+                                    <tr><th>Height</th><td>44" [112 cm]</td></tr>
+                                    <tr><th>Weight</th><td>80 lbs. [36.28 kg]</td></tr>
+                                
+                                    <tr><th colspan="2">Space and Site Requirements</th></tr>
+                                    <tr><th>Width</th><td>36" [91.44 cm]</td></tr>
+                                    <tr><th>Depth</th><td>8" [20.32 cm]</td></tr>
+                                    <tr><th>Height from Floor</th><td>72" [180 cm]</td></tr>
+                                
+                                    <tr><th colspan="2">Electrical Requirements</th></tr>
+                                    <tr><th>Service</th><td>120V~ (VAC), 20 Amp, 60 Hz-dedicated circuit terminated in 20 Amp hospital grade GFCI double wall receptacle</td></tr>
+                                    <tr><th>Ratings</th><td>120 V~, 60 Hz, 8A</td></tr>
+                                    <tr><th>Fusing</th><td>10A or equivalent</td></tr>
+                                
+                                    <tr><th colspan="2">Water Supply Requirements</th></tr>
+                                    <tr><th>Delivery Pressure</th><td>Regulated to 25-35 PSI using a Watts 263A with a pressure gauge and female 1/4" NPT outlet (or equivalent)</td></tr>
+                                    <tr><th>Flow Rate</th><td>1 gpm at 25 PSI minimum</td></tr>
+                                    <tr><th>Temperature</th><td>Cold water supply, 50°-80° F</td></tr>
+                                    <tr><th>Shut-Off</th><td>A shut-off valve is recommended</td></tr>
+                                    <tr><th>Connection</th><td>10-feet of 1/4" ID Tubing (provided in installation kit)</td></tr>
+                                    <tr><th>Quality</th><td>High-quality potable water; a high-quality potable water is one that meets Federal Clean Water Standards at the point of use</td></tr>
+                                    <tr><th>Water Usage</th><td>Approximately one gallon per processing cycle</td></tr>
+                                
+                                    <tr><th colspan="2">Drain Requirements</th></tr>
+                                    <tr><th>Drain</th><td>1-1/2" Drain Pipe and Trap<br><strong>Note:</strong> A special drain fitting is provided in the installation kit.</td></tr>
+                                </table>
+                                
+                            </div>
+                            <a href="/pages/csmedical-list.html" class="view-catalogue-btn">View Full Catalogue</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-item">
+                    <div class="product-image">
+                        <img src="/images/td100.png" alt="Product 3">
+                    </div>
+                    <div class="product-details">
+                        <div class="product-details-content">
+                            <ul class="product-features">
+                                <li>High-level disinfection complete in 5 minutes</li>
+                                <li>Five individual rinse cycles after disinfection cycle is complete</li>
+                                <li>Microprocessor-controlled for ease of use by medical personnel</li>
+                            </ul>
+                            <span class="toggle-specs" data-target="specs-table-3">> click for more information</span>
+                            <div class="specs-table" id="specs-table-3">
+                                <table>
+                                    <tr><th colspan="2">Actual Size</th></tr>
+                                    <tr><th>Width</th><td>24" [60.96 cm]</td></tr>
+                                    <tr><th>Depth</th><td>8" [20.32 cm]</td></tr>
+                                    <tr><th>Height</th><td>44" [112 cm]</td></tr>
+                                    <tr><th>Weight</th><td>90 lbs. [40.82 kg]</td></tr>
+                                
+                                    <tr><th colspan="2">Space and Site Requirements</th></tr>
+                                    <tr><th>Width</th><td>36" [91.44 cm]</td></tr>
+                                    <tr><th>Depth</th><td>8" [20.32 cm]</td></tr>
+                                    <tr><th>Height from Floor</th><td>72" [180 cm]</td></tr>
+                                
+                                    <tr><th colspan="2">Electrical Requirements</th></tr>
+                                    <tr><th>Service</th><td>120V~ (VAC), 20 Amp, 60 Hz-dedicated circuit terminated in 20 Amp hospital grade GFCI double wall receptacle</td></tr>
+                                    <tr><th>Ratings</th><td>120 V~, 60 Hz, 8A</td></tr>
+                                    <tr><th>Fusing</th><td>10A or equivalent</td></tr>
+                                
+                                    <tr><th colspan="2">Water Supply Requirements</th></tr>
+                                    <tr><th>Delivery Pressure</th><td>Regulated to 20–25 PSI using a Watts 263A with a pressure gauge and female 1/4" NPT outlet (or equivalent)</td></tr>
+                                    <tr><th>Flow Rate</th><td>1 gpm at 20 PSI minimum</td></tr>
+                                    <tr><th>Temperature</th><td>Cold water supply, 50°–80° F</td></tr>
+                                    <tr><th>Shut-Off</th><td>A shut-off valve is recommended</td></tr>
+                                    <tr><th>Connection</th><td>10-feet of 1/4" ID Tubing (provided in installation kit)</td></tr>
+                                    <tr><th>Quality</th><td>High-quality potable water; a high-quality potable water is one that meets Federal Clean Water Standards at the point of use.</td></tr>
+                                    <tr><th>Water Usage</th><td>Approximately one gallon per processing cycle</td></tr>
+                                
+                                    <tr><th colspan="2">Drain Requirements</th></tr>
+                                    <tr><th>Drain</th><td>1-1/2" Drain Pipe and Trap<br><strong>Note:</strong> A special drain fitting is provided in the installation kit.</td></tr>
+                                </table>
+                            </div>
+
+                            <a href="/pages/csmedical-list.html" class="view-catalogue-btn">View Full Catalogue</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- CPR Workflow Diagram Section -->
+                <section class="cpr-compact">
+                    <div class="button-style-container" style="background-color: #F78C19; padding: 10px; border-radius: 5px; text-align: center; color: white;">
+                        <h3>Complete Probe Reprocessing</h3>
+                    </div>
+                    <div class="cpr-flex-container">
+                        <div class="cpr-media">
+                            <img src="/images/cpr.png" alt="Complete Probe Reprocessing Diagram">
+                        </div>
+                        <div class="cpr-media">
+                            <iframe 
+                                width="1521" 
+                                height="526" 
+                                src="https://www.youtube.com/embed/FdS1JBWBzsY" 
+                                title="CS Medical - TEE Complete Care" 
+                                frameborder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                referrerpolicy="strict-origin-when-cross-origin" 
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+                </section>
+                
+                
+            </section>
+        </main>
+
+        <!-- Footer (from reference files) -->
+        <footer id="footer">
+            <div class="footer-info">
+                <p class="footer-left">1166 South Service Rd. W, Oakville, ON L6L 5T7</p>
+                <p class="footer-center">
+                    Phone: 905-469-4253  |  
+                    Fax: 905-825-9795  |  
+                    Toll Free: 866-718-0515
+                </p>
+                <p class="footer-right">
+                    Email: <a href="mailto:info@phoenixairmid.com">info@phoenixairmid.com</a>
+                </p>
+            </div>
+        </footer>
+    </div>
+</body>
+<script src="/script.js"></script>
+</html>

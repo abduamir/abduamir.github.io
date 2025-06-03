@@ -1,0 +1,579 @@
+/* Catalogue Page Styles */
+
+/* Font Family */
+body {
+    font-family: 'Supreme', Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+/* Container */
+.container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    box-sizing: border-box;
+}
+
+@media (min-width: 640px) {
+    .container {
+        max-width: 640px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 768px;
+    }
+}
+
+@media (min-width: 960px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1280px) {
+    .container {
+        max-width: 1280px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .container {
+        max-width: 1440px;
+    }
+}
+
+/* Margin Utilities */
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mb-4 {
+    margin-bottom: 1rem;
+}
+
+.mb-6 {
+    margin-bottom: 1.5rem;
+}
+
+.mb-8 {
+    margin-bottom: 2rem;
+}
+
+.mx-2 {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+/* Typography Utilities */
+.text-4xl {
+    font-size: 3.062rem;
+    line-height: 1.2;
+}
+
+.text-sm {
+    font-size: 0.812rem;
+    line-height: 1.8;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.font-medium {
+    font-weight: 500;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+/* Color Utilities */
+.text-color-11 {
+    color: #020332;
+}
+
+.text-color-7 {
+    color: #4eaae0;
+}
+
+.text-color-6 {
+    color: #5a92f1;
+}
+
+.bg-color-3 {
+    background-color: #f1f9ff;
+}
+
+/* Shadows */
+.shadow-mikrogen_table {
+    box-shadow: 0px 4px 4px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Rounded Corners */
+.rounded-lg {
+    border-radius: 0.5rem;
+}
+
+/* Width Utilities */
+.w-full {
+    width: 100%;
+}
+
+/* Padding Utilities */
+.py-3 {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+}
+
+.px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* Header */
+header {
+    position: relative;
+    width: 100%;
+    z-index: 10;
+}
+
+/* Main Content */
+main {
+    flex: 1;
+    padding: 20px;
+    position: relative;
+    margin-top: 60px;
+}
+
+.catalogue {
+    width: 100%;
+    position: relative;
+}
+
+/* Logo and Breadcrumb Container */
+.logo-breadcrumb-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    width: auto;
+}
+
+/* Company Logo */
+.company-logo {
+    max-width: 200px;
+    margin-bottom: 1rem;
+}
+
+.company-logo img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Breadcrumb Navigation */
+.breadcrumb {
+    text-align: left;
+    width: auto;
+    margin-left: 0;
+    padding-top: 1rem;
+}
+
+.breadcrumb a {
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb .separator {
+    color: #020332;
+}
+
+/* Heading */
+.catalogue h1 {
+    margin-top: 0;
+}
+
+/* Product Table */
+.product-table table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+    line-height: 1.7142857;
+}
+
+.product-table th,
+.product-table td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    color: #020332;
+}
+
+.product-table thead tr {
+    background-color: #f1f9ff;
+}
+
+.product-table th {
+    font-weight: 500;
+    color: #4eaae0;
+}
+
+/* Tab Navigation */
+.catalogue .tabs {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    padding: 10px 0;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.catalogue .tabs .tab-btn {
+    background-color: transparent;
+    color: #0f8fca;
+    border: 1px solid #0f8fca;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
+    box-shadow: none;
+    line-height: 1.2;
+}
+
+.catalogue .tabs .tab-btn:hover {
+    background-color: #0f8fca;
+    color: white;
+    transform: translateY(-1px);
+}
+
+.catalogue .tabs .tab-btn.active {
+    background-color: #020332;
+    color: white;
+    border-color: #020332;
+    font-weight: 600;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+}
+
+.catalogue .tabs .tab-btn[data-tab="all"] {
+    border-color: #020332;
+    color: #020332;
+}
+
+.catalogue .tabs .tab-btn[data-tab="all"]:hover {
+    background-color: #020332;
+    color: white;
+}
+
+.catalogue .tabs .tab-btn:focus {
+    outline: 2px solid #0f8fca;
+    outline-offset: 2px;
+}
+
+/* Tab and Pagination Filtering */
+.catalogue .product-table tbody tr {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.catalogue .product-table tbody tr.tab-active.page-active {
+    display: table-row;
+    opacity: 1;
+}
+
+/* Pagination Styling */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    gap: 10px;
+}
+
+.page-btn {
+    background-color: #11cee3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.page-btn:hover {
+    background-color: #4eaae0;
+    transform: translateY(-2px);
+}
+
+.page-btn.active {
+    background-color: #020332;
+    font-weight: bold;
+}
+
+.page-btn:focus {
+    outline: 2px solid #11cee3;
+    outline-offset: 2px;
+}
+
+/* Mobile Optimization */
+@media (max-width: 1280px) {
+    main {
+        padding: 10px;
+        margin-top: 50px;
+    }
+
+    .company-logo {
+        max-width: 150px;
+        margin: 0 auto 0.5rem auto;
+    }
+
+    .logo-breadcrumb-container {
+        align-items: center;
+        margin-bottom: 1.5rem;
+    }
+
+    .breadcrumb {
+        text-align: center;
+        font-size: 0.812rem;
+        margin-bottom: 0;
+    }
+
+    .breadcrumb .separator {
+        margin: 0 0.25rem;
+    }
+
+    .catalogue h1 {
+        font-size: 2.438rem;
+        margin-bottom: 1rem;
+    }
+
+    /* Tab Navigation */
+    .catalogue .tabs {
+        gap: 6px;
+        padding: 6px 0;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+    }
+
+    .catalogue .tabs::-webkit-scrollbar {
+        display: none;
+    }
+
+    .catalogue .tabs .tab-btn {
+        padding: 4px 10px;
+        font-size: 0.75rem;
+        border-radius: 4px;
+        display: inline-block;
+    }
+
+    /* Product Table */
+    .product-table table,
+    .product-table thead,
+    .product-table tbody,
+    .product-table tr,
+    .product-table th,
+    .product-table td {
+        display: block;
+    }
+
+    .product-table thead {
+        display: none;
+    }
+
+    .product-table tbody tr {
+        border-radius: 2px;
+        box-shadow: 0 0 16px -8px rgba(0, 21, 46, 0.3);
+        margin-bottom: 1rem;
+    }
+
+    .product-table td {
+        display: flex;
+        align-items: center;
+        padding: 0.5rem;
+    }
+
+    .product-table td::before {
+        content: attr(data-label);
+        color: #9a9aad;
+        font-size: 0.812rem;
+        line-height: 1.8;
+        padding-right: 0.5rem;
+        width: 8rem;
+        flex-shrink: 0;
+        font-weight: 500;
+    }
+
+    .catalogue .product-table tbody tr.tab-active.page-active {
+        display: block;
+        opacity: 1;
+    }
+}
+
+/* ───────── Generic catalogue‑layout helpers (re‑usable) ───────── */
+
+.catalogue-banner{
+    width:100%;height:100%;
+    display:flex;align-items:center;justify-content:center;
+    background-size:cover;background-position:center;
+    margin-bottom:1.75rem;
+}
+.catalogue-banner img{width:100%;max-height:100%;object-fit:cover;}
+
+.cat-breadcrumb{
+    text-align:center;font-size:1rem;font-weight:500;color:#0f8fca;
+}
+.cat-breadcrumb span{margin:0 0.35rem;color:#020332;}
+.cat-breadcrumb a{color:#0f8fca;text-decoration:none;}
+.cat-breadcrumb a:hover{color:#020332;text-decoration:underline;}
+
+.catalogue-intro{
+    display:flex;justify-content:space-between;align-items:flex-start;
+    gap:2rem;margin-bottom:2rem;flex-wrap:wrap;
+}
+.intro-left img{
+    max-width:240px;border-radius:6px;
+    box-shadow:0 2px 8px rgba(0,0,0,.08);
+}
+.intro-left figcaption{
+    margin-top:0.5rem;font-size:0.875rem;color:#5b5b6b;text-align:left;
+}
+.intro-right{text-align:center;}
+.catalogue-preview{
+    width:180px;border:1px solid #d8d8e0;border-radius:4px;
+    box-shadow:0 1px 6px rgba(0,0,0,.06);margin-bottom:0.75rem;
+}
+.cat-download-btn{
+    display:inline-block;background:#0f8fca;color:#fff;
+    padding:8px 18px;border-radius:4px;font-weight:600;
+    text-decoration:none;transition:background .25s,transform .2s;
+}
+.cat-download-btn:hover{background:#020332;transform:translateY(-2px);}
+.cat-download-btn:focus{outline:2px solid #0f8fca;outline-offset:2px;}
+
+@media(max-width:768px){
+    .catalogue-banner{height:140px;}
+    .catalogue-intro{flex-direction:column;align-items:center;text-align:center;}
+    .intro-left img{max-width:70%;}
+}
+
+/* ───── ESFEQA fine‑tuning (banner flush, breadcrumb, intro sizing) ───── */
+
+/* 1 ▸ Banner flush with header  ──────────────────────────────────────── */
+/* ───── Full‑bleed banner for ESFEQA ───────────────────────────── */
+.esfeqa-page .catalogue-banner{
+    /* 1  ▸ stretch full width of the *viewport*  */
+    width:100vw;                 /* viewport width  */
+    max-width:100vw;             /* never shrink to container */
+    
+    /* 2  ▸ centre that 100 vw element within the page  */
+    margin:0 calc(50% - 50vw) 40px;   /* flush top + sides, 40 px gap below */
+
+    overflow:hidden;
+    position:relative;
+}
+.esfeqa-page .catalogue-banner img{
+    width:100%;
+    height:auto;
+    display:block;
+}
+
+main.esfeqa-fix{margin-top:0;padding-top:20px;}  /* only if main has margin‑top */
+
+/* 2 ▸ Breadcrumb: larger text but tighter spacing  ───────────────────── */
+.esfeqa-page .cat-breadcrumb{
+    font-size:1.125rem;              /* bigger */
+    line-height:1.2;                 /* tighter vertical */
+    margin-bottom:1rem;              /* less gap */
+}
+.esfeqa-page .cat-breadcrumb span{
+    margin:0 0.25rem;                /* tighter horizontal */
+}
+
+/* 3 ▸ Intro row sizing  ──────────────────────────────────────────────── */
+.esfeqa-page .intro-left{flex:0 0 46%;}  /* let the image+text use ~half width */
+.esfeqa-page .intro-right{flex:0 0 46%;}
+
+.esfeqa-page .intro-left img{
+    max-width:500px;                 /* larger photo */
+    width:100%;
+}
+.esfeqa-page .intro-left figcaption{
+    margin-top:0.75rem;
+    max-width:100%;                  /* allow full width of its flex box */
+    line-height:1.75;
+}
+
+/* 4 ▸ Download block neat under cover image  ─────────────────────────── */
+/* ───── Keep cover size, align button to bottom ───── */
+.esfeqa-page .catalogue-intro{
+    align-items:stretch;          /* both columns same height */
+}
+
+.esfeqa-page .intro-right{
+    display:flex;                 /* already a column */
+    flex-direction:column;
+    align-items:flex-end;         /* align content to the right */
+}
+
+.esfeqa-page .cat-download-btn{
+    margin-top:20px;              /* pushes button to column’s bottom */
+}
+
+/* restore fixed cover width so it never blows up */
+.esfeqa-page .catalogue-preview{
+    width:220px;                  /* your previous size */
+    height:auto;
+    max-width:100%;               /* just in case column becomes narrower */
+}
+
+/* 5 ▸ Mobile tweaks  ─────────────────────────────────────────────────── */
+@media(max-width:768px){
+    .esfeqa-page .intro-left,
+    .esfeqa-page .intro-right{flex:0 0 100%;}
+
+    .esfeqa-page .intro-left img{max-width:90%;}
+    .esfeqa-page .catalogue-preview{width:60%;}
+    .esfeqa-page .intro-right{ align-items: center; } /* center on mobile */
+}
+.esfeqa-main{
+    margin-top:0 !important;
+    padding-top:0 !important;
+}
+
+/* centre the wrapper and let it shrink to content */
+.breadcrumb-wrap{
+    text-align:center;     /* centres inline‑block children */
+}
+
+/* turn breadcrumb into a shrink‑to‑fit flexbox */
+.cat-breadcrumb{
+    display:inline-flex;   /* shrink to content */
+    align-items:center;
+    gap:0.25rem;           /* tidy uniform spacing */
+    font-size:1.125rem;    /* already enlarged earlier */
+    line-height:1.3;
+}
+/* Symmetrical spacing left and right */
+.esfeqa-page .catalogue-intro{
+    padding:0 0px;        /* adjust 40 px to taste */
+    justify-content:space-between; /* already set by default, but be explicit */
+}

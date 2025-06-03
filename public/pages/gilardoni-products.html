@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Highlighted Products - Phoenix Airmid Biomedical</title>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css"> <!-- Main site styles -->
+    <link rel="stylesheet" href="/productstyle.css"> <!-- Updated product styles -->
+</head>
+<body>
+    <div class="page-wrapper">
+        <!-- Header (from reference files) -->
+        <header>
+            <nav>
+                <div class="logo">
+                    <a href="/index.html"><img src="/images/PAB Logo Old.png" alt="Phoenix Airmid Logo"></a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#" class="dropdown-trigger" data-menu="company-menu">Company</a></li>
+                    <li><a href="#" class="dropdown-trigger" data-menu="products-menu">Products & Solutions</a></li>
+                    <li><a href="#" class="dropdown-trigger" data-menu="resources-menu">Resources</a></li>
+                    <li><a href="#" class="dropdown-trigger" data-menu="support-menu">Support</a></li>
+                    <li><a href="#" class="dropdown-trigger" data-menu="news-menu">News & Events</a></li>
+                </ul>
+                <div class="search-container">
+                    <input type="text" class="search-input" id="search-input" placeholder="Search...">
+                    <button class="search-btn">🔍</button>
+                </div>
+                <div class="search-results-container"></div>
+
+                <!-- Dropdown Menus (from reference files) -->
+                <div class="dropdown-menu" id="company-menu">
+                    <a href="/pages/about.html">About Us</a>
+                    <a href="/pages/what_we_do.html">What We Do</a>
+                    <a href="/pages/values.html">Our Values</a>
+                    <a href="/pages/our_people.html">Our People</a>
+                    <a href="/pages/responsibility.html">Our Corporate Responsibility</a>
+                    <a href="/pages/partners.html">Our Partners</a>
+                </div>
+                <div class="dropdown-menu" id="products-menu">
+                    <div class="dropdown-content">
+                        <div class="product-categories">
+                            <h3>Product Categories</h3>
+                            <ul id="category-list">
+                                <li><a href="#" class="category-trigger" data-category="clinical-chemistry">Clinical Chemistry</a></li>
+                                <li><a href="#" class="category-trigger" data-category="hematology">Hematology</a></li>
+                                <li><a href="#" class="category-trigger" data-category="microbiology">Microbiology</a></li>
+                                <li><a href="#" class="category-trigger" data-category="EQA">EQA</a></li>
+                                <li><a href="#" class="category-trigger" data-category="pathology">Pathology</a></li>
+                                <li><a href="#" class="category-trigger" data-category="transfusion-medicine">Transfusion Medicine</a></li>
+                                <li><a href="#" class="category-trigger" data-category="disinfection-systems">Disinfection Systems</a></li>
+                                <li><a href="#" class="category-trigger" data-category="Biomarkers">Biomarkers</a></li>
+                                <li><a href="#" class="category-trigger" data-category="Pre-Analytical">Pre-Analytical</a></li>
+                            </ul>
+                        </div>
+                        <div class="products">
+                            <h3>Products</h3>
+                            <ul id="products-list" class="scrollable-list"></ul>
+                        </div>
+                        <div class="solutions">
+                            <h3>Solutions</h3>
+                            <ul id="solutions-list" class="scrollable-list"></ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="dropdown-menu" id="resources-menu">
+                    <div class="dropdown-category">
+                        <span>Orders</span>
+                        <ul>
+                            <li><a href="/pages/ordering.html">Ordering</a></li>
+                            <li><a href="/pages/logistics.html">Logistics</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown-category">
+                        <span>Inquiries</span>
+                        <ul>
+                            <li><a href="/pages/account-executives.html">Account Executives</a></li>
+                            <li><a href="/pages/product-specialists.html">Product Specialists</a></li>
+                            <li><a href="/pages/business-development.html">Business Development</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="dropdown-menu" id="support-menu">
+                    <a href="/pages/contact.html">Contact Us</a>
+                    <a href="/pages/Instrument-Service-and-Application-Specialists.html">Instrument Service and Application Specialists</a>
+                </div>
+                <div class="dropdown-menu" id="news-menu">
+                    <a href="/pages/news.html">Latest News</a>
+                    <a href="/pages/events.html">Upcoming Events</a>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Sidebar (from reference files) -->
+        <section class="vertical-bar">
+            <div class="sidebar">
+                <div class="sidebar-content">
+                    <a href="/pages/customer-service.html">
+                        <img src="/images/icons8-headset-50.png" alt="Customer Service">
+                        <span>Customer Service</span>
+                    </a>
+                    <a href="/pages/events.html">
+                        <img src="/images/icons8-calendar-100.png" alt="Events">
+                        <span>Events</span>
+                    </a>
+                    <a href="/pages/contact.html">
+                        <img src="/images/icons8-phone-100.png" alt="Contact Us">
+                        <span>Contact Us</span>
+                    </a>
+                    <a href="/pages/ordering.html">
+                        <img src="/images/icons8-megaphone-100.png" alt="Call for Service">
+                        <span>Call for Service</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content -->
+        <main>
+            <!-- Video Banner -->
+            <div class="video-banner">
+                <video autoplay loop muted playsinline>
+                    <source src="\images\Gilardoni_Banner.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <section class="video-and-info-wrapper">
+                <div class="youtube-embed">
+                    <iframe 
+                        width="1080" height="608" 
+                        src="https://www.youtube.com/embed/5tYHhu9FJMs" 
+                        title="Gilardoni X-RAY irradiator - RADGIL 2" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            
+                <div class="info-card-single">
+                    <h2>Radgil2 X-ray Blood Irradiator</h2>
+                    <h4>For safe and effective X-ray irradiation of blood and blood components.</h4>
+            
+                    <p>
+                        <strong>RADGIL2</strong> is a self-contained X-ray irradiator specifically designed for the irradiation of blood and blood products. It is well-suited for the prevention of <em>Transfusion-associated Graft-versus-Host Disease (TA-GvHD)</em>, a rare but serious complication of blood transfusion, and serves as a safer, non-radioisotope alternative to traditional <strong>Cesium-137</strong> sourced irradiators.
+                    </p>
+            
+                    <p>
+                        The system is <strong>safe</strong>, <strong>easy to use</strong>, and requires no specialized training or radioprotection measures. Adjustable parameters also make RADGIL2 ideal for a range of research applications, including:
+                    </p>
+            
+                    <ul class="info-list">
+                        <li>Stem cell and tissue irradiations</li>
+                        <li>Vaccine irradiations</li>
+                        <li>Bone marrow ablation on laboratory animals</li>
+                    </ul>
+                </div>
+            </section>
+            
+            
+            
+            
+            
+            
+
+           <!-- Highlighted Products Section -->
+            <section class="highlighted-products">
+                <!-- Product 1 -->
+                <div class="product-item">
+                    <div class="product-image">
+                        <img src="/images/Radgil2.png" alt="Product 1">
+                    </div>
+                    <div class="product-details">
+                        <div class="product-details-content">
+                            <ul class="product-features">
+                                
+                                <li>High Dose Rate: for fast irradiation times</li>
+                                <li>High Throughput: holds up to six blood products per cycle</li>
+                                <li>Rotating Canister: provides uniform dose distribution throughout the X-ray cycle</li>
+                                <li>Dose Calibration & Integrated Data management System</li>
+                                <li>Safe and cost effective alternative to Cesium</li>
+                                <li>Health Canada and FDA Cleared for use in blood irradiation</li>
+                            </ul>
+                            <span class="toggle-specs" data-target="specs-table-1">> click for more information</span>
+                            <div class="specs-table" id="specs-table-1">
+                                <table>
+                                    <tr>
+                                        <th>Indications of Use</th>
+                                        <td>
+                                            • Blood products<br>
+                                            • Other generic (research-only) applications
+                                        </td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <th>Power Requirement</th>
+                                        <td>400 VAC ± 10 %  50/60 Hz, three-phase, 6 kW</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <th>Cooling / Water Supply</th>
+                                        <td>
+                                            Tap water 2.5 – 4.0 bar, ≥ 5 L min-1<br>
+                                            Max hardness ≤ 27 °fH<br>
+                                            <em>or</em> optional closed-loop chiller
+                                        </td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <th>Supplied Accessories</th>
+                                        <td>
+                                            • Load-distribution floor plate (≥ 750 kg m-2)<br>
+                                            • 5 initialized operator smartcards<br>
+                                            • 2 blood-bag canisters (3- and 4-compartment)<br>
+                                            • Pass-through &amp; holder for lab-dosimeter probe
+                                        </td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <th>User Interface</th>
+                                        <td>
+                                            • Wide colour touch-screen display (live status)<br>
+                                            • Lockable settings panel
+                                        </td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <th>Safety / Door System</th>
+                                        <td>X-ray chamber with triple-safety-lock sliding door</td>
+                                    </tr>
+                                
+                                    <tr>
+                                        <th>Optional Peripherals</th>
+                                        <td>Label printer · Barcode scanner</td>
+                                    </tr>
+                                </table>
+                                
+                                </table>
+                            </div>
+                            <a href="/images/Gilardoni_Brochure.pdf" class="view-catalogue-btn" download>Download Brochure</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- No products to display -->
+                <div class="no-products" style="visibility: hidden; color: white;"></div>
+                    <p style="color: white;">No products are currently available in this category.</p>
+                </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="external-link-button">
+                <a href="https://www.gilardoni.it/en/medical-division/" target="_blank" rel="noopener noreferrer">
+                    To Learn More, Visit Gilardoni Website
+                    <img src="/images/external-link.png" alt="External Link Icon">
+                </a>
+            </section>
+            
+        </main>
+
+        <!-- Footer (from reference files) -->
+        <footer id="footer">
+            <div class="footer-info">
+                <p class="footer-left">1166 South Service Rd. W, Oakville, ON L6L 5T7</p>
+                <p class="footer-center">
+                    Phone: 905-469-4253  |  
+                    Fax: 905-825-9795  |  
+                    Toll Free: 866-718-0515
+                </p>
+                <p class="footer-right">
+                    Email: <a href="mailto:info@phoenixairmid.com">info@phoenixairmid.com</a>
+                </p>
+            </div>
+        </footer>
+    </div>
+</body>
+<script src="/script.js"></script>
+</html>

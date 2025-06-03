@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Highlighted Products - Phoenix Airmid Biomedical</title>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css"> <!-- Main site styles -->
+    <link rel="stylesheet" href="/productstyle.css"> <!-- Updated product styles -->
+</head>
+<body>
+    <div class="page-wrapper">
+        <!-- Header (from reference files) -->
+        <header>
+            <nav>
+                <div class="logo">
+                    <a href="/index.html"><img src="/images/PAB Logo Old.png" alt="Phoenix Airmid Logo"></a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#" class="dropdown-trigger" data-menu="company-menu">Company</a></li>
+                    <li><a href="#" class="dropdown-trigger" data-menu="products-menu">Products & Solutions</a></li>
+                    <li><a href="#" class="dropdown-trigger" data-menu="resources-menu">Resources</a></li>
+                    <li><a href="#" class="dropdown-trigger" data-menu="support-menu">Support</a></li>
+                    <li><a href="#" class="dropdown-trigger" data-menu="news-menu">News & Events</a></li>
+                </ul>
+                <div class="search-container">
+                    <input type="text" class="search-input" id="search-input" placeholder="Search...">
+                    <button class="search-btn">🔍</button>
+                </div>
+                <div class="search-results-container"></div>
+
+                <!-- Dropdown Menus (from reference files) -->
+                <div class="dropdown-menu" id="company-menu">
+                    <a href="/pages/about.html">About Us</a>
+                    <a href="/pages/what_we_do.html">What We Do</a>
+                    <a href="/pages/values.html">Our Values</a>
+                    <a href="/pages/our_people.html">Our People</a>
+                    <a href="/pages/responsibility.html">Our Corporate Responsibility</a>
+                    <a href="/pages/partners.html">Our Partners</a>
+                </div>
+                <div class="dropdown-menu" id="products-menu">
+                    <div class="dropdown-content">
+                        <div class="product-categories">
+                            <h3>Product Categories</h3>
+                            <ul id="category-list">
+                                <li><a href="#" class="category-trigger" data-category="clinical-chemistry">Clinical Chemistry</a></li>
+                                <li><a href="#" class="category-trigger" data-category="hematology">Hematology</a></li>
+                                <li><a href="#" class="category-trigger" data-category="microbiology">Microbiology</a></li>
+                                <li><a href="#" class="category-trigger" data-category="EQA">EQA</a></li>
+                                <li><a href="#" class="category-trigger" data-category="pathology">Pathology</a></li>
+                                <li><a href="#" class="category-trigger" data-category="transfusion-medicine">Transfusion Medicine</a></li>
+                                <li><a href="#" class="category-trigger" data-category="disinfection-systems">Disinfection Systems</a></li>
+                                <li><a href="#" class="category-trigger" data-category="Biomarkers">Biomarkers</a></li>
+                                <li><a href="#" class="category-trigger" data-category="Pre-Analytical">Pre-Analytical</a></li>
+                            </ul>
+                        </div>
+                        <div class="products">
+                            <h3>Products</h3>
+                            <ul id="products-list" class="scrollable-list"></ul>
+                        </div>
+                        <div class="solutions">
+                            <h3>Solutions</h3>
+                            <ul id="solutions-list" class="scrollable-list"></ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="dropdown-menu" id="resources-menu">
+                    <div class="dropdown-category">
+                        <span>Orders</span>
+                        <ul>
+                            <li><a href="/pages/ordering.html">Ordering</a></li>
+                            <li><a href="/pages/logistics.html">Logistics</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown-category">
+                        <span>Inquiries</span>
+                        <ul>
+                            <li><a href="/pages/account-executives.html">Account Executives</a></li>
+                            <li><a href="/pages/product-specialists.html">Product Specialists</a></li>
+                            <li><a href="/pages/business-development.html">Business Development</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="dropdown-menu" id="support-menu">
+                    <a href="/pages/contact.html">Contact Us</a>
+                    <a href="/pages/Instrument-Service-and-Application-Specialists.html">Instrument Service and Application Specialists</a>
+                </div>
+                <div class="dropdown-menu" id="news-menu">
+                    <a href="/pages/news.html">Latest News</a>
+                    <a href="/pages/events.html">Upcoming Events</a>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Sidebar (from reference files) -->
+        <section class="vertical-bar">
+            <div class="sidebar">
+                <div class="sidebar-content">
+                    <a href="/pages/customer-service.html">
+                        <img src="/images/icons8-headset-50.png" alt="Customer Service">
+                        <span>Customer Service</span>
+                    </a>
+                    <a href="/pages/events.html">
+                        <img src="/images/icons8-calendar-100.png" alt="Events">
+                        <span>Events</span>
+                    </a>
+                    <a href="/pages/contact.html">
+                        <img src="/images/icons8-phone-100.png" alt="Contact Us">
+                        <span>Contact Us</span>
+                    </a>
+                    <a href="/pages/ordering.html">
+                        <img src="/images/icons8-megaphone-100.png" alt="Call for Service">
+                        <span>Call for Service</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content -->
+        <main>
+            <!-- Image Banner -->
+            <div class="image-banner">
+                <img src="/images/optibanner.jpg" alt="Mikrogen Page">
+            </div>
+
+           <!-- Highlighted Products Section -->
+            <section class="highlighted-products">
+                <!-- Product 1 -->
+                <div class="product-item">
+                    <div class="product-image">
+                        <img src="/images/TS2.png" alt="Product 1">
+                    </div>
+                    <div class="product-details">
+                        <div class="product-details-content">
+                            <ul class="product-features">
+                                <li>Provides fast accurate results for blood gases, acid-base balance, electrolytes, ionized calcium, glucose, and lactate.</li>
+                                <li>Runs samples of whole blood, plasma and serum on single-use disposable cassettes.</li>
+                                <li>Uses innovative optical technology.</li>
+                            </ul>
+                            <span class="toggle-specs" data-target="specs-table-1">> click for more information</span>
+                            <div class="specs-table" id="specs-table-1">
+                                <table>
+                                    <tr><th>Minimum Sample Size</th><td>125 µL, 60µL for B-60 cassette</td></tr>
+                                    <tr><th>Sample Type</th><td>Whole Blood, Plasma, or Serum (depends on analyte tested)</td></tr>
+                                    <tr><th>Sample Application</th><td>Syringe, Capillary or ComfortSampler™</td></tr>
+                                    <tr><th>Sample Input</th><td>Automatic Aspiration</td></tr>
+                                    <tr><th>Analysis Time (Time to Results)</th><td>&lt; 120 Seconds</td></tr>
+                                    <tr><th>Ambient Temperature</th><td>10° C - 30° C (50°F - 86°F)</td></tr>
+                                    <tr><th>Relative Humidity</th><td>5% - 95% (Non-Condensing)</td></tr>
+                                    <tr><th>Available Languages</th><td>English, Spanish, French, Italian, German, Japanese, Polish, Portuguese, Romanian, Russian, and Turkish</td></tr>
+                                    <tr><th>Size</th><td>4.7 H x 14.2 W x 9.1 D in (12.0 x 36.2 x 23.0 cm)</td></tr>
+                                    <tr><th>Weight</th><td>4.3 kg (9.6 lbs) with rechargeable Battery Pack</td></tr>
+                                    <tr><th>Voltage/Frequency</th><td>120 or 240 AC/50-60 Hz</td></tr>
+                                    <tr><th>Power Consumption (Max.)</th><td>110 VA</td></tr>
+                                    <tr><th>Interface</th><td>ASTM, ASCII, and POCT1 protocols (Ethernet and USB Serial)</td></tr>
+                                    <tr><th>Ports</th><td>USB Type A</td></tr>
+                                    <tr><th>Approvals</th><td>CE, UL, IVDD, FDA 510k cleared</td></tr>
+                                </table>
+                            </div>
+                            <a href="/pages/optimedical-list.html" class="view-catalogue-btn">View Full Catalogue</a>
+                        </div>
+                    </div>
+                </div>
+
+
+            </section>
+            <section class="external-link">
+                <a href="https://www.optimedical.com" target="_blank" rel="noopener noreferrer">
+                    OptiMedical Website <img src="/images/external-link.png" alt="External Link Icon">
+                </a>
+            </section>
+        </main>
+
+        <!-- Footer (from reference files) -->
+        <footer id="footer">
+            <div class="footer-info">
+                <p class="footer-left">1166 South Service Rd. W, Oakville, ON L6L 5T7</p>
+                <p class="footer-center">
+                    Phone: 905-469-4253  |  
+                    Fax: 905-825-9795  |  
+                    Toll Free: 866-718-0515
+                </p>
+                <p class="footer-right">
+                    Email: <a href="mailto:info@phoenixairmid.com">info@phoenixairmid.com</a>
+                </p>
+            </div>
+        </footer>
+    </div>
+</body>
+<script src="/script.js"></script>
+</html>

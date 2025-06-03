@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Highlighted Products - Phoenix Airmid Biomedical</title>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css"> <!-- Main site styles -->
+    <link rel="stylesheet" href="/productstyle.css"> <!-- Updated product styles -->
+</head>
+<body>
+    <div class="page-wrapper">
+        <!-- Header (from reference files) -->
+        <header>
+            <nav>
+                <div class="logo">
+                    <a href="/index.html"><img src="/images/PAB Logo Old.png" alt="Phoenix Airmid Logo"></a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#" class="dropdown-trigger" data-menu="company-menu">Company</a></li>
+                    <li><a href="#" class="dropdown-trigger" data-menu="products-menu">Products & Solutions</a></li>
+                    <li><a href="#" class="dropdown-trigger" data-menu="resources-menu">Resources</a></li>
+                    <li><a href="#" class="dropdown-trigger" data-menu="support-menu">Support</a></li>
+                    <li><a href="#" class="dropdown-trigger" data-menu="news-menu">News & Events</a></li>
+                </ul>
+                <div class="search-container">
+                    <input type="text" class="search-input" id="search-input" placeholder="Search...">
+                    <button class="search-btn">🔍</button>
+                </div>
+                <div class="search-results-container"></div>
+
+                <!-- Dropdown Menus (from reference files) -->
+                <div class="dropdown-menu" id="company-menu">
+                    <a href="/pages/about.html">About Us</a>
+                    <a href="/pages/what_we_do.html">What We Do</a>
+                    <a href="/pages/values.html">Our Values</a>
+                    <a href="/pages/our_people.html">Our People</a>
+                    <a href="/pages/responsibility.html">Our Corporate Responsibility</a>
+                    <a href="/pages/partners.html">Our Partners</a>
+                </div>
+                <div class="dropdown-menu" id="products-menu">
+                    <div class="dropdown-content">
+                        <div class="product-categories">
+                            <h3>Product Categories</h3>
+                            <ul id="category-list">
+                                <li><a href="#" class="category-trigger" data-category="clinical-chemistry">Clinical Chemistry</a></li>
+                                <li><a href="#" class="category-trigger" data-category="hematology">Hematology</a></li>
+                                <li><a href="#" class="category-trigger" data-category="microbiology">Microbiology</a></li>
+                                <li><a href="#" class="category-trigger" data-category="EQA">EQA</a></li>
+                                <li><a href="#" class="category-trigger" data-category="pathology">Pathology</a></li>
+                                <li><a href="#" class="category-trigger" data-category="transfusion-medicine">Transfusion Medicine</a></li>
+                                <li><a href="#" class="category-trigger" data-category="disinfection-systems">Disinfection Systems</a></li>
+                                <li><a href="#" class="category-trigger" data-category="Biomarkers">Biomarkers</a></li>
+                                <li><a href="#" class="category-trigger" data-category="Pre-Analytical">Pre-Analytical</a></li>
+                            </ul>
+                        </div>
+                        <div class="products">
+                            <h3>Products</h3>
+                            <ul id="products-list" class="scrollable-list"></ul>
+                        </div>
+                        <div class="solutions">
+                            <h3>Solutions</h3>
+                            <ul id="solutions-list" class="scrollable-list"></ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="dropdown-menu" id="resources-menu">
+                    <div class="dropdown-category">
+                        <span>Orders</span>
+                        <ul>
+                            <li><a href="/pages/ordering.html">Ordering</a></li>
+                            <li><a href="/pages/logistics.html">Logistics</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown-category">
+                        <span>Inquiries</span>
+                        <ul>
+                            <li><a href="/pages/account-executives.html">Account Executives</a></li>
+                            <li><a href="/pages/product-specialists.html">Product Specialists</a></li>
+                            <li><a href="/pages/business-development.html">Business Development</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="dropdown-menu" id="support-menu">
+                    <a href="/pages/contact.html">Contact Us</a>
+                    <a href="/pages/Instrument-Service-and-Application-Specialists.html">Instrument Service and Application Specialists</a>
+                </div>
+                <div class="dropdown-menu" id="news-menu">
+                    <a href="/pages/news.html">Latest News</a>
+                    <a href="/pages/events.html">Upcoming Events</a>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Sidebar (from reference files) -->
+        <section class="vertical-bar">
+            <div class="sidebar">
+                <div class="sidebar-content">
+                    <a href="/pages/customer-service.html">
+                        <img src="/images/icons8-headset-50.png" alt="Customer Service">
+                        <span>Customer Service</span>
+                    </a>
+                    <a href="/pages/events.html">
+                        <img src="/images/icons8-calendar-100.png" alt="Events">
+                        <span>Events</span>
+                    </a>
+                    <a href="/pages/contact.html">
+                        <img src="/images/icons8-phone-100.png" alt="Contact Us">
+                        <span>Contact Us</span>
+                    </a>
+                    <a href="/pages/ordering.html">
+                        <img src="/images/icons8-megaphone-100.png" alt="Call for Service">
+                        <span>Call for Service</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content -->
+        <main>
+            <!-- Video Banner -->
+            <div class="video-banner">
+                <video autoplay loop muted playsinline>
+                    <source src="\images\energium.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+           <!-- Highlighted Products Section -->
+            <section class="highlighted-products">
+                <!-- Product 1 -->
+                <div class="product-item">
+                    <div class="product-image">
+                        <img src="/images/hend.jpg" alt="Product 1">
+                    </div>
+                    <div class="product-details">
+                        <div class="product-details-content">
+                            <ul class="product-features">
+                                <li>Compact size allows for convenient movement</li>
+                                <li>Multiple sample verification</li>
+                                <li>Fast tube discharge speed</li>
+                            </ul>
+                            <span class="toggle-specs" data-target="specs-table-1">> click for more information</span>
+                            <div class="specs-table" id="specs-table-1">
+                                <table>
+                                    <tr><th>Maximum Tube Feed Quantity</th><td>Continuous tube loading</td></tr>
+                                    <tr><th>Tube Ejection Speed</th><td>3.2 sec</td></tr>
+                                    <tr><th>Tube Supply Method</th><td>Direct tube supply</td></tr>
+                                    <tr><th>Compatible Tube Types</th><td>Diameter: 13~18mm / Length: 82~128mm</td></tr>
+                                    <tr><th>Printing Resolution</th><td>203 dpi</td></tr>
+                                    <tr><th>Label Printing Method</th><td>Thermal Printing</td></tr>
+                                    <tr><th>Compatible Label Size</th><td>Width: 36mm~50mm, Length: 22~35mm, Label Quantity: 1,000 labels (per 1 label roll)</td></tr>
+                                    <tr><th>Product Dimension</th><td>190(W) x 267(H) x 354(D) mm</td></tr>
+                                    <tr><th>Product Weight</th><td>6.5 kg</td></tr>
+                                    <tr><th>Power</th><td>DC 24V 3A</td></tr>
+                                    <tr><th>Interface</th><td>USB, TCP/IP, Serial</td></tr>
+                                    <tr><th>Certification</th><td>CE, KC, RoHS</td></tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-item">
+                    <div class="product-image">
+                        <img src="/images/henm.jpg" alt="Product 2">
+                    </div>
+                    <div class="product-details">
+                        <div class="product-details-content">
+                            <ul class="product-features">
+                                <li>Automated barcode labeling</li>
+                                <li>Elimination of human errors associated with manual operations</li>
+                                <li>Streamlined and efficient blood collection process</li>
+                            </ul>
+                            <span class="toggle-specs" data-target="specs-table-2">> click for more information</span>
+                            <div class="specs-table" id="specs-table-2">
+                                <table>
+                                    <tr><th>Model Name</th><td>HENm</td></tr>
+                                    <tr><th>Production Volume (Hourly Tube Production)</th><td>1,200 Tubes</td></tr>
+                                    <tr><th>Tube Discharge Speed</th><td>3sec (per 1 Tube)</td></tr>
+                                    <tr><th>Tube Loading Capacity</th><td>Max 140ea<br>13x75mm, 13x100mm (Single Inlet): 20ea<br>16x100mm (Single Inlet): 18ea<br>13x100mm (Dual Inlet): 16ea</td></tr>
+                                    <tr><th>Inlet Quantity</th><td>7~14 Inlet (when replacing two single inlets with dual inlets, Up to 14 inlets can be used.)</td></tr>
+                                    <tr><th>Tube Supply Method</th><td>Direct tube pallet supply</td></tr>
+                                    <tr><th>Compatible Tube Types</th><td>Diameter: 12~16mm, Length: 75~125mm<br>Manufacturer: VACUTEST KIMA, BD, GREINER, SOYA GREENTEC, INSEPACK, IMPROVE, SARSTEDT, etc.<br>(Please consult with ENERGIUM regarding tube compatibility prior to use.)</td></tr>
+                                    <tr><th>Printing Resolution</th><td>203dpi</td></tr>
+                                    <tr><th>Label Printing Method</th><td>Thermal printing</td></tr>
+                                    <tr><th>Barcode Scanner</th><td>2D (PDF417, QR Code, Data Matrix)<br>1D (Code128, UCC/EAN-128, UPC-E)</td></tr>
+                                    <tr><th>Compatible Label Sizes</th><td>Width: 50mm, Length: 28~35mm, Label Quantity: 2000 label (per 1 label roll)</td></tr>
+                                    <tr><th>Compatible Receipt Label Roll Size</th><td>Width: 57mm, Length: 70mm (Less than)</td></tr>
+                                    <tr><th>Product Dimension</th><td>HENm: 599(W) x 400(H) x 199(D) mm<br>HENm mobile: 450(W) x 1,000(H) x 845(D) mm</td></tr>
+                                    <tr><th>Product Weight</th><td>HENm: 20kgf<br>HENm mobile: 55kgf</td></tr>
+                                    <tr><th>Power</th><td>HENm: AC 100-240 V~, 50/60Hz, 2.2A<br>HENm mobile: AC 100-240 V~, 50/60Hz, 4A</td></tr>
+                                    <tr><th>Battery</th><td>* Li-FePo4, 12.8V 7.5Ah x 2</td></tr>
+                                    <tr><th>Continuous Labeling Quantity</th><td>* 4,000 Tubes</td></tr>
+                                    <tr><th>Standby Time</th><td>* 13 hours</td></tr>
+                                    <tr><th>Roller Mixer</th><td>* Max 4 tubes (Time control available)</td></tr>
+                                    <tr><th>Roller mixer Rotation Speed</th><td>* 24 rpm</td></tr>
+                                    <tr><th>Interface</th><td>USB A,B Port 5V 200mA, RS232 (optional)</td></tr>
+                                    <tr><th>Certificates</th><td>CE, KC, RoHs</td></tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>               
+            </section>
+        </main>
+
+        <!-- Footer (from reference files) -->
+        <footer id="footer">
+            <div class="footer-info">
+                <p class="footer-left">1166 South Service Rd. W, Oakville, ON L6L 5T7</p>
+                <p class="footer-center">
+                    Phone: 905-469-4253  |  
+                    Fax: 905-825-9795  |  
+                    Toll Free: 866-718-0515
+                </p>
+                <p class="footer-right">
+                    Email: <a href="mailto:info@phoenixairmid.com">info@phoenixairmid.com</a>
+                </p>
+            </div>
+        </footer>
+    </div>
+</body>
+<script src="/script.js"></script>
+</html>

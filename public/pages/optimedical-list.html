@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Highlighted Products - Phoenix Airmid Biomedical</title>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css"> <!-- Main site styles -->
+    <link rel="stylesheet" href="/list.css"> <!-- Updated product styles -->
+</head>
+<body>
+    <div class="page-wrapper">
+        <!-- Header (from reference files) -->
+        <header>
+            <nav>
+                <div class="logo">
+                    <a href="/index.html"><img src="/images/PAB Logo Old.png" alt="Phoenix Airmid Logo"></a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#" class="dropdown-trigger" data-menu="company-menu">Company</a></li>
+                    <li><a href="#" class="dropdown-trigger" data-menu="products-menu">Products & Solutions</a></li>
+                    <li><a href="#" class="dropdown-trigger" data-menu="resources-menu">Resources</a></li>
+                    <li><a href="#" class="dropdown-trigger" data-menu="support-menu">Support</a></li>
+                    <li><a href="#" class="dropdown-trigger" data-menu="news-menu">News & Events</a></li>
+                </ul>
+                <div class="search-container">
+                    <input type="text" class="search-input" id="search-input" placeholder="Search...">
+                    <button class="search-btn">🔍</button>
+                </div>
+                <div class="search-results-container"></div>
+
+                <!-- Dropdown Menus (from reference files) -->
+                <div class="dropdown-menu" id="company-menu">
+                    <a href="/pages/about.html">About Us</a>
+                    <a href="/pages/what_we_do.html">What We Do</a>
+                    <a href="/pages/values.html">Our Values</a>
+                    <a href="/pages/our_people.html">Our People</a>
+                    <a href="/pages/responsibility.html">Our Corporate Responsibility</a>
+                    <a href="/pages/partners.html">Our Partners</a>
+                </div>
+                <div class="dropdown-menu" id="products-menu">
+                    <div class="dropdown-content">
+                        <div class="product-categories">
+                            <h3>Product Categories</h3>
+                            <ul id="category-list">
+                                <li><a href="#" class="category-trigger" data-category="clinical-chemistry">Clinical Chemistry</a></li>
+                                <li><a href="#" class="category-trigger" data-category="hematology">Hematology</a></li>
+                                <li><a href="#" class="category-trigger" data-category="microbiology">Microbiology</a></li>
+                                <li><a href="#" class="category-trigger" data-category="EQA">EQA</a></li>
+                                <li><a href="#" class="category-trigger" data-category="pathology">Pathology</a></li>
+                                <li><a href="#" class="category-trigger" data-category="transfusion-medicine">Transfusion Medicine</a></li>
+                                <li><a href="#" class="category-trigger" data-category="disinfection-systems">Disinfection Systems</a></li>
+                                <li><a href="#" class="category-trigger" data-category="Biomarkers">Biomarkers</a></li>
+                                <li><a href="#" class="category-trigger" data-category="Pre-Analytical">Pre-Analytical</a></li>
+                            </ul>
+                        </div>
+                        <div class="products">
+                            <h3>Products</h3>
+                            <ul id="products-list" class="scrollable-list"></ul>
+                        </div>
+                        <div class="solutions">
+                            <h3>Solutions</h3>
+                            <ul id="solutions-list" class="scrollable-list"></ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="dropdown-menu" id="resources-menu">
+                    <div class="dropdown-category">
+                        <span>Orders</span>
+                        <ul>
+                            <li><a href="/pages/ordering.html">Ordering</a></li>
+                            <li><a href="/pages/logistics.html">Logistics</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown-category">
+                        <span>Inquiries</span>
+                        <ul>
+                            <li><a href="/pages/account-executives.html">Account Executives</a></li>
+                            <li><a href="/pages/product-specialists.html">Product Specialists</a></li>
+                            <li><a href="/pages/business-development.html">Business Development</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="dropdown-menu" id="support-menu">
+                    <a href="/pages/contact.html">Contact Us</a>
+                    <a href="/pages/Instrument-Service-and-Application-Specialists.html">Instrument Service and Application Specialists</a>
+                </div>
+                <div class="dropdown-menu" id="news-menu">
+                    <a href="/pages/news.html">Latest News</a>
+                    <a href="/pages/events.html">Upcoming Events</a>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Sidebar (from reference files) -->
+        <section class="vertical-bar">
+            <div class="sidebar">
+                <div class="sidebar-content">
+                    <a href="/pages/customer-service.html">
+                        <img src="/images/icons8-headset-50.png" alt="Customer Service">
+                        <span>Customer Service</span>
+                    </a>
+                    <a href="/pages/events.html">
+                        <img src="/images/icons8-calendar-100.png" alt="Events">
+                        <span>Events</span>
+                    </a>
+                    <a href="/pages/contact.html">
+                        <img src="/images/icons8-phone-100.png" alt="Contact Us">
+                        <span>Contact Us</span>
+                    </a>
+                    <a href="/pages/ordering.html">
+                        <img src="/images/icons8-megaphone-100.png" alt="Call for Service">
+                        <span>Call for Service</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    <!-- Main Content -->
+    <!-- Main Content -->
+<main>
+    <section class="catalogue container mx-auto">
+        <!-- Logo and Breadcrumb Container (unchanged) -->
+        <div class="logo-breadcrumb-container">
+            <div class="company-logo">
+                <img src="/images/optimedical.png" alt="OptiMedical Logo">
+            </div>
+            <nav class="breadcrumb text-sm text-color-11 mb-8">
+                <a href="/index.html" class="text-color-7 hover:text-color-6 hover:underline">Home</a>
+                <span class="separator mx-2">></span>
+                <a href="/pages/OptiMedical-products.html" class="text-color-7 hover:text-color-6 hover:underline">OptiMedical</a>
+                <span class="separator mx-2">></span>
+                <span class="current font-medium">OptiMedical Products</span>
+            </nav>
+        </div>
+
+        <h1 class="text-4xl font-bold text-color-11 text-center mb-6">Full Catalogue - OptiMedical</h1>
+
+        <!-- Tab Navigation -->
+        <div class="tabs mb-6">
+            <button class="tab-btn active" data-tab="blood-gas-analyzers">Blood Gas Analyzers</button>
+            <button class="tab-btn" data-tab="arterial-blood-collection-kits">Arterial Blood Collection Kits</button>
+            <button class="tab-btn" data-tab="consumables">Consumables</button>
+            <button class="tab-btn" data-tab="qc-material">QC Material</button>
+        </div>
+
+        <!-- Product Table -->
+        <div class="product-table">
+            <table class="w-full border-collapse text-color-11 shadow-mikrogen_table rounded-lg">
+                <thead>
+                    <tr class="bg-color-3 text-color-7">
+                        <th class="py-3 px-4 text-left font-medium">Product Name</th>
+                        <th class="py-3 px-4 text-left font-medium">Packaging</th>
+                        <th class="py-3 px-4 text-left font-medium">Product Number</th>
+                    </tr>
+                </thead>
+                <tbody id="product-table-body">
+                    <!-- Blood Gas Analyzers -->
+                    <tr data-category="blood-gas-analyzers">
+                        <td class="py-3 px-4" data-label="Product Name">OPTI CCA-TS2 Blood Gas Analyzer</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">GD7046</td>
+                    </tr>
+                    <tr data-category="blood-gas-analyzers" class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">Battery</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">BP7279</td>
+                    </tr>
+
+                    <!-- Arterial Blood Collection Kits -->
+                    <tr data-category="arterial-blood-collection-kits">
+                        <td class="py-3 px-4" data-label="Product Name">COMFORTSAMPLER, WITH ACCESSORIES, 240 uL, 50 PER BOX</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">BP0600</td>
+                    </tr>
+                    <tr data-category="arterial-blood-collection-kits" class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">COMFORTSAMPLER, W/O ACCESSORIES, 240 uL, 50 PER BOX</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">BP0610</td>
+                    </tr>
+                    <tr data-category="arterial-blood-collection-kits">
+                        <td class="py-3 px-4" data-label="Product Name">COMFORTSAMPLER, BULK PACKAGED WITH NEEDLE, 240 uL, 300 PER BOX</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">BP0620</td>
+                    </tr>
+                    <tr data-category="arterial-blood-collection-kits" class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">COMFORTSAMPLER, BULK PACKAGED W/O NEEDLE, 240 uL, 300 PER BOX</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">BP0630</td>
+                    </tr>
+                    <tr data-category="arterial-blood-collection-kits">
+                        <td class="py-3 px-4" data-label="Product Name">COMFORTSAMPLER, BULK PACK WITH NEEDLE & PROTECTOR, 240 uL, 300 PER BOX</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">BP0640</td>
+                    </tr>
+                    <tr data-category="arterial-blood-collection-kits" class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">COMFORTSAMPLER, TRIAL KIT, 2 EA BP0600, 2 EA BP0610, 1 EA PV9502, BROCHURE</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">BP0603</td>
+                    </tr>
+                    <tr data-category="arterial-blood-collection-kits">
+                        <td class="py-3 px-4" data-label="Product Name">VIDEO, INST VID, COMFORTSAMPLER, CD</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">PV9502</td>
+                    </tr>
+                <!-- Consumables -->
+                    <tr data-category="consumables">
+                        <td class="py-3 px-4" data-label="Product Name">BOTTLE, GAS, OPTI CCA, OPTI CCA-TS</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">BP7001</td>
+                    </tr>
+                    <tr data-category="consumables" class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">BOTTLE, GAS, LOW PRESSURE, OPTI CCA-TS2</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">BP7162</td>
+                    </tr>
+                    <tr data-category="consumables">
+                        <td class="py-3 px-4" data-label="Product Name">CASSETTE, E- CL, 25 PER BOX, OPTI CCA, OPTI CCA-TS, OPTI CCA-TS2</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">BP7559</td>
+                    </tr>
+                    <tr data-category="consumables" class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">CASSETTE, E- CA, 25 PER BOX, OPTI CCA, OPTI CCA-TS, OPTI CCA-TS2</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">BP7560</td>
+                    </tr>
+                    <tr data-category="consumables">
+                        <td class="py-3 px-4" data-label="Product Name">CASSETTE, B, 25 PER BOX, OPTI CCA, OPTI CCA-TS, OPTI CCA-TS2</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">BP7562</td>
+                    </tr>
+                    <tr data-category="consumables" class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">CASSETTE, E- GLU, 25 PER BOX, OPTI CCA, OPTI CCA-TS, OPTI CCA-TS2</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">BP7564</td>
+                    </tr>
+                    <tr data-category="consumables">
+                        <td class="py-3 px-4" data-label="Product Name">CASSETTE, E TYPE, 25 PER BOX, OPTI CCA, OPTI CCA-TS, OPTI CCA-TS2</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">BP7587</td>
+                    </tr>
+                    <tr data-category="consumables" class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">CASSETTE, E-BUN, 25 PER BOX, OPTI CCA-TS, OPTI CCA-TS2</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">BP7588</td>
+                    </tr>
+                    <tr data-category="consumables">
+                        <td class="py-3 px-4" data-label="Product Name">CASSETTE, B-60, 25 PER BOX, OPTI CCA-TS, OPTI CCA-TS2</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">BP7586</td>
+                    </tr>
+                    <tr data-category="consumables" class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">CASSETTE, B-LAC, 25 PER BOX, OPTI CCA-TS, OPTI CCA-TS2</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">BP7561</td>
+                    </tr>
+                    <tr data-category="consumables">
+                        <td class="py-3 px-4" data-label="Product Name">CASSETTE, E-LYTE CCA TYPE, 25 PER BOX</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">BP7667</td>
+                    </tr>
+                    <tr data-category="consumables" class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">PAPER, THERMAL PRINTER, ROLL, OPTI CCA, OPTI CCA-TS, OPTI LION, OPTI CCA-TS2</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">HP0070</td>
+                    </tr>
+                    <tr data-category="consumables">
+                        <td class="py-3 px-4" data-label="Product Name">CAPILLARY TUBES, GLASS HEPARINIZED, 200uL, 250 PER BOX, OPTI CCA, OPTI CCA-TS, OPTI CCA-TS2</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">MC0024</td>
+                    </tr>
+                    <tr data-category="consumables" class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">TUBES, CAP, GLASS, HEP, 115 UL</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">MG0002</td>
+                    </tr>
+                    <tr data-category="consumables">
+                        <td class="py-3 px-4" data-label="Product Name">KIT, CARTRIDGE PERISTALTIC PUMP, OPTI CCA, OPTI CCA-TS, OPTI LION, OPTI CCA-TS2</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">BP7012</td>
+                    </tr>
+                    <tr data-category="consumables" class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">TUBE, SAMPLE ASPIRATION, E-LYTE CCA CASS</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">BP7183</td>
+                    </tr>
+                    <!-- QC Material -->
+                    <tr data-category="qc-material">
+                        <td class="py-3 px-4" data-label="Product Name">CASSETTE, STANDARD REFERENCE (SRC) - LEVEL 1, OPTI CCA, OPTI CCA-TS</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">BP7536</td>
+                    </tr>
+                    <tr data-category="qc-material" class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">CASSETTE, STANDARD REFERENCE (SRC) - LEVEL 3, OPTI CCA, OPTI CCA-TS</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">BP7543</td>
+                    </tr>
+                    <tr data-category="qc-material">
+                        <td class="py-3 px-4" data-label="Product Name">CASSETTE, STANDARD REFERENCE (SRC) - LEVEL 2, OPTI CCA, OPTI CCA-TS</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">BP7554</td>
+                    </tr>
+                    <tr data-category="qc-material" class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">CASSETTE, STANDARD REFERNCE (SRC) - MULTI-LEVEL, OPTI CCA-TS2</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">BP7652</td>
+                    </tr>
+                    <tr data-category="qc-material">
+                        <td class="py-3 px-4" data-label="Product Name">CASSETTE, THB CALIBRATION, OPTI CCA, OPTI CCA-TS</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">BP7542</td>
+                    </tr>
+                    <tr data-category="qc-material" class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">CASSETTE, THB CALIBRATION, OPTI CCA-TS2</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">BP7653</td>
+                    </tr>
+                    <tr data-category="qc-material">
+                        <td class="py-3 px-4" data-label="Product Name">CONTROLS, OPTI-CHECK, pH/BG/ELEC, TRI- LEVEL, 10 AMP/LEVEL, OPTI CCA, OPTI CCA-TS</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">HC7008</td>
+                    </tr>
+                    <tr data-category="qc-material" class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">CONTROLS, OPTI-CHECK PLUS, pH/BG/ELEC/GLU, TRI-LEVEL, OPTI CCA. OPTI CCA-TS</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">HC7009</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="pagination" style="display: flex; justify-content: center; align-items: center;"></div>
+        </div>
+    </section>
+</main>
+
+     <!-- Footer (constant across pages) -->
+     <footer id="footer">
+        <div class="footer-info">
+            <p class="footer-left">1166 South Service Rd. W, Oakville, ON L6L 5T7</p>
+            <p class="footer-center">
+                Phone: 905-469-4253  |  
+                Fax: 905-825-9795  |  
+                Toll Free: 866-718-0515
+            </p>
+            <p class="footer-right">
+                Email: <a href="mailto:info@phoenixairmid.com">info@phoenixairmid.com</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for toggling categories -->
+    <script>
+        function toggleCategory(element) {
+            const list = element.nextElementSibling;
+            const arrow = element.querySelector('.toggle-arrow');
+            if (list.style.display === 'none' || list.style.display === '') {
+                list.style.display = 'block';
+                arrow.textContent = '▼';
+            } else {
+                list.style.display = 'none';
+                arrow.textContent = '>';
+            }
+        }
+    </script>
+</body>
+<script src="/script.js"></script>
+</html>

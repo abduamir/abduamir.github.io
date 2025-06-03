@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Highlighted Products - Phoenix Airmid Biomedical</title>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css"> <!-- Main site styles -->
+    <link rel="stylesheet" href="/list.css"> <!-- Updated product styles -->
+</head>
+<body>
+    <div class="page-wrapper">
+        <!-- Header (from reference files) -->
+        <header>
+            <nav>
+                <div class="logo">
+                    <a href="/index.html"><img src="/images/PAB Logo Old.png" alt="Phoenix Airmid Logo"></a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#" class="dropdown-trigger" data-menu="company-menu">Company</a></li>
+                    <li><a href="#" class="dropdown-trigger" data-menu="products-menu">Products & Solutions</a></li>
+                    <li><a href="#" class="dropdown-trigger" data-menu="resources-menu">Resources</a></li>
+                    <li><a href="#" class="dropdown-trigger" data-menu="support-menu">Support</a></li>
+                    <li><a href="#" class="dropdown-trigger" data-menu="news-menu">News & Events</a></li>
+                </ul>
+                <div class="search-container">
+                    <input type="text" class="search-input" id="search-input" placeholder="Search...">
+                    <button class="search-btn">🔍</button>
+                </div>
+                <div class="search-results-container"></div>
+
+                <!-- Dropdown Menus (from reference files) -->
+                <div class="dropdown-menu" id="company-menu">
+                    <a href="/pages/about.html">About Us</a>
+                    <a href="/pages/what_we_do.html">What We Do</a>
+                    <a href="/pages/values.html">Our Values</a>
+                    <a href="/pages/our_people.html">Our People</a>
+                    <a href="/pages/responsibility.html">Our Corporate Responsibility</a>
+                    <a href="/pages/partners.html">Our Partners</a>
+                </div>
+                <div class="dropdown-menu" id="products-menu">
+                    <div class="dropdown-content">
+                        <div class="product-categories">
+                            <h3>Product Categories</h3>
+                            <ul id="category-list">
+                                <li><a href="#" class="category-trigger" data-category="clinical-chemistry">Clinical Chemistry</a></li>
+                                <li><a href="#" class="category-trigger" data-category="hematology">Hematology</a></li>
+                                <li><a href="#" class="category-trigger" data-category="microbiology">Microbiology</a></li>
+                                <li><a href="#" class="category-trigger" data-category="EQA">EQA</a></li>
+                                <li><a href="#" class="category-trigger" data-category="pathology">Pathology</a></li>
+                                <li><a href="#" class="category-trigger" data-category="transfusion-medicine">Transfusion Medicine</a></li>
+                                <li><a href="#" class="category-trigger" data-category="disinfection-systems">Disinfection Systems</a></li>
+                                <li><a href="#" class="category-trigger" data-category="Biomarkers">Biomarkers</a></li>
+                                <li><a href="#" class="category-trigger" data-category="Pre-Analytical">Pre-Analytical</a></li>
+                            </ul>
+                        </div>
+                        <div class="products">
+                            <h3>Products</h3>
+                            <ul id="products-list" class="scrollable-list"></ul>
+                        </div>
+                        <div class="solutions">
+                            <h3>Solutions</h3>
+                            <ul id="solutions-list" class="scrollable-list"></ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="dropdown-menu" id="resources-menu">
+                    <div class="dropdown-category">
+                        <span>Orders</span>
+                        <ul>
+                            <li><a href="/pages/ordering.html">Ordering</a></li>
+                            <li><a href="/pages/logistics.html">Logistics</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown-category">
+                        <span>Inquiries</span>
+                        <ul>
+                            <li><a href="/pages/account-executives.html">Account Executives</a></li>
+                            <li><a href="/pages/product-specialists.html">Product Specialists</a></li>
+                            <li><a href="/pages/business-development.html">Business Development</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="dropdown-menu" id="support-menu">
+                    <a href="/pages/contact.html">Contact Us</a>
+                    <a href="/pages/Instrument-Service-and-Application-Specialists.html">Instrument Service and Application Specialists</a>
+                </div>
+                <div class="dropdown-menu" id="news-menu">
+                    <a href="/pages/news.html">Latest News</a>
+                    <a href="/pages/events.html">Upcoming Events</a>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Sidebar (from reference files) -->
+        <section class="vertical-bar">
+            <div class="sidebar">
+                <div class="sidebar-content">
+                    <a href="/pages/customer-service.html">
+                        <img src="/images/icons8-headset-50.png" alt="Customer Service">
+                        <span>Customer Service</span>
+                    </a>
+                    <a href="/pages/events.html">
+                        <img src="/images/icons8-calendar-100.png" alt="Events">
+                        <span>Events</span>
+                    </a>
+                    <a href="/pages/contact.html">
+                        <img src="/images/icons8-phone-100.png" alt="Contact Us">
+                        <span>Contact Us</span>
+                    </a>
+                    <a href="/pages/ordering.html">
+                        <img src="/images/icons8-megaphone-100.png" alt="Call for Service">
+                        <span>Call for Service</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    <!-- Main Content -->
+    <!-- Main Content -->
+<main>
+    <section class="catalogue container mx-auto">
+        <!-- Logo and Breadcrumb Container (unchanged) -->
+        <div class="logo-breadcrumb-container">
+            <div class="company-logo">
+                <img src="/images/Primera.png" alt="Primera Logo">
+            </div>
+            <nav class="breadcrumb text-sm text-color-11 mb-8">
+                <a href="/index.html" class="text-color-7 hover:text-color-6 hover:underline">Home</a>
+                <span class="separator mx-2">></span>
+                <span class="current font-medium">Primera Products</span>
+            </nav>
+        </div>
+
+        <h1 class="text-4xl font-bold text-color-11 text-center mb-6">Full Catalogue - Primera</h1>
+
+        <!-- Tab Navigation -->
+        <div class="tabs mb-6">
+            <button class="tab-btn active" data-tab="Equipment">Equipment</button>
+            <button class="tab-btn" data-tab="Consumable">Consumables</button>
+        </div>
+
+        <!-- Product Table -->
+        <div class="product-table">
+            <table class="w-full border-collapse text-color-11 shadow-mikrogen_table rounded-lg">
+                <thead>
+                    <tr class="bg-color-3 text-color-7">
+                        <th class="py-3 px-4 text-left font-medium">Product Name</th>
+                        <th class="py-3 px-4 text-left font-medium">Packaging</th>
+                        <th class="py-3 px-4 text-left font-medium">Product Number</th>
+                    </tr>
+                </thead>
+                <tbody id="product-table-body">
+                    <tr data-category="Equipment">
+                        <td class="py-3 px-4" data-label="Product Name">Printer Module</td>
+                        <td class="py-3 px-4" data-label="Packaging">each</td>
+                        <td class="py-3 px-4" data-label="Product Number">SCP-M 78405</td>
+                    </tr>
+                    <tr data-category="Equipment" class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">Autoloader robotic</td>
+                        <td class="py-3 px-4" data-label="Packaging">each</td>
+                        <td class="py-3 px-4" data-label="Product Number">SCP-R 78407</td>
+                    </tr>
+                    <tr data-category="Equipment">
+                        <td class="py-3 px-4" data-label="Product Name">Slide Printer</td>
+                        <td class="py-3 px-4" data-label="Packaging">each</td>
+                        <td class="py-3 px-4" data-label="Product Number">SCP-M 78104</td>
+                    </tr>
+                    <tr data-category="Consumable" class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">Ribbon CYMK</td>
+                        <td class="py-3 px-4" data-label="Packaging">pack of 6</td>
+                        <td class="py-3 px-4" data-label="Product Number">58108</td>
+                    </tr>
+                    <tr data-category="Consumable">
+                        <td class="py-3 px-4" data-label="Product Name">Black Ribbon</td>
+                        <td class="py-3 px-4" data-label="Packaging">pack of 6</td>
+                        <td class="py-3 px-4" data-label="Product Number">58105</td>
+                    </tr>
+                    <tr data-category="Consumable" class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">Print head - Cassette Printer</td>
+                        <td class="py-3 px-4" data-label="Packaging">each</td>
+                        <td class="py-3 px-4" data-label="Product Number">78260</td>
+                    </tr>
+                    <tr data-category="Consumable">
+                        <td class="py-3 px-4" data-label="Product Name">Printe head - Slide Printer</td>
+                        <td class="py-3 px-4" data-label="Packaging">each</td>
+                        <td class="py-3 px-4" data-label="Product Number">78250</td>
+                    </tr>
+                    <tr data-category="Consumable" class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">Slide Cartridge</td>
+                        <td class="py-3 px-4" data-label="Packaging">each</td>
+                        <td class="py-3 px-4" data-label="Product Number">78251</td>
+                    </tr>
+                    <tr data-category="Equipment">
+                        <td class="py-3 px-4" data-label="Product Name">PTLab PE</td>
+                        <td class="py-3 px-4" data-label="Packaging">each</td>
+                        <td class="py-3 px-4" data-label="Product Number">78209</td>
+                    </tr>
+                    <tr data-category="Equipment" class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">AIO-PC and Keyboard etc</td>
+                        <td class="py-3 px-4" data-label="Packaging">each</td>
+                        <td class="py-3 px-4" data-label="Product Number">All in one</td>
+                    </tr>
+                    <tr data-category="Equipment">
+                        <td class="py-3 px-4" data-label="Product Name">Barcode scanner</td>
+                        <td class="py-3 px-4" data-label="Packaging">each</td>
+                        <td class="py-3 px-4" data-label="Product Number">78200</td>
+                    </tr>
+                    <tr data-category="Consumable" class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">Hoppers</td>
+                        <td class="py-3 px-4" data-label="Packaging">pack of 4</td>
+                        <td class="py-3 px-4" data-label="Product Number">78265</td>
+                    </tr>
+                    <tr data-category="Consumable">
+                        <td class="py-3 px-4" data-label="Product Name">Hoppers</td>
+                        <td class="py-3 px-4" data-label="Packaging">each</td>
+                        <td class="py-3 px-4" data-label="Product Number">78261</td>
+                    </tr>
+                    <tr data-category="Consumable" class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">Cleaning Pen</td>
+                        <td class="py-3 px-4" data-label="Packaging">pack of 5</td>
+                        <td class="py-3 px-4" data-label="Product Number">76922</td>
+                    </tr>
+                    <tr data-category="Consumable">
+                        <td class="py-3 px-4" data-label="Product Name">spare extension tray</td>
+                        <td class="py-3 px-4" data-label="Packaging">each</td>
+                        <td class="py-3 px-4" data-label="Product Number">78262</td>
+                    </tr>
+                    <tr data-category="Consumable" class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">Tissue Processing</td>
+                        <td class="py-3 px-4" data-label="Packaging">Case of 1500</td>
+                        <td class="py-3 px-4" data-label="Product Number">M405-x</td>
+                    </tr>
+                    <tr data-category="Consumable">
+                        <td class="py-3 px-4" data-label="Product Name">Biopsy</td>
+                        <td class="py-3 px-4" data-label="Packaging">Case of 1500</td>
+                        <td class="py-3 px-4" data-label="Product Number">M406-x</td>
+                    </tr>
+                    <tr data-category="Consumable" class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">Tissue Processing (taped)</td>
+                        <td class="py-3 px-4" data-label="Packaging">Case of 1000</td>
+                        <td class="py-3 px-4" data-label="Product Number">405TEL-x</td>
+                    </tr>
+                    <tr data-category="Consumable">
+                        <td class="py-3 px-4" data-label="Product Name">Biopsy (taped)</td>
+                        <td class="py-3 px-4" data-label="Packaging">Case of 1000</td>
+                        <td class="py-3 px-4" data-label="Product Number">406TEL-x</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="pagination" style="display: flex; justify-content: center; align-items: center;"></div>
+        </div>
+    </section>
+</main>
+
+     <!-- Footer (constant across pages) -->
+     <footer id="footer">
+        <div class="footer-info">
+            <p class="footer-left">1166 South Service Rd. W, Oakville, ON L6L 5T7</p>
+            <p class="footer-center">
+                Phone: 905-469-4253  |  
+                Fax: 905-825-9795  |  
+                Toll Free: 866-718-0515
+            </p>
+            <p class="footer-right">
+                Email: <a href="mailto:info@phoenixairmid.com">info@phoenixairmid.com</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for toggling categories -->
+    <script>
+        function toggleCategory(element) {
+            const list = element.nextElementSibling;
+            const arrow = element.querySelector('.toggle-arrow');
+            if (list.style.display === 'none' || list.style.display === '') {
+                list.style.display = 'block';
+                arrow.textContent = '▼';
+            } else {
+                list.style.display = 'none';
+                arrow.textContent = '>';
+            }
+        }
+    </script>
+</body>
+<script src="/script.js"></script>
+</html>

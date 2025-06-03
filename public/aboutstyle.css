@@ -170,8 +170,21 @@ nav {
 .product-categories, .products, .solutions {
     width: 30%;
     text-align: left;
-    max-height: 314px; /* Adjusted height */
+    max-height: 395px; /* Adjusted height */
     overflow-y: auto; /* Enable vertical scroll */
+}
+
+/* Reorder the columns */
+.product-categories {
+    order: 0; /* Stays on the left (default) */
+}
+
+.solutions {
+    order: 1; /* Moves to the middle */
+}
+
+.products {
+    order: 2; /* Moves to the right */
 }
 
 /* Custom Scrollbar Styling */

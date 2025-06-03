@@ -1,0 +1,1338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Highlighted Products - Phoenix Airmid Biomedical</title>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css"> <!-- Main site styles -->
+    <link rel="stylesheet" href="/list.css"> <!-- Updated product styles -->
+</head>
+<body>
+    <div class="page-wrapper">
+        <!-- Header (from reference files) -->
+        <header>
+            <nav>
+                <div class="logo">
+                    <a href="/index.html"><img src="/images/PAB Logo Old.png" alt="Phoenix Airmid Logo"></a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#" class="dropdown-trigger" data-menu="company-menu">Company</a></li>
+                    <li><a href="#" class="dropdown-trigger" data-menu="products-menu">Products & Solutions</a></li>
+                    <li><a href="#" class="dropdown-trigger" data-menu="resources-menu">Resources</a></li>
+                    <li><a href="#" class="dropdown-trigger" data-menu="support-menu">Support</a></li>
+                    <li><a href="#" class="dropdown-trigger" data-menu="news-menu">News & Events</a></li>
+                </ul>
+                <div class="search-container">
+                    <input type="text" class="search-input" id="search-input" placeholder="Search...">
+                    <button class="search-btn">🔍</button>
+                </div>
+                <div class="search-results-container"></div>
+
+                <!-- Dropdown Menus (from reference files) -->
+                <div class="dropdown-menu" id="company-menu">
+                    <a href="/pages/about.html">About Us</a>
+                    <a href="/pages/what_we_do.html">What We Do</a>
+                    <a href="/pages/values.html">Our Values</a>
+                    <a href="/pages/our_people.html">Our People</a>
+                    <a href="/pages/responsibility.html">Our Corporate Responsibility</a>
+                    <a href="/pages/partners.html">Our Partners</a>
+                </div>
+                <div class="dropdown-menu" id="products-menu">
+                    <div class="dropdown-content">
+                        <div class="product-categories">
+                            <h3>Product Categories</h3>
+                            <ul id="category-list">
+                                <li><a href="#" class="category-trigger" data-category="clinical-chemistry">Clinical Chemistry</a></li>
+                                <li><a href="#" class="category-trigger" data-category="hematology">Hematology</a></li>
+                                <li><a href="#" class="category-trigger" data-category="microbiology">Microbiology</a></li>
+                                <li><a href="#" class="category-trigger" data-category="EQA">EQA</a></li>
+                                <li><a href="#" class="category-trigger" data-category="pathology">Pathology</a></li>
+                                <li><a href="#" class="category-trigger" data-category="transfusion-medicine">Transfusion Medicine</a></li>
+                                <li><a href="#" class="category-trigger" data-category="disinfection-systems">Disinfection Systems</a></li>
+                                <li><a href="#" class="category-trigger" data-category="Biomarkers">Biomarkers</a></li>
+                                <li><a href="#" class="category-trigger" data-category="Pre-Analytical">Pre-Analytical</a></li>
+                            </ul>
+                        </div>
+                        <div class="products">
+                            <h3>Products</h3>
+                            <ul id="products-list" class="scrollable-list"></ul>
+                        </div>
+                        <div class="solutions">
+                            <h3>Solutions</h3>
+                            <ul id="solutions-list" class="scrollable-list"></ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="dropdown-menu" id="resources-menu">
+                    <div class="dropdown-category">
+                        <span>Orders</span>
+                        <ul>
+                            <li><a href="/pages/ordering.html">Ordering</a></li>
+                            <li><a href="/pages/logistics.html">Logistics</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown-category">
+                        <span>Inquiries</span>
+                        <ul>
+                            <li><a href="/pages/account-executives.html">Account Executives</a></li>
+                            <li><a href="/pages/product-specialists.html">Product Specialists</a></li>
+                            <li><a href="/pages/business-development.html">Business Development</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="dropdown-menu" id="support-menu">
+                    <a href="/pages/contact.html">Contact Us</a>
+                    <a href="/pages/Instrument-Service-and-Application-Specialists.html">Instrument Service and Application Specialists</a>
+                </div>
+                <div class="dropdown-menu" id="news-menu">
+                    <a href="/pages/news.html">Latest News</a>
+                    <a href="/pages/events.html">Upcoming Events</a>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Sidebar (from reference files) -->
+        <section class="vertical-bar">
+            <div class="sidebar">
+                <div class="sidebar-content">
+                    <a href="/pages/customer-service.html">
+                        <img src="/images/icons8-headset-50.png" alt="Customer Service">
+                        <span>Customer Service</span>
+                    </a>
+                    <a href="/pages/events.html">
+                        <img src="/images/icons8-calendar-100.png" alt="Events">
+                        <span>Events</span>
+                    </a>
+                    <a href="/pages/contact.html">
+                        <img src="/images/icons8-phone-100.png" alt="Contact Us">
+                        <span>Contact Us</span>
+                    </a>
+                    <a href="/pages/ordering.html">
+                        <img src="/images/icons8-megaphone-100.png" alt="Call for Service">
+                        <span>Call for Service</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    <!-- Main Content -->
+    <!-- Main Content -->
+<main>
+    <section class="catalogue container mx-auto">
+        <!-- Logo and Breadcrumb Container (unchanged) -->
+        <div class="logo-breadcrumb-container">
+            <div class="company-logo">
+                <img src="/images/Mikrogen.png" alt="Mikrogen Logo">
+            </div>
+            <nav class="breadcrumb text-sm text-color-11 mb-8">
+                <a href="/index.html" class="text-color-7 hover:text-color-6 hover:underline">Home</a>
+                <span class="separator mx-2">></span>
+                <a href="/pages/mikrogen-products.html" class="text-color-7 hover:text-color-6 hover:underline">Mikrogen</a>
+                <span class="separator mx-2">></span>
+                <span class="current font-medium">Mikrogen Products</span>
+            </nav>
+        </div>
+
+        <h1 class="text-4xl font-bold text-color-11 text-center mb-6">Full Catalogue - Mikrogen</h1>
+
+        <!-- Product Table -->
+        <div class="product-table">
+            <table class="w-full border-collapse text-color-11 shadow-mikrogen_table rounded-lg">
+                <thead>
+                    <tr class="bg-color-3 text-color-7">
+                        <th class="py-3 px-4 text-left font-medium">Product Name</th>
+                        <th class="py-3 px-4 text-left font-medium">Packaging</th>
+                        <th class="py-3 px-4 text-left font-medium">Product Number</th>
+                    </tr>
+                </thead>
+                <tbody id="product-table-body">
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">recomBlot Borrelia NB IgG</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">4202</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">recomBlot Borrelia NB IgM</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">4203</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">recomWell Borrelia IgG</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">4204</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">recomWell Borrelia IgM</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">4205</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">recomBlot Borrelia IgG canis</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">4212</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">recomBlot Borrelia IgM canis</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">4213</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">recomWell Borrelia IgG canis</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">4214</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">recomWell Borrelia IgM canis</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">4215</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">recomBead Borrelia IgG</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">4252</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">recomBead Borrelia IgM</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">4253</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">recomLine Borrelia IgG</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">4272</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">recomLine Borrelia IgM</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">4273</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">recomLine Borrelia IgG (bulk)</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">4276</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">recomLine Borrelia IgM (bulk)</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">4277</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">recomBlot HCV 2.0</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">4302</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">recomWell Parvovirus B19 IgG</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">4404</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">recomWell Parvovirus B19 IgM</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">4405</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">recomLine Parvovirus B19 IgG (avidity)</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">4472</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">recomLine Parvovirus B19 IgM</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">4473</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">recomLine EBV IgG (avidity)</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">4572</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">recomLine EBV IgM</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">4573</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">recomWell Yersinia IgG</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">4604</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">recomWell Yersinia IgM</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">4605</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">recomWell Yersinia IgA</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">4606</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">recomLine Yersinia IgG</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">4672</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">recomLine Yersinia IgA (IgM)</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">4673</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">Immunoblot H. pylori IgG</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">4702</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">Immunoblot H. pylori IgA</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">4703</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">recomWell Helicobacter IgG</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">4704</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">recomWell Helicobacter IgA</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">4705</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">recomLine Bunyavirus IgG/IgM</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">4872</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">recomBlot Rubella IgG</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">4902</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">recomWell HEV IgG</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">5004</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">recomWell HEV IgM</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">5005</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">recomLineHEV IgG/IgM</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">5072</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">recomBlot Treponema IgG 2.0</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">5102</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">recomBlot Treponema IgM 2.0</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">5103</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">recomWell Treponema IgG</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">5104</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">recomWell Treponema IgM</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">5105</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">recomLine HSV-1 & HSV-2 IgG</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">5372</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">recomBlot CMV IgG</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">5502</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">recomBlot CMV IgM</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">5503</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">recomLine Bordetella pertussis IgG</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">5772</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">recomLine Bordetella pertussis IgA</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">5773</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">recomWell Toxoplasma IgG</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">5904</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">recomWell Toxoplasma IgM</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">5905</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">recomLine Toxoplasma IgG (aviditiy)</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">5972</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">recomLine Toxoplasma IgM</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">5973</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">recomLine ANA/ENA IgG</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">6072</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">recomLine Chlamydia IgG</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">6172</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">recomLine Chlamydia IgA</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">6173</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">recomWell Campylobacter IgG</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">6204</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">recomWell Campylobacter IgA</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">6205</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">recomLine Campylobacter IgG</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">6272</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">recomLine Campylobacter IgA</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">6273</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">recomLine TORCH Screening IgG</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">6472</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">recomLine TORCH Screening IgM</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">6473</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">recomWell FSME/TBE Virus IgG</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">6504</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">recomWell FSME/TBE Virus IgM</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">6505</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">recomLine HIV-1 & HIV-2 IgG</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">6672</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">recomWell EBV VCA IgG</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">7204</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">recomLine Hanta Plus IgG</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">7672</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">recomLine Hanta Plus IgM</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">7673</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">recomLine Tropical Fever IgG (RUO)</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">7872</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">recomLine Tropical Fever IgM (RUO)</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">7873</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">Measles IgM</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">810220</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">TMB substrate solution (for Blot and Line)</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">10008</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">anti-Human Conjugate IgG (peroxidase)</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">10014</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">anti-Human Conjugate IgM (peroxidase)</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">10015</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">anti-Human Conjugate IgA (peroxidase)</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">10016</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">Avidity reagent</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">11010</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">recomWell dilution buffer</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">12002</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">recomWell Tetrametylbenzidin (TMB, substrate)</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">12003</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">ELISA Borrelia anti-canis-conjugate IgG</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">14214</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">ELISA Borrelia anti-canis-conjugate IgM</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">14215</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">ELISA Borrelia anti-human-conjugate IgG</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">14264</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">ELISA Borrelia anti-human-conjugate IgM</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">14265</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">ELISA Parvovirus B19 Anti-human-Konj. IgM</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">14464</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">ELISA Parvovirus B19 Anti-human-Konj. IgG</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">14465</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">ELISA Yersinia Anti-human-conjugate IgG</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">14664</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">ELISA Yersinia Anti-human-conjugate IgA</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">14665</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">ELISA Yersinia Anti-human-conjugate IgM</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">14666</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">ELISA Helicobacter Anti-human-conjugate IgG</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">14764</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">ELISA Helicobacter Anti-human-conjugate IgM</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">14766</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">ELISA HEV Anti-human-conjugate IgG</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">15064</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">ELISA HEV Anti-human-conjugate IgM</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">15065</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">ELISA treponema Anti-human-conjugate IgM</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">15164</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">ELISA treponema Anti-human-conjugate IgG</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">15165</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">ELISA Toxoplasma Anti-human-conjugate IgG</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">15964</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">ELISA Toxoplasma Anti-human-conjugate IgM</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">15965</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">ELISA Campylobacter Anti-human-conjugate IgG</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">16264</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">ELISA Campylobacter Anti-human-conjugate IgA</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">16266</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">Borrella IgM positive serum</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">24219</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">Borrella IgG/IgM negative serum</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">24223</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">Borrella IgG positive serum</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">24227</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">Parvovirus IgG/IgM negative serum</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">24403</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">Parvovirus IgG positive serum</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">24417</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">Parvovirus IgM positive serum</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">24418</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">EBV IgG positive serum</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">24507</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">EBV IgG/IgM negative serum</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">24513</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">EBV IgM positive serum</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">24518</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">Yersinia IgG/IgA negative serum</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">24613</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">Yersinia IgG positive serum</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">24617</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">Yersinia IgA positive serum</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">24619</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">Helicobacter IgG/IgA negative serum</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">24724</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">Helicobacter IgG positive serum</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">24727</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">Helicobacter IgA positive serum</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">24729</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">Rubella IgG positive serum</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">24917</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">HEV IgG positive serum</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">25017</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">Treponema IgG/IgM negative serum</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">25113</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">Treponema IgG positive serum</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">25117</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">Treponema IgM positive serum</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">25118</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">HSV IgG negative serum</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">25313</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">HSV IgG positive serum</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">25317</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">CMV IgG/IgM negative serum</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">25513</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">CMV IgG positive serum</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">25517</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">CMV IgM positive serum</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">25518</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">B. pertussis IgG/IgA negative serum</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">25713</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">B. pertussis IgG positive serum</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">25717</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">B. pertussis IgA positive serum</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">25718</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">Toxoplasma IgG/IgM negative serum</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">25913</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">Toxoplasma IgG positive serum</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">25917</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">Toxoplasma IgM positive serum</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">25918</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">ANA/ENA IgG negative serum</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">26013</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">ANA/ENA IgG positive serum</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">26017</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">Chlamydia IgG/IgA negative serum</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">26113</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">Chlamydia IgG positive serum</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">26117</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">Chlamydia IgA positive serum</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">26119</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">Campylobacter IgG/IgA negative serum</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">26213</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">Campylobacter IgG positive serum</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">26217</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">Campylobacter IgA positive serum</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">26219</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">HIV 1 IgG positive serum</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">26613</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">HIV 2, IgG positive serum</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">26221</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">ampliCube Gastrointestinal Bacterial Panel 1</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">50001</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">ampliCube Gastrointestinal Bacterial Panel 2</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">50011</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">ampliCube Gastrointestinal Viral Panel 1</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">50002</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">ampliCube Gastrointestinal Viral Panel 2</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">50012</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">ampliCube Respiratory Bacterial Panel 1</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">50101</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">ampliCube Respiratory Bacterial Panel 2</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">50111</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">ampliCube Respiratory Bacterial Panel 3</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">50121</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">ampliCube Respiratory Bacterial Panel 4</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">50131</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">ampliCube Respiratory Viral Panel 1</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">50102</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">ampliCube Respiratory Viral Panel 2</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">50112</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">ampliCube Respiratory Viral Panel 3</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">50122</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">ampliCube Respiratory Viral Panel 4</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">50132</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">ampliCube Coronavirus Panel</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">50142</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">ampliCube STD Panel 1</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">50301</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">ampliCube STD Panel 2</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">50302</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">ampliCube STD Panel 3</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">50303</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">ampliCube HEV 2.0 Quant</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">55002</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">ampliCube Zika Virus</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">57801</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">ampliCube Color Compensation</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">50501</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">alphaCube gastroplexVirus</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">830501</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">alphaCube gastroplexVirus</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">830502</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">alphaCube gastroplexVirus PLUS</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">830503</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">alphaCube gastroplexVirus PLUS</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">830504</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">alphaCube respiraRNA 2.0</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">830507</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">alphaCube respiraRNA 2.0</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">830508</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">alphaCube Entero 2.0</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">830509</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">alphaCube Entero 2.0</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">830510</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">alphaCube Entero 2.0 LC</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">830511</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">alphaCube Entero 2.0 LC</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">830512</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">alphaCube Noro</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">830513</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">alphaCube Noro LC</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">830514</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">alphaCube TBE</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">830519</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">alphaCube TBE</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">830520</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">alphaCube TBE LC</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">830521</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">alphaCube TBE LC</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">830522</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">alphaCube Babesia</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">830525</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">alphaCube Babesia</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">830526</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">alphaCube Borrelia</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">830527</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">alphaCube Borrelia</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">830528</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">alphaCube Ehrlichia</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">830533</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">alphaCube Ehrlichia</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">830534</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">alphaCube PanLegionella</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">830535</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">alphaCube PanLegionella</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">830536</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">alphaCube Legionella</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">830539</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">alphaCube Legionella</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">830540</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">alphaCube GBS</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">830547</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">alphaCube GBS</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">830548</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">alphaCube Q-Fever</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">830555</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">alphaCube Q-Fever</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">830556</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">alphaCube MRSA 3.0</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">830557</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">alphaCube MRSA 3.0</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">830558</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">alphaCube Bordetella</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">830559</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">alphaCube Bordetella</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">830560</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">alphaCube MTB</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">830561</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">alphaCube MTB</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">830562</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">alphaCube Tropical Fever 1</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">830563</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">alphaCube Tropical Fever 1</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">830564</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">alphaClean Nuclear Acid Release Reagent</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">831000</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">alphaClean Mag RNA/DNA</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">831001</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">alphaClean Mag RNA/DNA</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">831002</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">alphaClean Pure RNA/DNA</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">831003</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">alphaClean Pure RNA/DNA</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">831004</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">alphaClean Proteinase K</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">831007</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">alphaClean Collection tube</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">831008</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">alphaCube LC480 Colour Compensation</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">831009</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">alphaClean Plus Nucleic Acid Release Reagent</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">831013</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">alphaClean TS (tissue shred) 1,5 ml</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">831016</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">alphaClean TS (tissue shred) 2,0 ml - screw cap</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">831017</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">alphaClean TS (tissue shred) 2,0 ml</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">831018</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">alphaClean Pestle</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">831019</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">Enterovirus RT-PCR Control</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">830900</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">Influenza A H1 RT-PCR Control</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">830901</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">Adenovirus PCR Control</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">830902</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">CMV PCR Control</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">830903</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">HSV 1 PCR Control</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">830904</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">HSV 2 PCR Control</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">830905</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">EBV PCR Control</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">830906</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">RSV A RT-PCR Control</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">830907</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">RSV B RT-PCR Control</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">830908</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">Rotavirus RT-PCR Control</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">830909</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">TBEV RT-PCR Control</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">830910</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">VZV PCR Control</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">830911</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">B. pertussis PCR Control</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">830912</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">Borrelia PCR Control</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">830913</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">Chlamydia pneumoniae PCR Control</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">830914</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">GBS PCR Control</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">830915</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">MBT complex PCR Control</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">830916</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">Influenza B RT-PCR Control</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">830917</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">Influenza A H3 RT-PCR Control</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">830918</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">B. parapertussis PCR Control</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">830919</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">Pathogen Group A Respiratory</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">59971</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">Pathogen Group B Respiratory</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">59972</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">Pathogen Group C Respiratory</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">59973</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">Pathogen Group K Gastrointestinal</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">59981</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">Pathogen Group L Gastrointestinal</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">59982</td>
+                    </tr>
+                    <tr class="bg-color-3">
+                        <td class="py-3 px-4" data-label="Product Name">Pathogen Group Q STD</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">59987</td>
+                    </tr>
+                    <tr>
+                        <td class="py-3 px-4" data-label="Product Name">Pathogen Group R STD</td>
+                        <td class="py-3 px-4" data-label="Packaging">-</td>
+                        <td class="py-3 px-4" data-label="Product Number">59988</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="pagination" style="display: flex; justify-content: center; align-items: center;"></div>
+        </div>
+    </section>
+</main>
+
+    <!-- Footer (constant across pages) -->
+    <footer id="footer">
+        <div class="footer-info">
+            <p class="footer-left">1166 South Service Rd. W, Oakville, ON L6L 5T7</p>
+            <p class="footer-center">
+                Phone: 905-469-4253  |  
+                Fax: 905-825-9795  |  
+                Toll Free: 866-718-0515
+            </p>
+            <p class="footer-right">
+                Email: <a href="mailto:info@phoenixairmid.com">info@phoenixairmid.com</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for toggling categories -->
+    <script>
+        function toggleCategory(element) {
+            const list = element.nextElementSibling;
+            const arrow = element.querySelector('.toggle-arrow');
+            if (list.style.display === 'none' || list.style.display === '') {
+                list.style.display = 'block';
+                arrow.textContent = '▼';
+            } else {
+                list.style.display = 'none';
+                arrow.textContent = '>';
+            }
+        }
+    </script>
+</body>
+<script src="/script.js"></script>
+</html>
