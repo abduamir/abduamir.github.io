@@ -350,7 +350,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 { name: 'More Products...', url: '/pages/optimedical-list.html' }
             ],
             solutions: [
-                { name: 'OPTI CCA-TS2 Blood Gas and Electrolyte Analyzer', url: '/pages/optimedical-products.html' }
+                { name: 'OPTI CCA-TS2 Blood Gas and Electrolyte Analyzer', url: '/pages/OptiMedical-products.html' }
             ]
         },
         'hematology': {
