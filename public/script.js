@@ -422,12 +422,15 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         'EQA': {
             products: [
-                { name: 'PCR Kits', url: '/products/pcr-kits' },
-                { name: 'DNA/RNA Extraction Kits', url: '/products/dna-rna-extraction-kits' }
+                { name: 'Biochemistry Programs', url: '/pages/ESFEQA-list.html' },
+                { name: 'Microbiology and Virology', url: '/pages/ESFEQA-list.html' },
+                { name: 'Immunology Programs', url: '/pages/ESFEQA-list.html' },
+                { name: 'Hematology and Immunohematology', url: '/pages/ESFEQA-list.html' },
+                { name: 'CSF Diagnostics and Coagulation', url: '/pages/ESFEQA-list.html' },
+                { name: 'Educational Programs', url: '/pages/ESFEQA-list.html' }
             ],
             solutions: [
-                { name: 'Real-Time PCR Systems', url: '/solutions/real-time-pcr-systems' },
-                { name: 'Next-Generation Sequencing (NGS) Platforms', url: '/solutions/ngs-platforms' }
+                { name: 'External Quality Assessnent (EQA) programs', url: '/pages/ESFEQA-list.html' }
             ]
         },
         'pathology': {
