@@ -420,7 +420,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             ]
         },
-        'EQA': {
+        'External Quality Assessment (EQA)': {
             products: [
                 { name: 'Biochemistry Programs', url: '/pages/ESFEQA-list.html' },
                 { name: 'Microbiology and Virology', url: '/pages/ESFEQA-list.html' },
@@ -430,7 +430,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 { name: 'Educational Programs', url: '/pages/ESFEQA-list.html' }
             ],
             solutions: [
-                { name: 'External Quality Assessnent (EQA) programs', url: '/pages/ESFEQA-list.html' }
+                { name: 'External Quality Assessment (EQA) programs', url: '/pages/ESFEQA-list.html' }
             ]
         },
         'pathology': {
