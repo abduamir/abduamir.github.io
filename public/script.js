@@ -420,7 +420,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             ]
         },
-        'External Quality Assessment (EQA)': {
+        'EQA': {
             products: [
                 { name: 'Biochemistry Programs', url: '/pages/ESFEQA-list.html' },
                 { name: 'Microbiology and Virology', url: '/pages/ESFEQA-list.html' },
