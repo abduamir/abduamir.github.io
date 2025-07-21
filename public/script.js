@@ -447,12 +447,12 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         'transfusion-medicine': {
             products: [
-                { name: 'Blood Collection Tubes', url: '/products/blood-collection-tubes' },
-                { name: 'Blood Typing Reagents', url: '/products/blood-typing-reagents' }
+                { name: 'RADGIL2 - XRay Blood Irradiator', url: '/pages/gilardoni-products.html' },
+                
             ],
             solutions: [
-                { name: 'Automated Blood Typing Analyzers', url: '/solutions/automated-blood-typing-analyzers' },
-                { name: 'Blood Bank Management Software', url: '/solutions/blood-bank-management-software' }
+                { name: 'RADGIL2 - XRay Blood Irradiator', url: '/pages/gilardoni-products.html' },
+                
             ]
         },
         'disinfection-systems': {
