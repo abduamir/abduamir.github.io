@@ -670,7 +670,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     nav.querySelectorAll('.nav-links a, .dropdown-menu a').forEach((link) => {
         link.addEventListener('click', () => {
-            if (window.innerWidth <= 768) {
+            const isCategoryTrigger = link.classList.contains('category-trigger');
+            const isProductsTrigger = link.classList.contains('dropdown-trigger') && link.getAttribute('data-menu') === 'products-menu';
+            if (window.innerWidth <= 768 && !isCategoryTrigger && !isProductsTrigger) {
                 closeMobileMenu();
             }
         });

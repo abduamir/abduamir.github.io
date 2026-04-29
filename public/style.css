@@ -99,6 +99,9 @@ nav {
     list-style: none;
     display: flex;
     gap: 20px;
+    width: auto;
+    flex-direction: row;
+    padding-top: 0;
 }
 
 .nav-links li {
@@ -388,6 +391,48 @@ nav {
     .search-container {
         display: none;
         width: 100%;
+    }
+
+    .mobile-menu-open #products-menu {
+        padding: 12px;
+        border-top: 0;
+        box-shadow: none;
+    }
+
+    .mobile-menu-open .dropdown-content {
+        width: 100%;
+        flex-direction: column;
+        gap: 12px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .mobile-menu-open .product-categories,
+    .mobile-menu-open .products,
+    .mobile-menu-open .solutions {
+        width: 100%;
+        text-align: left;
+        max-height: none;
+        overflow: visible;
+        border: 1px solid #e5eef2;
+        border-radius: 8px;
+        padding: 8px;
+    }
+
+    .mobile-menu-open .product-categories h3,
+    .mobile-menu-open .products h3,
+    .mobile-menu-open .solutions h3 {
+        font-size: 1rem;
+        margin-bottom: 8px;
+    }
+
+    .mobile-menu-open .product-categories ul li a,
+    .mobile-menu-open .products ul li a,
+    .mobile-menu-open .solutions ul li a {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        padding: 10px 12px;
     }
 }
 
