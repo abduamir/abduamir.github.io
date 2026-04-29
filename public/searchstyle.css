@@ -260,3 +260,50 @@ footer {
     }
 }
 
+/* ---- 2026 polish overrides: search page readability ---- */
+main {
+    margin-top: 83px;
+    padding: 1.5rem;
+}
+
+#search-results {
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+#search-results ul li a {
+    line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+    main {
+        margin-top: 72px;
+        padding: 12px;
+    }
+
+    #search-results {
+        padding: 16px;
+        margin: 12px 0;
+        border-left-width: 3px;
+    }
+
+    .search-results-header {
+        font-size: 1.2rem;
+        padding: 12px 14px;
+        margin: 0 -16px 12px -16px;
+    }
+
+    #search-results ul {
+        padding: 0;
+    }
+
+    #search-results ul li {
+        margin: 10px 0;
+        padding: 10px;
+    }
+
+    #search-results ul li a {
+        font-size: 1rem;
+    }
+}
+

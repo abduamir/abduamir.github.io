@@ -660,3 +660,124 @@ form button:hover {
 .sidebar:hover .sidebar-content img {
     margin-right: 10px;
 }
+
+/* ---- 2026 polish overrides: shared shell + mobile nav ---- */
+:root {
+    --header-height: 83px;
+}
+
+header {
+    padding: 15px 0;
+}
+
+header nav {
+    gap: 1rem;
+}
+
+.menu-toggle {
+    display: none;
+    width: 44px;
+    height: 44px;
+    border: 0;
+    border-radius: 8px;
+    background: #fff;
+    color: #0CB7F5;
+    font-size: 1.35rem;
+    cursor: pointer;
+}
+
+.menu-toggle:focus-visible {
+    outline: 2px solid #086A9B;
+    outline-offset: 2px;
+}
+
+.dropdown-menu {
+    top: var(--header-height);
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        padding: 0 1rem;
+    }
+
+    .menu-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: auto;
+    }
+
+    .nav-links,
+    .search-container {
+        display: none;
+        width: 100%;
+    }
+
+    .mobile-menu-open .nav-links,
+    .mobile-menu-open .search-container {
+        display: flex;
+    }
+
+    .mobile-menu-open .nav-links {
+        flex-direction: column;
+        gap: 8px;
+        margin-top: 8px;
+    }
+
+    .mobile-menu-open .nav-links a {
+        display: flex;
+        align-items: center;
+        min-height: 44px;
+        padding: 10px 12px;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.15);
+    }
+
+    .mobile-menu-open .dropdown-menu {
+        position: static;
+        width: 100%;
+        height: auto;
+        margin-top: 8px;
+        opacity: 1;
+        visibility: visible;
+        align-items: stretch;
+        justify-content: flex-start;
+        border-radius: 8px;
+        padding: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    }
+
+    .mobile-menu-open #products-menu {
+        padding: 8px;
+        border-top: 0;
+        box-shadow: none;
+    }
+
+    .mobile-menu-open .dropdown-content {
+        width: 100%;
+        margin: 0;
+        gap: 10px;
+        flex-direction: column;
+    }
+
+    .mobile-menu-open .product-categories,
+    .mobile-menu-open .products,
+    .mobile-menu-open .solutions {
+        width: 100%;
+        max-height: none;
+        overflow: visible;
+        border: 1px solid #dbeaf0;
+        border-radius: 8px;
+        padding: 8px;
+    }
+
+    .mobile-menu-open .product-categories a,
+    .mobile-menu-open .products a,
+    .mobile-menu-open .solutions a {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+    }
+}

@@ -557,3 +557,47 @@ main {
     height: 18px;
     filter: brightness(0) invert(1); /* makes the icon white */
 }
+
+/* ---- 2026 polish overrides: product page spacing/typography ---- */
+body {
+    line-height: 1.5;
+}
+
+.highlighted-products {
+    gap: 40px;
+}
+
+.product-details-content {
+    max-width: 700px;
+}
+
+.product-features li {
+    line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+    main {
+        padding-top: 72px;
+    }
+
+    .highlighted-products {
+        gap: 24px;
+        padding: 0 12px;
+    }
+
+    .product-item {
+        margin-bottom: 28px;
+    }
+
+    .product-features li {
+        font-size: 17px;
+        margin-bottom: 10px;
+    }
+
+    .view-catalogue-btn {
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
