@@ -338,6 +338,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const categoryTriggers = document.querySelectorAll('.category-trigger');
     const productsList = document.getElementById('products-list');
     const solutionsList = document.getElementById('solutions-list');
+    if (!productsList || !solutionsList) {
+        return;
+    }
 
     const productsData = {
         'clinical-chemistry': {
@@ -499,9 +502,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     };
 
-    categoryTriggers.forEach(trigger => {
-        trigger.addEventListener('mouseenter', function () {
-            const category = this.getAttribute('data-category');
+    function populateCategory(category) {
             console.log(`🖱 Hover detected on category: ${category}`); // Debug
             productsList.innerHTML = '';
             solutionsList.innerHTML = '';
@@ -530,8 +531,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     solutionsList.appendChild(li);
                     console.log(`Added solution: ${solution.name} with URL: ${solution.url}`); // Debug
 
-                    // Add hover event listener to each solution
-                    li.addEventListener('mouseenter', () => {
+                    const renderMicrobiologyProducts = () => {
                         console.log(`🖱 Hover on solution: ${solution.name}`);
                         productsList.innerHTML = ''; // Clear products list
                         if (solution.products.length === 0) {
@@ -548,6 +548,14 @@ document.addEventListener("DOMContentLoaded", () => {
                                 console.log(`Added product: ${product.name} with URL: ${product.url}`); // Debug
                             });
                         }
+                    };
+
+                    // Hover for desktop and click/focus for touch/keyboard
+                    li.addEventListener('mouseenter', renderMicrobiologyProducts);
+                    li.addEventListener('focusin', renderMicrobiologyProducts);
+                    li.addEventListener('click', (event) => {
+                        event.preventDefault();
+                        renderMicrobiologyProducts();
                     });
                 });
 
@@ -584,7 +592,20 @@ document.addEventListener("DOMContentLoaded", () => {
                     });
                 }
             }
-        });
+    }
+
+    categoryTriggers.forEach(trigger => {
+        const handleCategoryInteraction = function (event) {
+            if (event.type === 'click') {
+                event.preventDefault();
+            }
+            const category = this.getAttribute('data-category');
+            populateCategory(category);
+        };
+
+        trigger.addEventListener('mouseenter', handleCategoryInteraction);
+        trigger.addEventListener('focus', handleCategoryInteraction);
+        trigger.addEventListener('click', handleCategoryInteraction);
     });
 
     // Reset products list when leaving solutions column (for microbiology)
@@ -594,6 +615,72 @@ document.addEventListener("DOMContentLoaded", () => {
             productsList.innerHTML = '<li>Please hover over a solution to see products</li>';
         }
     });
+});
+
+// Mobile nav + fixed header behavior
+document.addEventListener("DOMContentLoaded", () => {
+    const header = document.querySelector('header');
+    const nav = document.querySelector('header nav');
+    if (!header || !nav) return;
+
+    let menuToggle = nav.querySelector('.menu-toggle');
+    if (!menuToggle) {
+        menuToggle = document.createElement('button');
+        menuToggle.type = 'button';
+        menuToggle.className = 'menu-toggle';
+        menuToggle.setAttribute('aria-label', 'Toggle navigation menu');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.innerHTML = '&#9776;';
+        const navLinks = nav.querySelector('.nav-links');
+        if (navLinks) {
+            nav.insertBefore(menuToggle, navLinks);
+        } else {
+            nav.appendChild(menuToggle);
+        }
+    }
+
+    const closeMobileMenu = () => {
+        nav.classList.remove('mobile-menu-open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.innerHTML = '&#9776;';
+    };
+
+    menuToggle.addEventListener('click', (event) => {
+        event.stopPropagation();
+        if (window.innerWidth > 768) {
+            closeMobileMenu();
+            return;
+        }
+        const isOpen = nav.classList.toggle('mobile-menu-open');
+        menuToggle.setAttribute('aria-expanded', String(isOpen));
+        menuToggle.innerHTML = isOpen ? '&times;' : '&#9776;';
+    });
+
+    document.addEventListener('click', (event) => {
+        if (!nav.contains(event.target)) {
+            closeMobileMenu();
+        }
+    });
+
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 768) {
+            closeMobileMenu();
+        }
+    });
+
+    nav.querySelectorAll('.nav-links a, .dropdown-menu a').forEach((link) => {
+        link.addEventListener('click', () => {
+            if (window.innerWidth <= 768) {
+                closeMobileMenu();
+            }
+        });
+    });
+
+    const onScroll = () => {
+        header.classList.toggle('scrolled', window.scrollY > 8);
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
 });
 
 // Slideshow Logic
