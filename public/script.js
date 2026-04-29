@@ -554,13 +554,29 @@ document.addEventListener("DOMContentLoaded", () => {
                     li.addEventListener('mouseenter', renderMicrobiologyProducts);
                     li.addEventListener('focusin', renderMicrobiologyProducts);
                     li.addEventListener('click', (event) => {
-                        event.preventDefault();
+                        if (event.target.tagName !== 'A') {
+                            event.preventDefault();
+                        }
                         renderMicrobiologyProducts();
                     });
                 });
 
-                // Set initial products list state
-                productsList.innerHTML = '<li>Please hover over a solution to see products</li>';
+                // Mobile-first default: show first solution products immediately
+                if (productsData[category].solutions.length > 0) {
+                    const firstSolution = productsData[category].solutions[0];
+                    if (Array.isArray(firstSolution.products) && firstSolution.products.length > 0) {
+                        firstSolution.products.forEach(product => {
+                            if (!product.name || !product.url) return;
+                            const productLi = document.createElement('li');
+                            productLi.innerHTML = `<a href="${product.url}">${product.name}</a>`;
+                            productsList.appendChild(productLi);
+                        });
+                    } else {
+                        productsList.innerHTML = '<li>No products available</li>';
+                    }
+                } else {
+                    productsList.innerHTML = '<li>No solutions available</li>';
+                }
             } else {
                 // Default handling for other categories
                 console.log(`Processing category: ${category}`);
